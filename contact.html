@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
-        .hero { padding: 160px 0 80px; text-align: center; }
+        .hero { padding: 180px 0 80px; text-align: center; }
         .accent-blue { color: var(--primary); font-weight: 600; }
+        .section-tag { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; }
         input, select, textarea { transition: 0.3s; }
         input:focus, select:focus, textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(0, 168, 232, 0.1); }
     </style>
@@ -38,9 +39,9 @@
 
     <header class="hero">
         <div class="container">
-            <h4 class="accent-blue reveal">Connect with Us</h4>
-            <h1 class="reveal" style="animation-delay: 0.1s;">Let's Build the <br> Future Together</h1>
-            <p class="reveal" style="animation-delay: 0.3s;">Ready to see Timora in action? Fill out the form below or book a discovery call.</p>
+            <span class="section-tag reveal">Connect Globally</span>
+            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Let's Scale Your <br> Business Together</h1>
+            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 800px; margin: 30px auto;">Connect with our global operations team to see how Timora can transform your business.</p>
         </div>
     </header>
 
@@ -50,39 +51,40 @@
                 <div class="glass-card reveal" style="padding: 50px; border-color: rgba(0, 168, 232, 0.1); animation-delay: 0.4s;">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" placeholder="John Doe" required style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Full Name" required style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
                         </div>
                         <div class="form-group" style="margin-top: 25px;">
                             <label for="email">Work Email</label>
-                            <input type="email" id="email" placeholder="john@company.com" required style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
+                            <input type="email" id="email" placeholder="email@company.com" required style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
                         </div>
                         <div class="form-group" style="margin-top: 25px;">
-                            <label for="business">Business Type</label>
+                            <label for="business">Industry</label>
                             <select id="business" style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
-                                <option value="water">Water Delivery</option>
-                                <option value="printing">3D Printing</option>
-                                <option value="service">Appliance Service</option>
-                                <option value="other">Other Service Business</option>
+                                <option value="delivery">Logistics & Delivery</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="service" selected>Service Operations</option>
+                                <option value="other">Other Scaling Business</option>
                             </select>
                         </div>
                         <div class="form-group" style="margin-top: 25px;">
                             <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell us about your business operations..." rows="4" style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;"></textarea>
+                            <textarea id="message" placeholder="Tell us about your global operations..." rows="4" style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 40px; padding: 15px;">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 40px; padding: 15px;">Send Inquiry</button>
                     </form>
                 </div>
                 <div class="contact-info reveal" style="animation-delay: 0.6s;">
                     <div style="margin-bottom: 60px;">
-                        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Book a Demo</h2>
-                        <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">Prefer a live walkthrough? Connect with one of our operations specialists to see Timora in action.</p>
-                        <a href="#" class="btn btn-secondary" style="padding: 12px 30px;">Schedule Discovery Call</a>
+                         <span class="section-tag">Discovery</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Book a Product Demo</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">Ready for a live walkthrough? Connect with an international operations specialist to see Timora's global potential.</p>
+                        <a href="#" class="btn btn-secondary" style="padding: 12px 30px;">Schedule Global Call</a>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 15px;">Global Support</h3>
-                        <p style="color: var(--text-secondary);">Our team is here to help 24/7.</p>
-                        <p class="accent-blue" style="font-size: 1.25rem;">support@infinityclock.studio</p>
+                        <h3 style="margin-bottom: 15px;">24/7 Global Support</h3>
+                        <p style="color: var(--text-secondary);">Our team is available across all timezones.</p>
+                        <p class="accent-blue" style="font-size: 1.25rem;">global@infinityclock.studio</p>
                     </div>
                 </div>
             </div>
@@ -97,7 +99,7 @@
                     <a href="index.html" class="logo footer-logo">
                         <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 35px; vertical-align: middle;">
                     </a>
-                    <p>Building the future of business automation.</p>
+                    <p>Building the future of business automation worldwide.</p>
                 </div>
                 <div class="footer-links">
                     <ul class="nav-links" style="display: flex;">
@@ -115,13 +117,7 @@
 
     <script src="js/theme.js"></script>
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal');
-                }
-            });
-        }, { threshold: 0.1 });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal'); }); }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>

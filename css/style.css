@@ -27,6 +27,34 @@
     --letter-spacing-h: -0.02em;
 }
 
+/* --- Global Glow & Showcase --- */
+.glow-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-bg::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 168, 232, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glass-card-layered {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
 /* --- Top-Tier Animations --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -202,6 +230,47 @@ ul {
 
 .nav-links a:hover {
     color: var(--primary);
+}
+
+/* --- Testimonial Refinement --- */
+
+.testimonial-box {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-quote {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.testimonial-quote::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+}
+
+/* --- Pricing USD --- */
+
+.price-val {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.price-val span {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 400;
 }
 
 /* --- Hero --- */

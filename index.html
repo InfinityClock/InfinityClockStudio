@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timora | Run Your Entire Business On Time</title>
-    <meta name="description" content="Timora is the absolute business automation platform for modern service companies. Pixel-perfect management of orders, payments, and teams.">
+    <meta name="description" content="Timora is the global business automation platform for modern service companies. Manage orders, payments, and team workflows in one unified system.">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,20 +12,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     
     <style>
-        /* Section-specific alignments and spacing */
-        .hero { padding: 160px 0 100px; text-align: center; }
-        .hero-btns { margin-top: 40px; }
-        .hero-visual { margin-top: 80px; transform: scale(1.05); transition: 1s cubic-bezier(0.16, 1, 0.3, 1); }
-        .hero-visual:hover { transform: scale(1.08); }
+        /* Global SaaS Refinements */
+        .hero { padding: 180px 0 120px; text-align: center; }
+        .hero-visual { margin-top: 80px; transform: scale(1.05); }
         
-        .showcase-section { background: #070d1a; padding: 120px 0; }
-        .live-preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        
-        .testimonial-section { text-align: center; padding: 120px 0; background: rgba(0, 168, 232, 0.02); }
-        .testimonial-box { max-width: 800px; margin: 0 auto; }
-        .testimonial-quote { font-size: 2rem; font-weight: 500; line-height: 1.4; font-style: italic; margin-bottom: 30px; }
+        .wow-section { background: #070d1a; padding: 160px 0; position: relative; overflow: hidden; }
+        .showcase-glow { transition: 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .showcase-glow:hover { transform: scale(1.02) translateY(-10px); }
         
         .accent-blue { color: var(--primary); font-weight: 600; }
+        .section-tag { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; }
     </style>
 </head>
 <body class="reveal">
@@ -49,198 +45,180 @@
         </div>
     </nav>
 
-    <!-- Hero Section 2.0 -->
+    <!-- Global Hero -->
     <header class="hero">
         <div class="container">
-            <h1 class="gradient-text reveal" style="animation-delay: 0.1s;">Run Your Entire Business <br> On Time with Timora</h1>
-            <p class="reveal" style="animation-delay: 0.3s;">Manage orders, payments, and team operations in one powerful system built for modern businesses who value efficiency and growth.</p>
+            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Run Your Entire Business <br> On Time with Timora</h1>
+            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 850px; margin: 30px auto 50px;">
+                Manage orders, payments, and team operations in one powerful platform built for modern service businesses globally.
+            </p>
             <div class="hero-btns reveal" style="animation-delay: 0.5s;">
                 <a href="#" class="btn btn-primary">Start Free Trial</a>
-                <a href="timora.html" class="btn btn-secondary">View Product</a>
+                <a href="contact.html" class="btn btn-secondary">Book a Demo</a>
             </div>
             
             <div class="hero-visual reveal" style="animation-delay: 0.7s;">
-                <img src="assets/hero-dashboard.png" alt="Timora High-Fidelity Dashboard" style="border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                <img src="assets/hero-global.png" alt="Timora Global Dashboard Mockup" style="border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
             </div>
         </div>
     </header>
 
-    <!-- Introducing Timora Showcase -->
-    <section class="showcase-section">
-        <div class="container">
-            <div class="product-row align-center">
-                <div class="product-content">
-                    <h4 class="accent-blue">A New Era of Automation</h4>
-                    <h2 class="section-title" style="text-align: left; font-size: 3.5rem;">Introducing Timora</h2>
-                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 40px;">
-                        Timora is not just a tool—it's your business's central nervous system. We help service-based studios and agencies manage their entire lifecycle from a unified command center.
-                    </p>
-                    <div class="problem-grid" style="grid-template-columns: 1fr; gap: 20px;">
-                        <div style="display: flex; gap: 15px;">
-                            <span class="material-symbols-outlined accent-blue">check_circle</span>
-                            <div>
-                                <h4 style="margin-bottom: 5px;">Track Every Order</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem;">Real-time queue management with instant status synchronization.</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; gap: 15px;">
-                            <span class="material-symbols-outlined accent-blue">check_circle</span>
-                            <div>
-                                <h4 style="margin-bottom: 5px;">Verify Payments Instantly</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem;">Automated UTR and UPI reconciliation for zero-error accounts.</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; gap: 15px;">
-                            <span class="material-symbols-outlined accent-blue">check_circle</span>
-                            <div>
-                                <h4 style="margin-bottom: 5px;">Manage Your Team</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem;">Role-based access and task assignment for delivery and ops staff.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="timora.html" class="btn btn-secondary" style="margin-top: 40px;">Explore Timora</a>
-                </div>
-                <div class="product-visual">
-                    <img src="assets/timora-preview.png" alt="Timora Core Showcase" style="transform: perspective(1000px) rotateY(-5deg); border-radius: 12px; box-shadow: -20px 20px 40px rgba(0,168,232,0.1);">
-                </div>
+    <!-- Wow Showcase Section -->
+    <section class="wow-section glow-bg">
+        <div class="container text-center">
+            <span class="section-tag reveal">Product Showcase</span>
+            <h2 class="section-title reveal" style="font-size: 4rem; margin-bottom: 30px;">Everything You Need in One Dashboard</h2>
+            <p style="font-size: 1.4rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 80px;" class="reveal">
+                From real-time order tracking to advanced revenue analytics, Timora gives you total control over your business health.
+            </p>
+            <div class="showcase-glow reveal" style="animation-delay: 0.3s;">
+                <img src="assets/showcase-glow.png" alt="Unified Command Center Showcase" class="glass-card-layered" style="max-width: 100%; height: auto;">
             </div>
         </div>
     </section>
 
-    <!-- See Timora in Action (Live Preview) -->
+    <!-- See Timora in Action -->
     <section class="section-padding-large">
         <div class="container">
-            <div class="live-preview-grid">
-                <div class="glass-card" style="padding: 40px; border-color: rgba(0, 168, 232, 0.1);">
-                    <h4 class="accent-blue">Real-Time Operations</h4>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 25px;">See Timora in Action</h2>
-                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 30px;">
-                        From the moment an order is placed, Timora starts working. Our table interface gives you instant visibility into order health, payment status, and revenue analytics without refreshing the page.
+            <div class="product-row align-center">
+                <div class="product-content reveal">
+                    <span class="section-tag">Live Preview</span>
+                    <h2 style="font-size: 3.5rem; margin-bottom: 25px;">See Timora in Action</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.25rem; margin-bottom: 40px;">
+                        Experience how Timora simplifies complex workflows. Our realistic UI components are designed for clarity, scale, and international operations.
                     </p>
-                    <div style="display: flex; gap: 30px;">
-                        <div style="text-align: center;">
-                            <h2 style="color: var(--primary);">99%</h2>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Accuracy</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <h2 style="color: var(--primary);">40%</h2>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Time Saved</p>
-                        </div>
-                    </div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
+                        <li style="display: flex; gap: 15px; align-items: center;">
+                            <span class="material-symbols-outlined accent-blue">monitoring</span>
+                            <span style="font-weight: 500;">Real-time analytics dashboard</span>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: center;">
+                            <span class="material-symbols-outlined accent-blue">list_alt</span>
+                            <span style="font-weight: 500;">Advanced order management table</span>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: center;">
+                            <span class="material-symbols-outlined accent-blue">account_tree</span>
+                            <span style="font-weight: 500;">Unified workflow visualization</span>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="assets/timora-preview.png" alt="Live Dashboard Preview" style="border-radius: 15px; box-shadow: 0 40px 80px rgba(0,0,0,0.4);">
+                <div class="product-visual reveal" style="animation-delay: 0.2s;">
+                    <img src="assets/timora-preview.png" alt="Realistic Live Components" style="border-radius: 20px; box-shadow: 0 30px 60px rgba(0, 168, 232, 0.1);">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section 2.0 -->
+    <!-- Global Features -->
     <section class="features" style="background: #070d1a;">
         <div class="container">
-            <h2 class="section-title">Built for Modern Scaling</h2>
+            <h2 class="section-title reveal">Engineered for Global Scale</h2>
             <div class="features-grid">
                 <div class="feature-item glass-card reveal">
-                    <span class="material-symbols-outlined feature-icon">order_approve</span>
+                    <span class="material-symbols-outlined feature-icon">grid_view</span>
                     <h3>Order Management</h3>
-                    <p>Dynamic queues that prioritize your most urgent tasks and keep clients informed.</p>
+                    <p>Centralize your order lifecycle with intelligent queuing and automated status updates.</p>
                 </div>
                 <div class="feature-item glass-card reveal">
-                    <span class="material-symbols-outlined feature-icon">account_balance_wallet</span>
+                    <span class="material-symbols-outlined feature-icon">verified</span>
                     <h3>Payment Verification</h3>
-                    <p>Automated UPI/UTR checking system that eliminates manual bank statement audits.</p>
+                    <p>Secure, automated reconciliation of payments and bank transfers for zero-error financials.</p>
                 </div>
                 <div class="feature-item glass-card reveal">
-                    <span class="material-symbols-outlined feature-icon">dashboard</span>
+                    <span class="material-symbols-outlined feature-icon">settings_input_composite</span>
                     <h3>Admin Dashboard</h3>
-                    <p>A high-performance command center for tracking every metric that matters.</p>
+                    <p>A unified command center to monitor every aspect of your business operations.</p>
                 </div>
                 <div class="feature-item glass-card reveal">
-                    <span class="material-symbols-outlined feature-icon">security</span>
+                    <span class="material-symbols-outlined feature-icon">admin_panel_settings</span>
                     <h3>Role-Based Access</h3>
-                    <p>Granular permissions for your delivery, manufacturing, and analytics teams.</p>
+                    <p>Global permission management for teams, locations, and specialized roles.</p>
                 </div>
                 <div class="feature-item glass-card reveal">
-                    <span class="material-symbols-outlined feature-icon">monitoring</span>
+                    <span class="material-symbols-outlined feature-icon">trending_up</span>
                     <h3>Revenue Analytics</h3>
-                    <p>Understand your business growth with deep-dive reports on daily performance.</p>
+                    <p>Deep data insights and forecasting tools to drive your international growth strategy.</p>
                 </div>
                 <div class="feature-item glass-card reveal">
-                    <span class="material-symbols-outlined feature-icon">bolt</span>
-                    <h3>Instant Alerts</h3>
-                    <p>Smart notifications across devices to ensure you never miss a beat.</p>
+                    <span class="material-symbols-outlined feature-icon">public</span>
+                    <h3>Global Ready</h3>
+                    <p>Built for international teams with multi-currency support and professional language.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Section -->
+    <!-- Social Proof -->
     <section class="testimonial-section">
         <div class="container">
             <div class="testimonial-box reveal">
-                <p class="testimonial-quote">"Timora helped us streamline our entire order process and save hours daily. We've scaled our operations by 300% without adding a single staff member."</p>
-                <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-                    <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), #007ea7);"></div>
+                <p class="testimonial-quote">"Timora helped us streamline our entire workflow and improve efficiency by over 200%. It is the backbone of our global operations."</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), #007ea7);"></div>
                     <div style="text-align: left;">
-                        <h4 style="margin: 0;">Rajesh Kumar</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">CEO, AquaFlow Solutions</p>
+                        <h4 style="margin: 0; font-size: 1.2rem;">Sarah Jenkins</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Director of Operations, Nexus Global</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing 2.0 -->
+    <!-- Global Pricing -->
     <section class="section-padding-large" id="pricing">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 80px;">SaaS Scaling Plans</h2>
+            <h2 class="section-title reveal" style="margin-bottom: 80px;">Global Scaling Plans</h2>
             <div class="features-grid">
+                <!-- Starter -->
                 <div class="glass-card pricing-card reveal">
                     <h3>Starter</h3>
-                    <div class="price-val">₹999<span>/mo</span></div>
+                    <div class="price-val">$19<span>/mo</span></div>
                     <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left; list-style: none;">
-                        <li style="margin-bottom: 10px;">✓ Up to 100 Orders/mo</li>
-                        <li style="margin-bottom: 10px;">✓ Basic Dashboards</li>
-                        <li style="margin-bottom: 10px;">✓ 2 Staff Seats</li>
-                        <li style="margin-bottom: 10px;">✓ Email Support</li>
+                        <li style="margin-bottom: 12px;">✓ 100 Orders / mo</li>
+                        <li style="margin-bottom: 12px;">✓ Core Automation</li>
+                        <li style="margin-bottom: 12px;">✓ 2 Team Seats</li>
+                        <li style="margin-bottom: 12px;">✓ Email Support</li>
                     </ul>
                     <a href="#" class="btn btn-secondary" style="width: 100%; text-align: center;">Get Started</a>
                 </div>
+                <!-- Pro -->
                 <div class="glass-card pricing-card featured reveal" style="animation-delay: 0.2s;">
+                    <div style="background: var(--primary); color: white; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-bottom: 15px;">MOST POPULAR</div>
                     <h3>Pro</h3>
-                    <div class="price-val">₹2,999<span>/mo</span></div>
+                    <div class="price-val">$49<span>/mo</span></div>
                     <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left; list-style: none;">
-                        <li style="margin-bottom: 10px;">✓ Unlimited Orders</li>
-                        <li style="margin-bottom: 10px;">✓ Advanced Revenue Insights</li>
-                        <li style="margin-bottom: 10px;">✓ 10 Staff Seats</li>
-                        <li style="margin-bottom: 10px;">✓ Priority 24/7 Support</li>
-                        <li style="margin-bottom: 10px;">✓ Custom Payment Rules</li>
+                        <li style="margin-bottom: 12px;">✓ Unlimited Orders</li>
+                        <li style="margin-bottom: 12px;">✓ Advanced Analytics</li>
+                        <li style="margin-bottom: 12px;">✓ 10 Team Seats</li>
+                        <li style="margin-bottom: 12px;">✓ Priority Support</li>
+                        <li style="margin-bottom: 12px;">✓ Custom API Access</li>
                     </ul>
                     <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Start Free Trial</a>
                 </div>
+                <!-- Premium -->
                 <div class="glass-card pricing-card reveal" style="animation-delay: 0.4s;">
                     <h3>Premium</h3>
-                    <div class="price-val">₹4,999<span>/mo</span></div>
+                    <div class="price-val">$99<span>/mo</span></div>
                     <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left; list-style: none;">
-                        <li style="margin-bottom: 10px;">✓ Everything in Pro</li>
-                        <li style="margin-bottom: 10px;">✓ White-label Dashboards</li>
-                        <li style="margin-bottom: 10px;">✓ Custom Integrations</li>
-                        <li style="margin-bottom: 10px;">✓ Dedicated Account Manager</li>
+                        <li style="margin-bottom: 12px;">✓ Multi-location scaling</li>
+                        <li style="margin-bottom: 12px;">✓ Full White-labeling</li>
+                        <li style="margin-bottom: 12px;">✓ Unlimited Team Seats</li>
+                        <li style="margin-bottom: 12px;">✓ Dedicated Account Manager</li>
                     </ul>
                     <a href="contact.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Contact Sales</a>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary);">Built for growing businesses. Cloud-hosted. Secure.</p>
+            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary);">Trusted by 500+ service businesses worldwide. Secure cloud hosting.</p>
         </div>
     </section>
 
-    <!-- Final CTA 2.0 -->
+    <!-- Final CTA -->
     <section class="cta-section">
-        <div class="container">
+        <div class="container text-center">
             <div class="cta-box reveal">
-                <h2 style="font-size: 3.5rem;">Start Managing Your Business Smarter Today</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 40px;">No credit card required. Instant setup. Start your 14-day trial today.</p>
-                <div class="cta-btns">
+                <h2 style="font-size: 4rem; line-height: 1.1;">Start Managing Your Business Smarter Today</h2>
+                <p style="font-size: 1.4rem; margin: 30px auto 50px; max-width: 800px;">Join the elite businesses using Timora to automate and grow globally. Start your 14-day free trial now.</p>
+                <div class="hero-btns" style="justify-content: center;">
                     <a href="#" class="btn btn-primary" style="background: white; color: var(--primary);">Start Free Trial</a>
                     <a href="contact.html" class="btn btn-secondary" style="border-color: white;">Book Demo</a>
                 </div>
@@ -256,7 +234,7 @@
                     <a href="index.html" class="logo footer-logo">
                         <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 35px; vertical-align: middle;">
                     </a>
-                    <p>Building the future of business automation.</p>
+                    <p>Building the future of business automation worldwide.</p>
                 </div>
                 <div class="footer-links">
                     <ul class="nav-links" style="display: flex;">
@@ -275,7 +253,6 @@
 
     <script src="js/theme.js"></script>
     <script>
-        // Intersection Observer for animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -284,7 +261,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.glass-card, .section-title, .cta-box, h1, p').forEach(el => {
+        document.querySelectorAll('.reveal, .glass-card, .glass-card-layered, h1, h2, p').forEach(el => {
             observer.observe(el);
         });
 

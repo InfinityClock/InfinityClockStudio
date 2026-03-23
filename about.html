@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
-        .hero { padding: 160px 0 80px; text-align: center; }
+        .hero { padding: 180px 0 100px; text-align: center; }
         .accent-blue { color: var(--primary); font-weight: 600; }
+        .section-tag { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; }
     </style>
 </head>
 <body class="reveal">
@@ -36,9 +37,9 @@
 
     <header class="hero">
         <div class="container">
-            <h4 class="accent-blue reveal">Our Mission</h4>
-            <h1 class="gradient-text reveal" style="animation-delay: 0.1s;">The Platform for <br> Modern Business</h1>
-            <p class="reveal" style="animation-delay: 0.3s;">We build the digital infrastructure that enables service companies to scale automatically.</p>
+            <span class="section-tag reveal">The Global Mission</span>
+            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Engineering the Future <br> of Service Business</h1>
+            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 800px; margin: 30px auto;">We build the digital infrastructure that enables companies worldwide to scale operations automatically.</p>
         </div>
     </header>
 
@@ -46,17 +47,19 @@
         <div class="container">
             <div class="product-row align-center">
                 <div class="product-content reveal">
-                    <h2>Infrastructure for Growth</h2>
-                    <p style="color: var(--text-secondary); font-size: 1.25rem; margin-top: 20px;">
-                        Infinity Clock Studio was founded with a single goal: to provide world-class automation software for businesses that need to scale efficiently.
+                    <h2 style="font-size: 3.5rem;">Global Infrastructure</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.3rem; margin-top: 25px;">
+                        Infinity Clock Studio is a global software house dedicated to solving the operational complexities of modern service businesses.
                     </p>
                     <p style="color: var(--text-secondary); margin-top: 15px;">
-                        Our core product, Timora, represents thousands of hours of operational research and pixel-perfect design. We don't just build features; we build workflows.
+                        Our flagship platform, Timora, is used by hundreds of businesses globally to manage millions in revenue with zero manual overhead. We believe in software that disappears and lets you focus on growth.
                     </p>
                 </div>
-                <div class="product-visual glass-card reveal" style="padding: 60px; text-align: center; border-color: rgba(0, 168, 232, 0.1); animation-delay: 0.2s;">
-                    <span class="material-symbols-outlined" style="font-size: 6rem; color: var(--primary); margin-bottom: 20px;">rocket_launch</span>
-                    <h3>Timora Engine</h3>
+                <div class="product-visual reveal" style="animation-delay: 0.2s;">
+                    <div class="glass-card-layered" style="padding: 80px; text-align: center;">
+                        <span class="material-symbols-outlined" style="font-size: 8rem; color: var(--primary); margin-bottom: 30px;">public</span>
+                        <h3>World-Class Standards</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +73,7 @@
                     <a href="index.html" class="logo footer-logo">
                         <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 35px; vertical-align: middle;">
                     </a>
-                    <p>Building the future of business automation.</p>
+                    <p>Building the future of business automation worldwide.</p>
                 </div>
                 <div class="footer-links">
                     <ul class="nav-links" style="display: flex;">
@@ -88,13 +91,7 @@
 
     <script src="js/theme.js"></script>
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal');
-                }
-            });
-        }, { threshold: 0.1 });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal'); }); }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
