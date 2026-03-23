@@ -26,6 +26,29 @@
     --font-body: 'Inter', sans-serif;
 }
 
+/* Light Theme Overrides */
+body.light-theme {
+    --bg-dark: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0a1128;
+    --text-secondary: #475569;
+    --border: rgba(0, 168, 232, 0.1);
+    --glass: rgba(255, 255, 255, 0.8);
+}
+
+body.light-theme .glass-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 168, 232, 0.1);
+}
+
+body.light-theme .btn-secondary {
+    border-color: #cbd5e1;
+    color: #0a1128;
+}
+
+body.light-theme footer {
+    background: #f1f5f9;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap');
 
 * {
