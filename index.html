@@ -3,161 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfinityClock Studio | Modern Websites for SMB</title>
-    <meta name="description" content="InfinityClock Studio builds modern websites for Small and Medium Businesses (SMBs) across the globe. Professional, attractive, and high-performance.">
+    <title>Infinity Clock Studio | Smart Business Systems</title>
+    <meta name="description" content="We build smart business automation platforms and SaaS products to help companies scale faster.">
     
-    <!-- Fonts -->
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/professional.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <header>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
-            <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <img src="assets/logo.png" alt="InfinityClock Studio Logo" style="height: 40px; width: auto;">
-                <span class="font-outfit" style="font-size: 1.5rem; color: var(--brand-dark);">InfinityClock <span style="color: var(--brand-primary)">Studio</span></span>
+
+    <!-- Navigation -->
+    <nav class="nav-el" id="navbar">
+        <div class="container focus-container">
+            <a href="index.html" class="logo">
+                <span class="gradient-text">Infinity Clock</span> Studio
             </a>
-            <nav style="display: flex; gap: 2rem; align-items: center;">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="contact.html" class="btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Get a Website</a>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="gradient-text">We Build Smart Business Systems for Modern Companies</h1>
+            <p>Automate your operations, manage your team, and grow faster with our scalable platforms.</p>
+            <div class="hero-btns">
+                <a href="timora.html" class="btn btn-primary">Explore Timora</a>
+                <a href="contact.html" class="btn btn-secondary">Book a Demo</a>
+            </div>
+            
+            <div class="hero-visual">
+                <img src="assets/hero-dashboard.png" alt="SaaS Dashboard Preview">
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- Home Hero -->
-        <section style="padding: 180px 0 120px; position: relative; overflow: hidden; background: linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%);">
-            <div class="container" style="text-align: center;">
-                <span style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-primary); margin-bottom: 1.5rem; display: block;">Established Worldwide</span>
-                <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    We Build Modern Websites for <span class="text-gradient">Small Businesses</span>
-                </h1>
-                <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3.5rem; line-height: 1.7;">
-                    Empowering SMBs globally with high-performance digital solutions. We create attractive, professional websites that help you grow in a modern way.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="portfolio.html" class="btn-primary">View Portfolio</a>
-                    <a href="pricing.html" class="btn-outline">See Pricing</a>
+    <!-- What We Do Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="features-grid">
+                <div class="feature-item glass-card">
+                    <span class="material-symbols-outlined feature-icon">dataset</span>
+                    <h3>SaaS Product Development</h3>
+                    <p>We build robust, scalable software-as-a-service products tailored to your industry.</p>
+                </div>
+                <div class="feature-item glass-card">
+                    <span class="material-symbols-outlined feature-icon">settings_suggest</span>
+                    <h3>Business Automation Systems</h3>
+                    <p>Stop manual tasks. We automate your entire workflow from orders to fulfillment.</p>
+                </div>
+                <div class="feature-item glass-card">
+                    <span class="material-symbols-outlined feature-icon">dashboard_customize</span>
+                    <h3>Custom Dashboard Solutions</h3>
+                    <p>Visualize your business data with custom analytics and management dashboards.</p>
+                </div>
+                <div class="feature-item glass-card">
+                    <span class="material-symbols-outlined feature-icon">bolt</span>
+                    <h3>Workflow Optimization</h3>
+                    <p>We streamline your internal processes to maximize team efficiency and output.</p>
                 </div>
             </div>
-            <!-- Subtitle background element -->
-            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; background: radial-gradient(circle at center, rgba(2, 169, 226, 0.05) 0%, transparent 70%); z-index: -1;"></div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Services -->
-        <section style="padding: 100px 0; background-color: #FFFFFF; border-top: 1px solid var(--glass-border);">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 5rem;">
-                    <h2 class="section-title">Elevate Your <span class="text-gradient">Business Online</span></h2>
-                    <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">We don't just build websites; we build growth engines tailored for your niche.</p>
+    <!-- Featured Product Section (Timora) -->
+    <section class="product-focus">
+        <div class="container">
+            <div class="product-row">
+                <div class="product-content">
+                    <h4 class="gradient-text">Introducing Timora</h4>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Your Entire Business in One Place</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">
+                        A complete business automation platform to manage orders, payments, and team operations. 
+                        No more juggling WhatsApp chats and spreadsheets.
+                    </p>
+                    <a href="timora.html" class="btn btn-primary">View Product</a>
                 </div>
-                <div class="grid-section grid-section-3">
-                    <div class="card-premium reveal" style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🏢</div>
-                        <h4 style="margin-bottom: 1rem;">Business Solutions</h4>
-                        <p style="color: var(--text-muted); font-size: 0.875rem;">Professional corporate sites that build authority and trust for SMBs.</p>
-                        <a href="services.html" class="nav-link" style="display: block; margin-top: 1.5rem; font-weight: 700;">Learn More →</a>
-                    </div>
-                    <div class="card-premium reveal" style="text-align: center; transition-delay: 0.1s;">
-                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🛍️</div>
-                        <h4 style="margin-bottom: 1rem;">E-Commerce Engines</h4>
-                        <p style="color: var(--text-muted); font-size: 0.875rem;">High-conversion online stores with seamless global payment integrations.</p>
-                        <a href="services.html" class="nav-link" style="display: block; margin-top: 1.5rem; font-weight: 700;">Learn More →</a>
-                    </div>
-                    <div class="card-premium reveal" style="text-align: center; transition-delay: 0.2s;">
-                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">📅</div>
-                        <h4 style="margin-bottom: 1rem;">Booking Systems</h4>
-                        <p style="color: var(--text-muted); font-size: 0.875rem;">Automated scheduling for salons, clinics, and professional services.</p>
-                        <a href="services.html" class="nav-link" style="display: block; margin-top: 1.5rem; font-weight: 700;">Learn More →</a>
-                    </div>
+                <div class="product-visual">
+                    <img src="assets/timora-preview.png" alt="Timora Product Preview">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Our Approach Teaser -->
-        <section style="padding: 80px 0; background-color: var(--bg-accent);">
-            <div class="container">
-                <div class="grid-section grid-section-2" style="align-items: center; gap: 4rem;">
-                    <div class="reveal">
-                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Modern <span style="color: var(--brand-primary)">Design Philosophy</span></h2>
-                        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7;">We combine aesthetic excellence with technical precision. Every pixel is crafted to ensure your business stands out in a crowded digital landscape.</p>
-                    </div>
-                    <div class="reveal">
-                        <img src="assets/logo.png" alt="Branding Illustration" style="width: 100%; height: auto; max-width: 300px; margin: 0 auto; display: block; filter: saturate(0.5);">
-                    </div>
+    <!-- Why Choose Us Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+                <div class="feature-item">
+                    <span class="material-symbols-outlined feature-icon">verified</span>
+                    <h3>Built for Real Workflows</h3>
+                    <p>Our systems are designed by understanding how businesses actually operate.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-symbols-outlined feature-icon">speed</span>
+                    <h3>Fast Deployment</h3>
+                    <p>Go from concept to a live system in weeks, not months.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-symbols-outlined feature-icon">dns</span>
+                    <h3>Scalable & Secure</h3>
+                    <p>Enterprise-grade security and infrastructure that grows with you.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-symbols-outlined feature-icon">support_agent</span>
+                    <h3>Ongoing Support</h3>
+                    <p>We are your long-term technology partners, ensuring your systems always run smoothly.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Teaser (Smaller) -->
-        <section style="padding: 60px 0; background-color: var(--bg-accent);">
-            <div class="container">
-                <div class="card-premium" style="display: flex; justify-content: space-between; align-items: center; padding: 2rem; flex-wrap: wrap; gap: 2rem; border: none; background: #FFFFFF; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                    <div style="max-width: 500px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Ready to build for your business?</h3>
-                        <p style="color: var(--text-muted); font-size: 0.875rem;">Get a professional website tailored to your niche in just a few days.</p>
-                    </div>
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="contact.html" class="btn-primary">Connect with Us</a>
-                        <a href="mailto:contact@infinityclock.studio" class="btn-outline" style="padding: 0.75rem 1.5rem;">Email Us</a>
-                    </div>
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Start Automating Your Business Today</h2>
+                <p>Join companies that trust Infinity Clock Studio to power their digital operations.</p>
+                <div class="cta-btns">
+                    <a href="products.html" class="btn btn-primary" style="background: white; color: var(--primary);">Get Started</a>
+                    <a href="contact.html" class="btn btn-secondary" style="border-color: white;">Contact Us</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 3rem;">
-                <div style="max-width: 300px;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem;">
-                        <img src="assets/logo.png" alt="InfinityClock Studio Logo" style="height: 32px; width: auto;">
-                        <span class="font-outfit" style="font-size: 1.25rem; color: var(--brand-dark);">InfinityClock</span>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.875rem;">Building modern websites for SMBs worldwide with a rich, professional touch.</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="gradient-text">Infinity Clock</span> Studio
+                    </a>
+                    <p>Building the future of business automation.</p>
                 </div>
-                <div style="display: flex; gap: 4rem;">
-                    <nav style="display: flex; flex-direction: column; gap: 1rem;">
-                        <h4 style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Pages</h4>
-                        <a href="index.html" class="nav-link">Home</a>
-                        <a href="services.html" class="nav-link">Services</a>
-                        <a href="portfolio.html" class="nav-link">Portfolio</a>
-                        <a href="pricing.html" class="nav-link">Pricing</a>
-                    </nav>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <h4 style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Support</h4>
-                        <a href="mailto:contact@infinityclock.studio" class="nav-link">Email</a>
-                        <a href="contact.html" class="nav-link">Contact Us</a>
-                    </div>
+                <div class="footer-links">
+                    <ul class="nav-links" style="display: flex;">
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
                 </div>
             </div>
-            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
-                <p>© 2026 InfinityClock Studio. All rights reserved.</p>
+            <div style="margin-top: 40px; text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <p>&copy; 2026 Infinity Clock Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            const revealOnScroll = () => {
-                reveals.forEach(el => {
-                    const windowHeight = window.innerHeight;
-                    const revealTop = el.getBoundingClientRect().top;
-                    if (revealTop < windowHeight - 150) el.classList.add('active');
-                });
-            };
-            window.addEventListener('scroll', revealOnScroll);
-            revealOnScroll();
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
         });
     </script>
 </body>
