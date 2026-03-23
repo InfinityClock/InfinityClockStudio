@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timora | Business Automation Platform</title>
+    <title>Timora | Your Business Commands Center</title>
+    <meta name="description" content="Timora is the complete business automation platform for modern service companies. Manage orders, payments, and teams in one place.">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav class="nav-el scrolled" id="navbar">
         <div class="container">
             <a href="index.html" class="logo">
@@ -16,20 +21,23 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="timora.html">Product</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+            <div class="nav-auth">
+                <a href="#" class="btn-login">Login</a>
+                <a href="#" class="btn btn-primary btn-signup">Start Free Trial</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Timora Hero -->
-    <header class="hero" style="background: linear-gradient(to bottom, rgba(99, 102, 241, 0.1), transparent);">
+    <!-- Product Hero -->
+    <header class="hero" style="background: linear-gradient(to bottom, rgba(0, 168, 232, 0.05), transparent);">
         <div class="container">
-            <h4 class="gradient-text">Flagship Platform</h4>
+            <h4 class="gradient-text">The Business Engine</h4>
             <h1 class="gradient-text">Run Your Entire Business On Time</h1>
-            <p>Manage orders, verify payments, and lead your team with the industry's most powerful automation dashboard.</p>
+            <p>From order placement to final payment verification, Timora automates every step of your workflow.</p>
             <div class="hero-btns">
                 <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
                 <a href="contact.html" class="btn btn-secondary">Request Demo</a>
@@ -40,51 +48,30 @@
         </div>
     </header>
 
-    <!-- Problem Section -->
-    <section class="features">
+    <!-- Problem / Solution Detailed -->
+    <section class="problem-section">
         <div class="container">
-            <h2 class="section-title">The Problem We Solve</h2>
-            <div class="features-grid">
-                <div class="glass-card">
-                    <span class="material-symbols-outlined feature-icon" style="color: #f43f5e;">chat_error</span>
-                    <h3>Fragmented Communication</h3>
-                    <p>Managing orders on WhatsApp leads to missed messages and customer frustration.</p>
-                </div>
-                <div class="glass-card">
-                    <span class="material-symbols-outlined feature-icon" style="color: #f43f5e;">payments</span>
-                    <h3>Payment Confusion</h3>
-                    <p>Manual UTR verification is slow, prone to errors, and delays fulfillment.</p>
-                </div>
-                <div class="glass-card">
-                    <span class="material-symbols-outlined feature-icon" style="color: #f43f5e;">query_stats</span>
-                    <h3>Zero Revenue Insights</h3>
-                    <p>Without central tracking, you never really know your daily profit or team performance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="product-focus">
-        <div class="container">
-            <div class="product-row">
-                <div class="product-visual">
-                    <img src="assets/hero-dashboard.png" alt="Timora Analytics Dashboard">
-                </div>
+            <h2 class="section-title">Why Businesses Need Timora</h2>
+            <div class="product-row" style="margin-bottom: 80px;">
                 <div class="product-content">
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">The Timora Difference</h2>
-                    <ul style="color: var(--text-secondary); font-size: 1.1rem; list-style: none;">
-                        <li style="margin-bottom: 20px;">
-                            <strong style="color: white; display: block;">Centralized Command Center</strong>
-                            Every order, payment, and staff action is tracked in real-time.
+                    <h3>Stop Juggling Apps</h3>
+                    <p style="color: var(--text-secondary); margin-top: 20px;">
+                        Most business owners spend 70% of their time on operation—checking WhatsApp, verifying UTR transfers, and manually assigning staff tasks. 
+                    </p>
+                    <p style="color: var(--text-secondary); margin-top: 15px;">
+                        Timora eliminates this friction by consolidating your entire business into a single command center.
+                    </p>
+                </div>
+                <div class="product-visual glass-card" style="border-color: rgba(244, 63, 94, 0.2);">
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
+                        <li style="color: #f43f5e; display: flex; align-items: center; gap: 10px;">
+                            <span class="material-symbols-outlined">cancel</span> No more missed WhatsApp orders
                         </li>
-                        <li style="margin-bottom: 20px;">
-                            <strong style="color: white; display: block;">Automated Verification</strong>
-                            Integrate with payment gateways to verify transactions instantly.
+                        <li style="color: #f43f5e; display: flex; align-items: center; gap: 10px;">
+                            <span class="material-symbols-outlined">cancel</span> No more manual payment checks
                         </li>
-                        <li style="margin-bottom: 20px;">
-                            <strong style="color: white; display: block;">Team Accountability</strong>
-                            Assign roles and monitor performance across your entire organization.
+                        <li style="color: #f43f5e; display: flex; align-items: center; gap: 10px;">
+                            <span class="material-symbols-outlined">cancel</span> No more operational blindness
                         </li>
                     </ul>
                 </div>
@@ -92,106 +79,78 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Key Features Detail -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Key Features</h2>
+            <h2 class="section-title">Features Built for Scale</h2>
             <div class="features-grid">
-                <div class="feature-item">
+                <div class="feature-item glass-card">
                     <span class="material-symbols-outlined feature-icon">order_approve</span>
-                    <h3>Order Management</h3>
-                    <p>Track orders from placement to delivery with status updates.</p>
+                    <h3>Smart Order Management</h3>
+                    <p>Automated order queue with real-time status tracking for both you and your customers.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item glass-card">
                     <span class="material-symbols-outlined feature-icon">account_balance_wallet</span>
-                    <h3>Payment Integration</h3>
-                    <p>Seamlessly connect with local and international payment providers.</p>
+                    <h3>UPI & Payment Verification</h3>
+                    <p>Instant verification of UTR numbers and automated reconciliation of business accounts.</p>
                 </div>
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">admin_panel_settings</span>
-                    <h3>Admin Dashboard</h3>
-                    <p>Powerful tools for owners to oversee all business operations.</p>
+                <div class="feature-item glass-card">
+                    <span class="material-symbols-outlined feature-icon">group_work</span>
+                    <h3>Team Collaboration</h3>
+                    <p>Assign specific roles (Staff, Delivery, Admin) and track performance across your local team.</p>
                 </div>
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">badge</span>
-                    <h3>Employee Roles</h3>
-                    <p>Custom permissions for staff, managers, and delivery personnel.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">analytics</span>
-                    <h3>Deep Analytics</h3>
-                    <p>Visualize revenue, peak times, and customer retention metrics.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">notifications_active</span>
-                    <h3>Smart Alerts</h3>
-                    <p>Get notified about new orders and payment confirmations instantly.</p>
+                <div class="feature-item glass-card">
+                    <span class="material-symbols-outlined feature-icon">monitoring</span>
+                    <h3>Revenue Analytics</h3>
+                    <p>Powerful charts and reporting tools to understand your profit margins and growth trends.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="cta-section" style="background: rgba(255, 255, 255, 0.02);">
+    <!-- Pricing (Imported from Home) -->
+    <section class="features" id="pricing" style="background: rgba(0, 168, 232, 0.02);">
         <div class="container">
-            <h2 class="section-title">Workflow in 3 Steps</h2>
-            <div class="features-grid" style="text-align: center;">
-                <div>
-                    <h1 class="gradient-text" style="font-size: 4rem;">1</h1>
-                    <h3>Sign Up</h3>
-                    <p>Register your company and configure your product catalog.</p>
-                </div>
-                <div>
-                    <h1 class="gradient-text" style="font-size: 4rem;">2</h1>
-                    <h3>Receive Orders</h3>
-                    <p>Share your product links and start receiving automated orders.</p>
-                </div>
-                <div>
-                    <h1 class="gradient-text" style="font-size: 4rem;">3</h1>
-                    <h3>Manage & Scale</h3>
-                    <p>Process payments and manage delivery via your dashboard.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="features" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Choose Your Plan</h2>
+            <h2 class="section-title">Choose Your Scale</h2>
             <div class="features-grid">
-                <div class="glass-card feature-item">
+                <!-- Starter -->
+                <div class="glass-card pricing-card">
                     <h3>Starter</h3>
-                    <h2 class="gradient-text">$49/mo</h2>
-                    <p style="margin: 20px 0;">Perfect for small teams starting automation.</p>
-                    <ul style="color: var(--text-secondary); margin-bottom: 30px;">
-                        <li>Up to 500 orders/mo</li>
-                        <li>Basic Analytics</li>
-                        <li>3 Staff Seats</li>
+                    <div class="price-val">₹999<span>/mo</span></div>
+                    <p style="margin-bottom: 30px;">Perfect for small teams starting automation.</p>
+                    <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left;">
+                        <li>✓ Up to 100 Orders/mo</li>
+                        <li>✓ Basic Dashboards</li>
+                        <li>✓ 2 Staff Seats</li>
+                        <li>✓ Email Support</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Get Started</a>
+                    <a href="#" class="btn btn-secondary" style="width: 100%; text-align: center;">Get Started</a>
                 </div>
-                <div class="glass-card feature-item" style="border-color: var(--primary);">
+                <!-- Pro -->
+                <div class="glass-card pricing-card featured">
                     <h3>Pro</h3>
-                    <h2 class="gradient-text">$129/mo</h2>
-                    <p style="margin: 20px 0;">The best choice for growing businesses.</p>
-                    <ul style="color: var(--text-secondary); margin-bottom: 30px;">
-                        <li>Unlimited orders</li>
-                        <li>Advanced Insights</li>
-                        <li>15 Staff Seats</li>
-                        <li>Priority Support</li>
+                    <div class="price-val">₹2,999<span>/mo</span></div>
+                    <p style="margin-bottom: 30px;">The best choice for growing businesses.</p>
+                    <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left;">
+                        <li>✓ Unlimited Orders</li>
+                        <li>✓ Advanced Revenue Insights</li>
+                        <li>✓ 10 Staff Seats</li>
+                        <li>✓ Priority 24/7 Support</li>
+                        <li>✓ Custom Payment Rules</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Start Free Trial</a>
+                    <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Start Free Trial</a>
                 </div>
-                <div class="glass-card feature-item">
+                <!-- Premium -->
+                <div class="glass-card pricing-card">
                     <h3>Premium</h3>
-                    <h2 class="gradient-text">$299/mo</h2>
-                    <p style="margin: 20px 0;">Enterprise-grade features and scaling.</p>
-                    <ul style="color: var(--text-secondary); margin-bottom: 30px;">
-                        <li>Custom Integrations</li>
-                        <li>White-labeling</li>
-                        <li>Unlimited Staff</li>
-                        <li>Dedicated Manager</li>
+                    <div class="price-val">₹4,999<span>/mo</span></div>
+                    <p style="margin-bottom: 30px;">Enterprise-grade features and scaling.</p>
+                    <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left;">
+                        <li>✓ Everything in Pro</li>
+                        <li>✓ White-label Dashboards</li>
+                        <li>✓ Custom Integrations</li>
+                        <li>✓ Dedicated Account Manager</li>
+                        <li>✓ Multi-location Support</li>
                     </ul>
                     <a href="contact.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Contact Sales</a>
                 </div>
@@ -199,6 +158,19 @@
         </div>
     </section>
 
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="section-title">Ready to take control of your business?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 40px;">Join 100+ businesses using Timora to automate their operations.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn btn-primary">Start Free Trial Now</a>
+                <a href="contact.html" class="btn btn-secondary">Book Discovery Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -210,10 +182,10 @@
                 </div>
                 <div class="footer-links">
                     <ul class="nav-links" style="display: flex;">
-                        <li><a href="products.html">Products</a></li>
+                        <li><a href="timora.html">Timora</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="#">Security</a></li>
                     </ul>
                 </div>
             </div>

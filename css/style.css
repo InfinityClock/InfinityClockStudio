@@ -319,14 +319,124 @@ footer {
     border: 1px solid var(--border);
 }
 
-/* Responsive */
+/* --- Hero Refinement --- */
 
-@media (max-width: 992px) {
-    .hero h1 { font-size: 3rem; }
-    .product-row { flex-direction: column; text-align: center; }
+.hero h1 {
+    font-size: 4.5rem; /* Larger for impact */
+    margin-bottom: 25px;
 }
 
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero h1 { font-size: 2.5rem; }
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+/* --- Problem/Solution Sections --- */
+
+.problem-section {
+    padding: var(--section-padding);
+    background: rgba(244, 63, 94, 0.03); /* Subtle red tint for pain points */
+}
+
+body.light-theme .problem-section {
+    background: rgba(244, 63, 94, 0.05);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.problem-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    transition: 0.3s;
+}
+
+.problem-card h3 {
+    color: #f43f5e;
+    margin-bottom: 15px;
+}
+
+/* --- Who is this for --- */
+
+.audience-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.audience-tag {
+    background: var(--bg-card);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    font-weight: 500;
+}
+
+/* --- Pricing refined --- */
+
+.pricing-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card.featured {
+    border-color: var(--primary);
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0, 168, 232, 0.2);
+}
+
+.pricing-card.featured::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 40px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    transform: rotate(45deg);
+}
+
+.price-val {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.price-val span {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* --- Auth Buttons --- */
+
+.nav-auth {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-login {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.btn-signup {
+    padding: 8px 20px;
 }
