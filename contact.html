@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
         .hero { padding: 180px 0 80px; text-align: center; }
-        .accent-blue { color: var(--primary); font-weight: 600; }
         .section-tag { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; }
-        input, select, textarea { transition: 0.3s; }
-        input:focus, select:focus, textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(0, 168, 232, 0.1); }
+        .accent-blue { color: var(--primary); font-weight: 600; }
     </style>
 </head>
 <body class="reveal">
@@ -26,65 +24,66 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="timora.html">Product</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="timora.html">Timora</a></li>
                 <li><a href="index.html#pricing">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="nav-auth">
+             <div class="nav-auth">
                 <a href="#" class="btn-login">Login</a>
-                <a href="#" class="btn btn-primary btn-signup">Start Free Trial</a>
+                <a href="contact.html" class="btn btn-primary btn-signup">Get a Website</a>
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <span class="section-tag reveal">Connect Globally</span>
-            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Let's Scale Your <br> Business Together</h1>
-            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 800px; margin: 30px auto;">Connect with our global operations team to see how Timora can transform your business.</p>
+            <span class="section-tag reveal">Contact Us</span>
+            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Scale Your Business <br> Faster</h1>
+            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 800px; margin: 30px auto;">Whether you need a high-converting website or a powerful business automation system, we're ready to build your future.</p>
         </div>
     </header>
 
     <section class="section-padding-large">
         <div class="container">
-            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 80px;">
-                <div class="glass-card reveal" style="padding: 50px; border-color: rgba(0, 168, 232, 0.1); animation-delay: 0.4s;">
+            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px;">
+                <div class="glass-card reveal">
                     <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Full Name" required style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
                         </div>
-                        <div class="form-group" style="margin-top: 25px;">
-                            <label for="email">Work Email</label>
-                            <input type="email" id="email" placeholder="email@company.com" required style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label>Work Email</label>
+                            <input type="email" placeholder="email@company.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
                         </div>
-                        <div class="form-group" style="margin-top: 25px;">
-                            <label for="business">Industry</label>
-                            <select id="business" style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;">
-                                <option value="delivery">Logistics & Delivery</option>
-                                <option value="manufacturing">Manufacturing</option>
-                                <option value="service" selected>Service Operations</option>
-                                <option value="other">Other Scaling Business</option>
+                         <div class="form-group" style="margin-bottom: 20px;">
+                            <label>Product of Interest</label>
+                            <select style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
+                                <option>Website Development</option>
+                                <option>Timora SaaS Platform</option>
+                                <option>Full Automation Strategy</option>
                             </select>
                         </div>
-                        <div class="form-group" style="margin-top: 25px;">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell us about your global operations..." rows="4" style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary); margin-top: 10px;"></textarea>
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label>Project Details</label>
+                            <textarea rows="4" placeholder="Tell us about your business goals..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 40px; padding: 15px;">Send Inquiry</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
                     </form>
                 </div>
-                <div class="contact-info reveal" style="animation-delay: 0.6s;">
-                    <div style="margin-bottom: 60px;">
-                         <span class="section-tag">Discovery</span>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Book a Product Demo</h2>
-                        <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">Ready for a live walkthrough? Connect with an international operations specialist to see Timora's global potential.</p>
-                        <a href="#" class="btn btn-secondary" style="padding: 12px 30px;">Schedule Global Call</a>
+                <div class="contact-info reveal">
+                    <h2 style="margin-bottom: 20px;">Headquarters</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 40px;">Engineering systems for modern service businesses worldwide.</p>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <span class="material-symbols-outlined accent-blue">mail</span>
+                        <p style="margin-top: 10px;">hello@infinityclock.studio</p>
                     </div>
-                    <div>
-                        <h3 style="margin-bottom: 15px;">24/7 Global Support</h3>
-                        <p style="color: var(--text-secondary);">Our team is available across all timezones.</p>
-                        <p class="accent-blue" style="font-size: 1.25rem;">global@infinityclock.studio</p>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <span class="material-symbols-outlined accent-blue">public</span>
+                        <p style="margin-top: 10px;">Global Operations Hub</p>
                     </div>
                 </div>
             </div>
@@ -99,18 +98,15 @@
                     <a href="index.html" class="logo footer-logo">
                         <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 35px; vertical-align: middle;">
                     </a>
-                    <p>Building the future of business automation worldwide.</p>
+                    <p>Websites That Work. Systems That Scale.</p>
                 </div>
                 <div class="footer-links">
                     <ul class="nav-links" style="display: flex;">
-                        <li><a href="timora.html">Timora</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="timora.html">Timora SaaS</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-            </div>
-            <div style="margin-top: 40px; text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
-                <p>&copy; 2026 Infinity Clock Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
