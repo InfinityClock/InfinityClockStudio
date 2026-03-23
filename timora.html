@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timora | Your Business Commands Center</title>
-    <meta name="description" content="Timora is the complete business automation platform for modern service companies. Manage orders, payments, and teams in one place.">
-    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .hero { padding: 160px 0 100px; text-align: center; }
+        .accent-blue { color: var(--primary); font-weight: 600; }
+        .feature-item { transition: 0.5s; }
+        .feature-item:hover { transform: translateY(-10px); }
+    </style>
 </head>
-<body>
+<body class="reveal">
 
     <!-- Navigation -->
     <nav class="nav-el scrolled" id="navbar">
@@ -33,140 +37,98 @@
     </nav>
 
     <!-- Product Hero -->
-    <header class="hero" style="background: linear-gradient(to bottom, rgba(0, 168, 232, 0.05), transparent);">
+    <header class="hero">
         <div class="container">
-            <h4 class="gradient-text">The Business Engine</h4>
-            <h1 class="gradient-text">Run Your Entire Business On Time</h1>
-            <p>From order placement to final payment verification, Timora automates every step of your workflow.</p>
-            <div class="hero-btns">
+            <h4 class="accent-blue reveal">The Business Engine</h4>
+            <h1 class="gradient-text reveal" style="animation-delay: 0.1s;">Run Your Entire Business <br> On Time</h1>
+            <p class="reveal" style="animation-delay: 0.3s;">From order placement to final payment verification, Timora automates every step of your workflow with pixel-perfect precision.</p>
+            <div class="hero-btns reveal" style="animation-delay: 0.5s;">
                 <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
                 <a href="contact.html" class="btn btn-secondary">Request Demo</a>
             </div>
-            <div class="hero-visual">
-                <img src="assets/timora-preview.png" alt="Timora Dashboard Overview">
+            <div class="hero-visual reveal" style="animation-delay: 0.7s;">
+                <img src="assets/timora-preview.png" alt="Timora Dashboard Overview" style="border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
             </div>
         </div>
     </header>
 
     <!-- Problem / Solution Detailed -->
-    <section class="problem-section">
+    <section class="section-padding-large" style="background: #070d1a;">
         <div class="container">
-            <h2 class="section-title">Why Businesses Need Timora</h2>
-            <div class="product-row" style="margin-bottom: 80px;">
-                <div class="product-content">
-                    <h3>Stop Juggling Apps</h3>
-                    <p style="color: var(--text-secondary); margin-top: 20px;">
-                        Most business owners spend 70% of their time on operation—checking WhatsApp, verifying UTR transfers, and manually assigning staff tasks. 
+            <div class="product-row align-center">
+                <div class="product-content reveal">
+                    <h2 class="section-title" style="text-align: left; font-size: 3rem;">Stop Juggling Apps</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.25rem; margin-top: 20px;">
+                        Most business owners spend 70% of their time on operations—checking WhatsApp, manually verifying UTR transfers, and assigning staff. 
                     </p>
                     <p style="color: var(--text-secondary); margin-top: 15px;">
-                        Timora eliminates this friction by consolidating your entire business into a single command center.
+                        Timora eliminates this friction by consolidating your entire business into a single high-performance command center.
                     </p>
+                    <div style="margin-top: 40px;">
+                         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <span class="material-symbols-outlined accent-blue">cancel</span>
+                            <p style="color: var(--text-secondary);">No more missed WhatsApp orders</p>
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <span class="material-symbols-outlined accent-blue">cancel</span>
+                            <p style="color: var(--text-secondary);">No more manual payment auditing</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-visual glass-card" style="border-color: rgba(244, 63, 94, 0.2);">
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
-                        <li style="color: #f43f5e; display: flex; align-items: center; gap: 10px;">
-                            <span class="material-symbols-outlined">cancel</span> No more missed WhatsApp orders
-                        </li>
-                        <li style="color: #f43f5e; display: flex; align-items: center; gap: 10px;">
-                            <span class="material-symbols-outlined">cancel</span> No more manual payment checks
-                        </li>
-                        <li style="color: #f43f5e; display: flex; align-items: center; gap: 10px;">
-                            <span class="material-symbols-outlined">cancel</span> No more operational blindness
-                        </li>
-                    </ul>
+                <div class="product-visual reveal" style="animation-delay: 0.2s;">
+                    <img src="assets/hero-dashboard.png" alt="Timora Interface" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Features Detail -->
-    <section class="features">
+    <!-- Detailed Features Grid -->
+    <section class="section-padding-large">
         <div class="container">
-            <h2 class="section-title">Features Built for Scale</h2>
+            <h2 class="section-title reveal">Built for Scale</h2>
             <div class="features-grid">
-                <div class="feature-item glass-card">
+                <div class="feature-item glass-card reveal">
                     <span class="material-symbols-outlined feature-icon">order_approve</span>
-                    <h3>Smart Order Management</h3>
-                    <p>Automated order queue with real-time status tracking for both you and your customers.</p>
+                    <h3>Smart Order Queue</h3>
+                    <p>Intelligent sorting and status tracking that ensures every order is fulfilled on time.</p>
                 </div>
-                <div class="feature-item glass-card">
-                    <span class="material-symbols-outlined feature-icon">account_balance_wallet</span>
-                    <h3>UPI & Payment Verification</h3>
-                    <p>Instant verification of UTR numbers and automated reconciliation of business accounts.</p>
+                <div class="feature-item glass-card reveal" style="animation-delay: 0.1s;">
+                    <span class="material-symbols-outlined feature-icon">payments</span>
+                    <h3>UPI Verification</h3>
+                    <p>Proprietary reconciliation engine for instant UTR automated verification.</p>
                 </div>
-                <div class="feature-item glass-card">
-                    <span class="material-symbols-outlined feature-icon">group_work</span>
-                    <h3>Team Collaboration</h3>
-                    <p>Assign specific roles (Staff, Delivery, Admin) and track performance across your local team.</p>
+                <div class="feature-item glass-card reveal" style="animation-delay: 0.2s;">
+                    <span class="material-symbols-outlined feature-icon">groups</span>
+                    <h3>Team Command</h3>
+                    <p>Assign tasks, track performance, and manage roles for your entire operations team.</p>
                 </div>
-                <div class="feature-item glass-card">
-                    <span class="material-symbols-outlined feature-icon">monitoring</span>
-                    <h3>Revenue Analytics</h3>
-                    <p>Powerful charts and reporting tools to understand your profit margins and growth trends.</p>
+                <div class="feature-item glass-card reveal" style="animation-delay: 0.3s;">
+                    <span class="material-symbols-outlined feature-icon">query_stats</span>
+                    <h3>Deep Analytics</h3>
+                    <p>Granular revenue insights and operational health reporting at your fingertips.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing (Imported from Home) -->
-    <section class="features" id="pricing" style="background: rgba(0, 168, 232, 0.02);">
-        <div class="container">
-            <h2 class="section-title">Choose Your Scale</h2>
-            <div class="features-grid">
-                <!-- Starter -->
-                <div class="glass-card pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price-val">₹999<span>/mo</span></div>
-                    <p style="margin-bottom: 30px;">Perfect for small teams starting automation.</p>
-                    <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left;">
-                        <li>✓ Up to 100 Orders/mo</li>
-                        <li>✓ Basic Dashboards</li>
-                        <li>✓ 2 Staff Seats</li>
-                        <li>✓ Email Support</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary" style="width: 100%; text-align: center;">Get Started</a>
-                </div>
-                <!-- Pro -->
-                <div class="glass-card pricing-card featured">
-                    <h3>Pro</h3>
+    <!-- Pricing (Simplified Highlight) -->
+    <section class="section-padding-large" style="background: rgba(0, 168, 232, 0.02);" id="pricing">
+        <div class="container text-center">
+            <h2 class="section-title reveal">Ready to take control?</h2>
+            <div class="features-grid" style="max-width: 1000px; margin: 60px auto;">
+                 <div class="glass-card pricing-card featured reveal">
+                    <h3>Pro Plan</h3>
                     <div class="price-val">₹2,999<span>/mo</span></div>
-                    <p style="margin-bottom: 30px;">The best choice for growing businesses.</p>
-                    <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left;">
-                        <li>✓ Unlimited Orders</li>
-                        <li>✓ Advanced Revenue Insights</li>
-                        <li>✓ 10 Staff Seats</li>
-                        <li>✓ Priority 24/7 Support</li>
-                        <li>✓ Custom Payment Rules</li>
+                    <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left; list-style: none;">
+                        <li style="margin-bottom: 10px;">✓ Unlimited Orders</li>
+                        <li style="margin-bottom: 10px;">✓ Advanced Revenue Insights</li>
+                        <li style="margin-bottom: 10px;">✓ 10 Staff Seats</li>
+                        <li style="margin-bottom: 10px;">✓ Priority 24/7 Support</li>
                     </ul>
                     <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Start Free Trial</a>
                 </div>
-                <!-- Premium -->
-                <div class="glass-card pricing-card">
-                    <h3>Premium</h3>
-                    <div class="price-val">₹4,999<span>/mo</span></div>
-                    <p style="margin-bottom: 30px;">Enterprise-grade features and scaling.</p>
-                    <ul style="color: var(--text-secondary); margin-bottom: 40px; text-align: left;">
-                        <li>✓ Everything in Pro</li>
-                        <li>✓ White-label Dashboards</li>
-                        <li>✓ Custom Integrations</li>
-                        <li>✓ Dedicated Account Manager</li>
-                        <li>✓ Multi-location Support</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Contact Sales</a>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="cta-section">
-        <div class="container text-center">
-            <h2 class="section-title">Ready to take control of your business?</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 40px;">Join 100+ businesses using Timora to automate their operations.</p>
-            <div class="hero-btns">
-                <a href="#" class="btn btn-primary">Start Free Trial Now</a>
-                <a href="contact.html" class="btn btn-secondary">Book Discovery Call</a>
-            </div>
+            <a href="index.html#pricing" class="accent-blue">View all plans</a>
         </div>
     </section>
 
@@ -196,5 +158,18 @@
     </footer>
 
     <script src="js/theme.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal, .glass-card, .section-title').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

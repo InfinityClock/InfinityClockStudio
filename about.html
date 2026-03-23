@@ -8,8 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .hero { padding: 160px 0 80px; text-align: center; }
+        .accent-blue { color: var(--primary); font-weight: 600; }
+    </style>
 </head>
-<body>
+<body class="reveal">
 
     <!-- Navigation -->
     <nav class="nav-el scrolled" id="navbar">
@@ -30,41 +34,30 @@
         </div>
     </nav>
 
-    <header class="hero" style="padding: 120px 0 60px;">
+    <header class="hero">
         <div class="container">
-            <h4 class="gradient-text">Our Story</h4>
-            <h1 class="gradient-text">Building the Infrastructure for Modern Service Businesses</h1>
-            <p>At Infinity Clock Studio, we believe that every business deserves sophisticated automation without the complexity of traditional enterprise software.</p>
+            <h4 class="accent-blue reveal">Our Mission</h4>
+            <h1 class="gradient-text reveal" style="animation-delay: 0.1s;">The Platform for <br> Modern Business</h1>
+            <p class="reveal" style="animation-delay: 0.3s;">We build the digital infrastructure that enables service companies to scale automatically.</p>
         </div>
     </header>
 
-    <section class="features">
+    <section class="section-padding-large">
         <div class="container">
-            <div class="product-row">
-                <div class="product-content">
-                    <h2>Our Mission</h2>
-                    <p style="color: var(--text-secondary); margin-top: 20px; font-size: 1.1rem;">
-                        Our mission is to help local and service-based businesses move from manual "WhatsApp management" to professional, automated digital operations. 
+            <div class="product-row align-center">
+                <div class="product-content reveal">
+                    <h2>Infrastructure for Growth</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.25rem; margin-top: 20px;">
+                        Infinity Clock Studio was founded with a single goal: to provide world-class automation software for businesses that need to scale efficiently.
                     </p>
-                    <p style="color: var(--text-secondary); margin-top: 15px; font-size: 1.1rem;">
-                        We built Timora because we saw a gap: small service businesses were being left behind by high-end SaaS tools. We're here to change that.
+                    <p style="color: var(--text-secondary); margin-top: 15px;">
+                        Our core product, Timora, represents thousands of hours of operational research and pixel-perfect design. We don't just build features; we build workflows.
                     </p>
                 </div>
-                <div class="product-visual glass-card" style="text-align: center; padding: 40px;">
-                    <span class="material-symbols-outlined" style="font-size: 5rem; color: var(--primary); margin-bottom: 20px;">update</span>
-                    <h3>Focused on Efficiency</h3>
+                <div class="product-visual glass-card reveal" style="padding: 60px; text-align: center; border-color: rgba(0, 168, 232, 0.1); animation-delay: 0.2s;">
+                    <span class="material-symbols-outlined" style="font-size: 6rem; color: var(--primary); margin-bottom: 20px;">rocket_launch</span>
+                    <h3>Timora Engine</h3>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container text-center">
-            <h2 class="section-title">Join our journey</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 40px;">We're just getting started in revolutionizing how service businesses run.</p>
-            <div class="hero-btns">
-                <a href="timora.html" class="btn btn-primary">Discover Timora</a>
-                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -84,7 +77,6 @@
                         <li><a href="timora.html">Timora</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Privacy</a></li>
                     </ul>
                 </div>
             </div>
@@ -95,5 +87,15 @@
     </footer>
 
     <script src="js/theme.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
