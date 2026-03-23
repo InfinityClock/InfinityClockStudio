@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Websites Designed for Every Business</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .hero { padding: 180px 0 80px; text-align: center; }
+        .section-tag { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; }
+        .industry-card { position: relative; overflow: hidden; border-radius: 20px; background: var(--bg-card); transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .industry-card:hover { transform: translateY(-15px); border-color: var(--primary); box-shadow: 0 40px 80px rgba(0, 168, 232, 0.15); }
+        .card-image-wrap { position: relative; height: 260px; overflow: hidden; }
+        .card-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+        .industry-card:hover .card-image-wrap img { transform: scale(1.1); }
+        .sample-badge { position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.6); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; z-index: 2; backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .card-info { padding: 30px; text-align: left; }
+        .industry-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; margin-top: 80px; }
+        .accent-blue { color: var(--primary); font-weight: 600; }
+    </style>
+</head>
+<body class="reveal">
+
+    <!-- Navigation -->
+    <nav class="nav-el scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 40px; vertical-align: middle;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="timora.html">Timora</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+             <div class="nav-auth">
+                <a href="#" class="btn-login">Login</a>
+                <a href="contact.html" class="btn btn-primary btn-signup">Get a Website</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <header class="hero">
+        <div class="container">
+            <span class="section-tag reveal">Industry Expertise</span>
+            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Websites Designed <br> for Every Business</h1>
+            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 800px; margin: 30px auto 50px;">
+                We create modern, high-performing websites tailored to your industry — built to convert visitors into customers.
+            </p>
+            <div class="hero-btns reveal" style="animation-delay: 0.5s; justify-content: center;">
+                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                <a href="#industries" class="btn btn-secondary">View Templates</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Industry Showcase Grid -->
+    <section class="section-padding-large" id="industries" style="background: #070d1a;">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Templates</span>
+                <h2 class="section-title">Tailored Solutions by Industry</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Choose a style that matches your brand vision. All templates are fully customizable to your specific business needs.</p>
+            </div>
+            
+            <div class="industry-grid">
+                <!-- 1. 3D Printing -->
+                <div class="industry-card reveal">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-3d-printing.png" alt="3D Printing Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>3D Printing & Manufacturing</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Precision-focused UI for custom product manufacturers and 3D labs.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 2. Water Delivery -->
+                <div class="industry-card reveal" style="animation-delay: 0.1s;">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-water-delivery.png" alt="Water Delivery Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Water Delivery Services</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Clean, subscription-focused design for regional delivery operations.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 3. Appliance Repair -->
+                <div class="industry-card reveal" style="animation-delay: 0.2s;">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-appliance-repair.png" alt="Appliance Repair Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Appliance Repair Services</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Authority-building layouts with prominent booking and contact systems.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 4. Dental Clinics -->
+                <div class="industry-card reveal">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-dental.png" alt="Dental Clinic Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Modern Dental Clinics</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Pristine healthcare aesthetic with integrated appointment scheduling.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 5. Beauty Salon -->
+                <div class="industry-card reveal" style="animation-delay: 0.1s;">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-beauty.png" alt="Beauty Salon Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Beauty Salons & Spas</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Elegant lifestyle design for premium wellness and beauty providers.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 6. Restaurant -->
+                <div class="industry-card reveal" style="animation-delay: 0.2s;">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-restaurant.png" alt="Restaurant Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Restaurants & Cafes</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Appetizing visuals with menu showcases and reservation components.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 7. Real Estate -->
+                <div class="industry-card reveal">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-real-estate.png" alt="Real Estate Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Real Estate Agencies</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Sophisticated property-tech UI with advanced listing and search frames.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 8. Fitness -->
+                <div class="industry-card reveal" style="animation-delay: 0.1s;">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-fitness.png" alt="Gym Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Fitness Clubs & Gyms</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">High-energy, dynamic layouts for athletic centers and studios.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 9. Logistics -->
+                <div class="industry-card reveal" style="animation-delay: 0.2s;">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-logistics.png" alt="Logistics Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Logistics & Freight</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Structured industrial design for global and regional delivery companies.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+
+                <!-- 10. Local Shop -->
+                <div class="industry-card reveal">
+                    <div class="card-image-wrap">
+                        <span class="sample-badge">Sample Template</span>
+                        <img src="assets/niche-local-shop.png" alt="Local Shop Website Template">
+                    </div>
+                    <div class="card-info">
+                        <h3>Boutique Retail & Shops</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Charming storefront UI for local businesses and independent retailers.</p>
+                        <a href="contact.html" class="accent-blue">Get This Style →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section-padding-large">
+        <div class="container text-center">
+            <span class="section-tag">Process</span>
+            <h2 class="section-title">How We Build Your Website</h2>
+            <div class="features-grid" style="margin-top: 80px;">
+                <div class="feature-item reveal">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">01</div>
+                    <h4>Understand</h4>
+                    <p style="color: var(--text-secondary);">We analyze your niche competitors and unique business goals.</p>
+                </div>
+                <div class="feature-item reveal" style="animation-delay: 0.1s;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">02</div>
+                    <h4>Design</h4>
+                    <p style="color: var(--text-secondary);">We craft a pixel-perfect mockup based on your chosen industry style.</p>
+                </div>
+                <div class="feature-item reveal" style="animation-delay: 0.2s;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">03</div>
+                    <h4>Develop</h4>
+                    <p style="color: var(--text-secondary);">We build your site with clean code and high-performance hosting.</p>
+                </div>
+                <div class="feature-item reveal" style="animation-delay: 0.3s;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">04</div>
+                    <h4>Optimize</h4>
+                    <p style="color: var(--text-secondary);">We launch and optimize for maximum conversions and speed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section" style="background: linear-gradient(135deg, #0a1128 0%, #001f3f 100%);">
+        <div class="container text-center">
+            <div class="cta-box reveal">
+                <h2 style="font-size: 3.5rem;">Get a Website That Works <br> for Your Business</h2>
+                <p style="font-size: 1.2rem; margin: 30px auto 50px; max-width: 800px;">Stop losing customers to outdated design. Let's build your modern digital storefront today.</p>
+                <div class="hero-btns" style="justify-content: center;">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="contact.html" class="btn btn-secondary" style="border-color: white;">Book a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 35px; vertical-align: middle;">
+                    </a>
+                    <p>Websites That Work. Systems That Scale.</p>
+                </div>
+                <div class="footer-links">
+                    <ul class="nav-links" style="display: flex;">
+                         <li><a href="index.html">Home</a></li>
+                        <li><a href="timora.html">Timora SaaS</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 40px; text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <p>&copy; 2026 Infinity Clock Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('reveal');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
