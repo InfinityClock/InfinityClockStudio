@@ -5,17 +5,17 @@
 
 :root {
     /* Colors */
-    --bg-dark: #0f172a;
-    --bg-card: #1e293b;
+    --bg-dark: #0a1128; /* Slightly bluer dark */
+    --bg-card: #152238;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --primary: #6366f1;
-    --primary-hover: #4f46e5;
-    --secondary: #a855f7;
+    --primary: #00a8e8; /* Sky Blue from logo */
+    --primary-hover: #007ea7;
+    --secondary: #003459; /* Dark Blue from logo */
     --accent: #22d3ee;
-    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-    --glass: rgba(30, 41, 59, 0.7);
-    --border: rgba(255, 255, 255, 0.1);
+    --gradient: linear-gradient(135deg, var(--primary), #007ea7);
+    --glass: rgba(10, 17, 40, 0.7);
+    --border: rgba(0, 168, 232, 0.2);
     
     /* Spacing */
     --section-padding: 100px 20px;
@@ -119,6 +119,7 @@ ul {
 .gradient-text {
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
