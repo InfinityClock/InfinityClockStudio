@@ -3,92 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timora | The Business Operating System</title>
+    <title>Timora | The Modern Business OS</title>
     <link rel="stylesheet" href="css/professional.css">
     <link rel="icon" href="assets/logo.png">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body style="background: var(--brand-dark); color: white;">
+<body style="background: var(--brand-navy); color: white;">
 
     <!-- Navigation (Dark) -->
-    <nav class="nav-main" style="background: rgba(15, 23, 42, 0.8); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <nav class="nav-main" style="background: rgba(2, 6, 23, 0.85); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
-                <img src="assets/logo.png" alt="logo" style="height: 36px; filter: brightness(0) invert(1);">
-                <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: white; font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock</span>
+            <a href="index.html" style="display: flex; align-items: center; gap: 0.875rem; text-decoration: none;">
+                <img src="assets/logo.png" alt="logo" style="height: 40px; filter: brightness(0) invert(1);">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; color: white; font-size: 1.75rem; letter-spacing: -2px;">Infinity Clock</span>
             </a>
-            <div class="nav-desktop" style="display: flex; align-items: center; gap: 3rem;">
-                <a href="index.html" style="text-decoration: none; font-weight: 600; color: white;">Back to Home</a>
-                <a href="#waitlist" class="btn btn-primary" style="background: white; color: var(--brand-dark); box-shadow: none;">Join Waitlist</a>
+            <div style="display: flex; align-items: center; gap: 3.5rem;">
+                <a href="index.html" style="text-decoration: none; font-weight: 700; color: white; opacity: 0.7;">Back to Home</a>
+                <a href="#waitlist" class="btn btn-primary" style="background: white; color: var(--brand-navy); box-shadow: none;">Request Demo</a>
             </div>
         </div>
     </nav>
 
     <!-- Product Hero -->
-    <section style="padding: 160px 0 100px; text-align: center;">
+    <section style="padding: 180px 0 120px; text-align: center;">
         <div class="container">
-            <span class="badge-premium reveal" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">Q3 2026 ROADMAP</span>
-            <h1 class="reveal" style="font-size: 5rem; color: white; letter-spacing: -3px; margin-bottom: 1.5rem;">Timora. <br> Run your business <span style="color: var(--brand-primary);">on time.</span></h1>
-            <p class="reveal" style="font-size: 1.5rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.4;">
-                A high-fidelity business operating system designed for modern service industries. Unified orders, workflows, and payments in one command center.
+            <span class="badge-premium reveal" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid rgba(255,255,255,0.1);">Now in Closed Beta</span>
+            <h1 class="reveal" style="font-size: 6rem; line-height: 0.95; letter-spacing: -4px; margin-bottom: 2.5rem; color: white;">Timora.<br>Your business, <span style="color: var(--brand-primary);">on autopilot.</span></h1>
+            <p class="reveal" style="font-size: 1.75rem; color: var(--text-muted); max-width: 900px; margin: 0 auto; line-height: 1.4;">
+                A single, unified operating system to manage orders, automate workflows, and empower teams. Built for high-growth service operations.
             </p>
             
-            <div class="reveal" style="margin-top: 4rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                <form id="waitlist" style="max-width: 500px; width: 100%; display: flex; gap: 1rem; background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
-                    <input type="email" placeholder="Enter work email" required style="flex: 1; padding: 0.75rem 1.25rem; background: transparent; border: none; color: white; outline: none; font-family: inherit;">
-                    <button type="submit" class="btn btn-primary" style="background: white; color: var(--brand-dark);">Join Early Access</button>
+            <div class="reveal" id="waitlist" style="margin-top: 5rem; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+                 <form style="max-width: 550px; width: 100%; display: flex; gap: 1rem; background: rgba(255,255,255,0.03); padding: 0.75rem; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.05);">
+                    <input type="email" placeholder="Enter work email" required style="flex: 1; padding: 1rem 1.5rem; background: transparent; border: none; color: white; outline: none; font-family: inherit; font-size: 1.125rem;">
+                    <button type="submit" class="btn btn-primary" style="background: white; color: var(--brand-navy); padding: 1rem 2.5rem;">Join Beta</button>
                 </form>
-                <p style="font-size: 0.8125rem; color: #475569;">Already 50+ businesses in queue for the closed beta.</p>
+                <div style="display: flex; gap: 3rem; opacity: 0.4; font-weight: 800; font-size: 0.875rem; letter-spacing: 0.1em;">
+                    <span>50+ PILOT TEAMS</span>
+                    <span>Q4 2026 LAUNCH</span>
+                    <span>ENTERPRISE READY</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section style="background: rgba(255,255,255,0.02);">
+    <!-- Detailed Feature Blocks -->
+    <section style="background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03);">
         <div class="container">
-            <div class="grid-standard">
-                <div class="reveal">
-                    <div style="width: 48px; height: 48px; background: rgba(99, 102, 241, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;"><i data-lucide="workflow" style="color: var(--brand-primary); width: 24px;"></i></div>
-                    <h3 style="color: white; margin-bottom: 1rem;">Workflow Engine</h3>
-                    <p style="color: #64748b; font-size: 0.9375rem;">Custom, multi-stage pipelines to track every business entity from lead to fulfillment.</p>
-                </div>
-                <div class="reveal" style="animation-delay: 0.1s;">
-                    <div style="width: 48px; height: 48px; background: rgba(99, 102, 241, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;"><i data-lucide="credit-card" style="color: var(--brand-primary); width: 24px;"></i></div>
-                    <h3 style="color: white; margin-bottom: 1rem;">Global Revenue</h3>
-                    <p style="color: #64748b; font-size: 0.9375rem;">Integrated payment verification and reconciliation across multiple gateways and currencies.</p>
-                </div>
-                <div class="reveal" style="animation-delay: 0.2s;">
-                    <div style="width: 48px; height: 48px; background: rgba(99, 102, 241, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;"><i data-lucide="shield-lock" style="color: var(--brand-primary); width: 24px;"></i></div>
-                    <h3 style="color: white; margin-bottom: 1rem;">RBAC Security</h3>
-                    <p style="color: #64748b; font-size: 0.9375rem;">Enterprise-grade role-based access control ensuring your data stays isolated and secure.</p>
-                </div>
+            <div style="grid-template-columns: repeat(2, 1fr);" class="grid-standard">
+                 <div class="reveal card-saas" style="background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.05); padding: 4rem;">
+                    <div style="width: 56px; height: 56px; background: rgba(99, 102, 241, 0.1); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><i data-lucide="package" style="color: var(--brand-primary);"></i></div>
+                    <h3 style="color: white; font-size: 1.75rem; margin-bottom: 1.5rem;">Order Lifecycle</h3>
+                    <p style="color: var(--text-muted); font-size: 1.125rem;">Track every micro-stage from first inquiry to final delivery with absolute historical precision. Never lose a lead again.</p>
+                 </div>
+                  <div class="reveal card-saas" style="background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.05); padding: 4rem; animation-delay: 0.1s;">
+                    <div style="width: 56px; height: 56px; background: rgba(99, 102, 241, 0.1); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><i data-lucide="users" style="color: var(--brand-primary);"></i></div>
+                    <h3 style="color: white; font-size: 1.75rem; margin-bottom: 1.5rem;">Team Orchestration</h3>
+                    <p style="color: var(--text-muted); font-size: 1.125rem;">Assign roles, track performance, and unify communication. Your team works in a single, high-speed interface.</p>
+                 </div>
+                 <div class="reveal card-saas" style="background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.05); padding: 4rem; animation-delay: 0.2s;">
+                    <div style="width: 56px; height: 56px; background: rgba(99, 102, 241, 0.1); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><i data-lucide="bar-chart-big" style="color: var(--brand-primary);"></i></div>
+                    <h3 style="color: white; font-size: 1.75rem; margin-bottom: 1.5rem;">Real-time Dashboards</h3>
+                    <p style="color: var(--text-muted); font-size: 1.125rem;">Monitor revenue, order density, and logistics health as it happens. Make data-driven decisions with zero latency.</p>
+                 </div>
+                  <div class="reveal card-saas" style="background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.05); padding: 4rem; animation-delay: 0.3s;">
+                    <div style="width: 56px; height: 56px; background: rgba(99, 102, 241, 0.1); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><i data-lucide="shield-check" style="width: 28px; color: var(--brand-primary);"></i></div>
+                    <h3 style="color: white; font-size: 1.75rem; margin-bottom: 1.5rem;">Enterprise Security</h3>
+                    <p style="color: var(--text-muted); font-size: 1.125rem;">Multi-tenant data isolation and role-based access control (RBAC) designed for the most sensitive business operations.</p>
+                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases -->
+    <!-- Use Case Immersive -->
     <section>
         <div class="container">
-             <div style="text-align: center; margin-bottom: 5rem;">
-                <h2 style="color: white; font-size: 3rem;">Universal Utility</h2>
+             <div style="text-align: center; margin-bottom: 6rem;">
+                <span class="badge-premium" style="background: rgba(255,255,255,0.05); color: white;">Manage everything in one place</span>
+                <h2 style="color: white; font-size: 4rem; letter-spacing: -3px; margin-top: 1rem;">Scale without the mess.</h2>
              </div>
-             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem;">
-                <div class="reveal" style="background: rgba(255,255,255,0.03); padding: 3rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.05);">
-                    <h4 style="color: white; margin-bottom: 1rem;">3D Printing Services</h4>
-                    <p style="color: var(--text-muted);">Manage print queues, material inventory, and client verification in one unified pipeline.</p>
-                </div>
-                <div class="reveal" style="background: rgba(255,255,255,0.03); padding: 3rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.05);">
-                    <h4 style="color: white; margin-bottom: 1rem;">Service Operations</h4>
-                    <p style="color: var(--text-muted);">Coordinate field teams, verify onsite payments, and track equipment delivery statuses.</p>
-                </div>
+             <div class="reveal" style="background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid rgba(255,255,255,0.05); border-radius: 4rem; padding: 6rem; text-align: center;">
+                 <p style="color: var(--text-muted); font-size: 1.5rem; max-width: 900px; margin: 0 auto;">"Timora allowed us to replace four separate tools (WhatsApp, Sheets, Stripe, and Slack) with a single, high-speed operating system. Our efficiency literally doubled overnight."</p>
+                 <div style="margin-top: 3rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                    <div style="width: 48px; height: 48px; background: var(--bg-soft); border-radius: 50%;"></div>
+                    <div style="text-align: left;">
+                        <p style="font-weight: 700;">Arjun Gupta</p>
+                        <p style="font-size: 0.875rem; color: #475569;">Lead Strategist, Infinity Clock</p>
+                    </div>
+                 </div>
              </div>
         </div>
     </section>
 
     <!-- Footer (Minimal Dark) -->
-    <footer style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: #475569;">
+    <footer style="padding: 100px 0 60px; text-align: center; color: #475569; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container">
-            <p>&copy; 2026 Infinity Clock Studio Inc. Timora is a trademark of Infinity Clock.</p>
+             <p>&copy; 2026 Infinity Clock Studio Inc. All rights reserved.</p>
+             <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
+                <a href="index.html" style="color: #64748b; text-decoration: none;">Home</a>
+                <a href="contact.html" style="color: #64748b; text-decoration: none;">Inquire</a>
+                <a href="#waitlist" style="color: #64748b; text-decoration: none;">Beta</a>
+             </div>
         </div>
     </footer>
 
