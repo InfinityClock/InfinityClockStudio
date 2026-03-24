@@ -3,152 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Infinity Clock Studio</title>
+    <title>Services | High-Performance Business Systems</title>
     <link rel="stylesheet" href="css/professional.css">
     <link rel="icon" href="assets/logo.png">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- Header (Same as index) -->
-    <header class="header-main">
+    <!-- Navigation -->
+    <nav class="nav-main">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-                <img src="assets/logo.png" alt="logo" style="height: 32px;">
-                <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--brand-dark); font-size: 1.25rem;">Infinity Clock</span>
+            <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                <img src="assets/logo.png" alt="logo" style="height: 36px;">
+                <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock</span>
             </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link active">Services</a></li>
-                    <li><a href="timora.html" class="nav-link">Timora <span style="font-size: 0.65rem; background: var(--brand-accent); color: white; padding: 2px 6px; border-radius: 10px; margin-left: 4px;">COMING SOON</span></a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem;">Get Free Audit</a></li>
-                </ul>
-            </nav>
+            <div class="nav-desktop" style="display: flex; align-items: center; gap: 3rem;">
+                <a href="index.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Product</a>
+                <a href="services.html" style="text-decoration: none; font-weight: 600; color: var(--brand-dark);">Services</a>
+                <a href="about.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Solutions</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Get Free Audit</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Services Hero -->
-    <section style="padding: 140px 0 80px; background: var(--bg-soft); text-align: center; border-bottom: 1px solid var(--border-light);">
+    <section style="padding: 140px 0 100px; background: var(--bg-soft); text-align: center;">
         <div class="container">
-            <span class="section-tag">Deep Expertise</span>
-            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Solutions built for <br> <span class="text-gradient">modern operations</span></h1>
-            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">We don't just build software — we design the digital systems that allow your business to grow without friction.</p>
+            <span class="badge-premium reveal">Operational Engineering</span>
+            <h1 class="reveal" style="font-size: 4rem; letter-spacing: -2px; margin-bottom: 1.5rem;">Software built for <br> <span style="color: var(--brand-primary);">business momentum.</span></h1>
+            <p class="reveal" style="font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">We don't just solve technical problems — we remove operational friction so you can scale your core business.</p>
         </div>
     </section>
 
-    <!-- Detailed Services Sections -->
-    <section id="website-dev" style="padding: 100px 0;">
+    <!-- Pillar 1: Web Dev -->
+    <section>
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
                 <div class="reveal">
-                    <i data-lucide="layout" style="width: 48px; height: 48px; color: var(--brand-primary); margin-bottom: 1.5rem;"></i>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Website Development</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem;">
-                        Your digital storefront is more than just a site — it's your primary conversion engine. We build pixel-perfect, lightning-fast web experiences that turn visitors into loyal customers.
+                    <div class="icon-box"><i data-lucide="monitor"></i></div>
+                    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Elite Web Implementation</h2>
+                    <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 2.5rem; line-height: 1.8;">
+                        Your website is your primary conversion engine. We build pixel-perfect, lightning-fast digital storefronts that unify your brand expression with high-performance tracking and SEO architecture.
                     </p>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> High-Converting UI/UX Design</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> SEO & Performance Optimization</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Mobile-First Responsive Layouts</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 2rem;">Initiate My Project</a>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                         <div>
+                            <h4 style="margin-bottom: 0.75rem;">Conversion Driven</h4>
+                            <p style="font-size: 0.875rem; color: var(--text-muted);">Every element is designed to drive the user towards your primary KPI.</p>
+                         </div>
+                          <div>
+                            <h4 style="margin-bottom: 0.75rem;">Enterprise Grade</h4>
+                            <p style="font-size: 0.875rem; color: var(--text-muted);">Modular, maintainable codebases that grow with your company requirements.</p>
+                         </div>
+                    </div>
                 </div>
-                <div class="reveal" style="background: var(--bg-soft); border: 1px solid var(--border-light); border-radius: 2rem; height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <i data-lucide="monitor" style="width: 120px; height: 120px; color: var(--border-light); opacity: 0.5;"></i>
+                <div class="reveal" style="background: var(--bg-soft); border-radius: 2rem; border: 1px solid var(--border-light); height: 500px; animation-delay: 0.2s; display: flex; align-items: center; justify-content: center;">
+                     <i data-lucide="zap" style="width: 150px; height: 150px; color: var(--border-light); opacity: 0.5;"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="automation" style="padding: 100px 0; background: var(--bg-soft);">
+     <!-- Pillar 2: Automation -->
+    <section style="background: var(--bg-soft);">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                 <div class="reveal" style="background: white; border: 1px solid var(--border-light); border-radius: 2rem; height: 400px; display: flex; align-items: center; justify-content: center; order: 1;">
-                    <i data-lucide="settings" style="width: 120px; height: 120px; color: var(--border-light); opacity: 0.5;"></i>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                 <div class="reveal" style="background: white; border-radius: 2rem; border: 1px solid var(--border-light); height: 500px; order: 1; display: flex; align-items: center; justify-content: center;">
+                     <i data-lucide="settings" style="width: 150px; height: 150px; color: var(--border-light); opacity: 0.5;"></i>
                 </div>
                 <div class="reveal" style="order: 2;">
-                    <i data-lucide="database" style="width: 48px; height: 48px; color: var(--brand-primary); margin-bottom: 1.5rem;"></i>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Business Automation</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem;">
-                        Eliminate manual data entry and fragmented spreadsheets. We engineer unified internal systems that automate order processing, payment verification, and logistics.
+                    <div class="icon-box" style="background: rgba(16, 185, 129, 0.05); color: #10b981;"><i data-lucide="cpu"></i></div>
+                    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Operational Automation</h2>
+                    <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 2.5rem; line-height: 1.8;">
+                        Fragmented manual work is the silent killer of growth. We engineer unified internal systems that automate order processing, payment verification, and multi-stage workflow logistics.
                     </p>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Order Management Workflows</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Payment Integration & Verification</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Logistics & Freight Automation</li>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+                         <li style="display: flex; gap: 1rem; align-items: center; font-weight: 600;"><i data-lucide="check-circle" style="width: 20px; color: #10b981;"></i> Unified Internal Dashboards</li>
+                         <li style="display: flex; gap: 1rem; align-items: center; font-weight: 600;"><i data-lucide="check-circle" style="width: 20px; color: #10b981;"></i> Automatic Payment Tracking</li>
+                         <li style="display: flex; gap: 1rem; align-items: center; font-weight: 600;"><i data-lucide="check-circle" style="width: 20px; color: #10b981;"></i> Multi-platform Data Syncing</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 2rem;">Automate My Workflow</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="custom-solutions" style="padding: 100px 0;">
+    <!-- Final Section Link -->
+    <section style="text-align: center; border-top: 1px solid var(--border-light);">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div class="reveal">
-                    <i data-lucide="zap" style="width: 48px; height: 48px; color: var(--brand-primary); margin-bottom: 1.5rem;"></i>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Custom Solutions</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem;">
-                        Off-the-shelf software doesn't always fit. We build bespoke dashboards and tools that match your exact business logic and industry requirements.
-                    </p>
-                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> KPI Dashboards & Reporting</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Proprietary Internal Tools</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Legacy System Integrations</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 2rem;">Build My Custom Tool</a>
-                </div>
-                <div class="reveal" style="background: var(--bg-soft); border: 1px solid var(--border-light); border-radius: 2rem; height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <i data-lucide="bar-chart-3" style="width: 120px; height: 120px; color: var(--border-light); opacity: 0.5;"></i>
-                </div>
-            </div>
+            <h2 class="reveal" style="font-size: 3rem; margin-bottom: 2rem;">Ready to build your <br> <span class="text-gradient">high-performance engine?</span></h2>
+             <a href="contact.html" class="btn btn-primary" style="padding: 1.25rem 3.5rem; font-size: 1.125rem;">Initiate System Audit</a>
         </div>
     </section>
 
-    <!-- Footer (Same as index) -->
-    <footer class="footer-main">
+    <!-- Footer -->
+    <footer class="footer-saas">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem;">
-                <div>
-                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1.5rem;">
-                         <img src="assets/logo.png" alt="logo" style="height: 24px; filter: brightness(0) invert(1);">
-                         <span style="color: white; font-weight: 800; font-size: 1.25rem;">Infinity Clock</span>
-                    </a>
-                    <p style="color: #a8b0bd; max-width: 300px;">We build modern websites and business systems that scale with you.</p>
-                </div>
-                <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Services</h4>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-                        <li><a href="services.html">Website Development</a></li>
-                        <li><a href="services.html">Business Automation</a></li>
-                        <li><a href="services.html">Custom Systems</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Product</h4>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-                        <li><a href="timora.html">Overview</a></li>
-                        <li><a href="timora.html">Waitlist</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Company</h4>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-                        <li><a href="about.html">Our Story</a></li>
-                        <li><a href="about.html">Vision</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: #a8b0bd; font-size: 0.75rem;">
-                <p>&copy; 2026 Infinity Clock Studio. All rights reserved.</p>
-                <div style="display: flex; gap: 1.5rem;">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
+             <div style="text-align: center; font-size: 0.875rem; color: #475569;">
+                <p>&copy; 2026 Infinity Clock Studio Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
