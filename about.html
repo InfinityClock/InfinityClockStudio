@@ -4,94 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Infinity Clock Studio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <style>
-        .hero { padding: 180px 0 100px; text-align: center; }
-        .accent-blue { color: var(--primary); font-weight: 600; }
-        .section-tag { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; }
-    </style>
+    <link rel="stylesheet" href="css/professional.css">
+    <link rel="icon" href="assets/logo.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="reveal">
+<body>
 
-    <!-- Navigation -->
-    <nav class="nav-el scrolled" id="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 40px; vertical-align: middle;">
+    <!-- Header -->
+    <header class="header-main">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                <img src="assets/logo.png" alt="logo" style="height: 32px;">
+                <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--brand-dark); font-size: 1.25rem;">Infinity Clock</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="timora.html">Product</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-auth">
-                <a href="#" class="btn-login">Login</a>
-                <a href="#" class="btn btn-primary btn-signup">Start Free Trial</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container">
-            <span class="section-tag reveal">The Global Mission</span>
-            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Engineering the Future <br> of Service Business</h1>
-            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 800px; margin: 30px auto;">We build the digital infrastructure that enables companies worldwide to scale operations automatically.</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="timora.html" class="nav-link">Timora <span style="font-size: 0.65rem; background: var(--brand-accent); color: white; padding: 2px 6px; border-radius: 10px; margin-left: 4px;">COMING SOON</span></a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem;">Get Free Audit</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="section-padding-large">
+    <!-- About Hero -->
+    <section style="padding: 160px 0 80px; background: radial-gradient(circle at 100% 100%, #f0f9ff 0%, #ffffff 50%); text-align: center;">
         <div class="container">
-            <div class="product-row align-center">
-                <div class="product-content reveal">
-                    <h2 style="font-size: 3.5rem;">Global Infrastructure</h2>
-                    <p style="color: var(--text-secondary); font-size: 1.3rem; margin-top: 25px;">
-                        Infinity Clock Studio is a global software house dedicated to solving the operational complexities of modern service businesses.
+            <span class="section-tag">Our Story</span>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Engineering the future of <br> <span class="text-gradient">business automation</span></h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto;">Infinity Clock Studio was founded on a single premise: that modern businesses shouldn't be held back by outdated systems.</p>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section style="padding: 100px 0; border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="reveal">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Built for Innovators, <br> by Engineers.</h2>
+                    <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 1.5rem;">
+                        We are a specialized team of designers, engineers, and automation experts dedicated to building high-performance digital infrastructure. Whether it's a high-converting marketing site or a complex ERP system, we prioritize scalability and clean code above all else.
                     </p>
-                    <p style="color: var(--text-secondary); margin-top: 15px;">
-                        Our flagship platform, Timora, is used by hundreds of businesses globally to manage millions in revenue with zero manual overhead. We believe in software that disappears and lets you focus on growth.
-                    </p>
-                </div>
-                <div class="product-visual reveal" style="animation-delay: 0.2s;">
-                    <div class="glass-card-layered" style="padding: 80px; text-align: center;">
-                        <span class="material-symbols-outlined" style="font-size: 8rem; color: var(--primary); margin-bottom: 30px;">public</span>
-                        <h3>World-Class Standards</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem;">
+                        <div>
+                            <h4 style="font-size: 2rem; color: var(--brand-primary); margin-bottom: 0.5rem;">50+</h4>
+                            <p style="text-transform: uppercase; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); letter-spacing: 0.1em;">Systems Launched</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 2rem; color: var(--brand-primary); margin-bottom: 0.5rem;">12+</h4>
+                            <p style="text-transform: uppercase; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); letter-spacing: 0.1em;">Global Industries</p>
+                        </div>
                     </div>
+                </div>
+                <div class="reveal" style="background: var(--bg-soft); border-radius: 2rem; height: 500px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                     <div style="position: absolute; width: 300px; height: 300px; background: var(--brand-primary); opacity: 0.05; border-radius: 50%; filter: blur(50px);"></div>
+                     <i data-lucide="compass" style="width: 150px; height: 150px; color: var(--border-light); opacity: 0.5;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section style="padding: 100px 0; background: var(--bg-soft);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.75rem;">What drives us</h2>
+            </div>
+            <div class="grid-main">
+                <div class="card-service reveal" style="background: white;">
+                    <i data-lucide="shield" style="width: 32px; color: var(--brand-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Security First</h4>
+                    <p style="font-size: 0.9375rem; color: var(--text-muted);">We treat your business data with the highest level of encryption and isolation protocols.</p>
+                </div>
+                <div class="card-service reveal" style="background: white; animation-delay: 0.1s;">
+                    <i data-lucide="activity" style="width: 32px; color: var(--brand-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Performance Obsessed</h4>
+                    <p style="font-size: 0.9375rem; color: var(--text-muted);">Milliseconds matter. We build systems that are light, fast, and optimized for global scale.</p>
+                </div>
+                <div class="card-service reveal" style="background: white; animation-delay: 0.2s;">
+                    <i data-lucide="trending-up" style="width: 32px; color: var(--brand-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Growth Focused</h4>
+                    <p style="font-size: 0.9375rem; color: var(--text-muted);">We don't just build for today; we build for the company you plan to be in 5 years.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer-main">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <a href="index.html" class="logo footer-logo">
-                        <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 35px; vertical-align: middle;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem;">
+                <div>
+                     <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1.5rem;">
+                         <img src="assets/logo.png" alt="logo" style="height: 24px; filter: brightness(0) invert(1);">
+                         <span style="color: white; font-weight: 800; font-size: 1.25rem;">Infinity Clock</span>
                     </a>
-                    <p>Building the future of business automation worldwide.</p>
+                    <p style="color: #a8b0bd; max-width: 300px;">We build modern websites and business systems that scale with you.</p>
                 </div>
-                <div class="footer-links">
-                    <ul class="nav-links" style="display: flex;">
-                        <li><a href="timora.html">Timora</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Services</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="services.html">Website Development</a></li>
+                        <li><a href="services.html">Business Automation</a></li>
+                        <li><a href="services.html">Custom Systems</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Product</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="timora.html">Overview</a></li>
+                        <li><a href="timora.html">Waitlist</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Company</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html">Vision</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div style="margin-top: 40px; text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: #a8b0bd; font-size: 0.75rem;">
                 <p>&copy; 2026 Infinity Clock Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/theme.js"></script>
     <script>
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal'); }); }, { threshold: 0.1 });
+        lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>

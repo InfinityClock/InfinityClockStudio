@@ -3,278 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Websites Designed for Every Business</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <style>
-        .hero { padding: 180px 0 80px; text-align: center; }
-        .section-tag { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; }
-        .industry-card { position: relative; overflow: hidden; border-radius: 20px; background: var(--bg-card); transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .industry-card:hover { transform: translateY(-15px); border-color: var(--primary); box-shadow: 0 40px 80px rgba(0, 168, 232, 0.15); }
-        .card-image-wrap { position: relative; height: 260px; overflow: hidden; }
-        .card-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
-        .industry-card:hover .card-image-wrap img { transform: scale(1.1); }
-        .sample-badge { position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.6); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; z-index: 2; backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .card-info { padding: 30px; text-align: left; }
-        .industry-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; margin-top: 80px; }
-        .accent-blue { color: var(--primary); font-weight: 600; }
-    </style>
+    <title>Services | Infinity Clock Studio</title>
+    <link rel="stylesheet" href="css/professional.css">
+    <link rel="icon" href="assets/logo.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="reveal">
+<body>
 
-    <!-- Navigation -->
-    <nav class="nav-el scrolled" id="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 40px; vertical-align: middle;">
+    <!-- Header (Same as index) -->
+    <header class="header-main">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                <img src="assets/logo.png" alt="logo" style="height: 32px;">
+                <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--brand-dark); font-size: 1.25rem;">Infinity Clock</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="timora.html">Timora</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-             <div class="nav-auth">
-                <a href="#" class="btn-login">Login</a>
-                <a href="contact.html" class="btn btn-primary btn-signup">Get a Website</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Services Hero -->
-    <header class="hero">
-        <div class="container">
-            <span class="section-tag reveal">Industry Expertise</span>
-            <h1 class="gradient-text reveal" style="animation-delay: 0.1s; font-size: 5rem; line-height: 1.1;">Websites Designed <br> for Every Business</h1>
-            <p class="reveal" style="animation-delay: 0.3s; font-size: 1.5rem; max-width: 800px; margin: 30px auto 50px;">
-                We create modern, high-performing websites tailored to your industry — built to convert visitors into customers.
-            </p>
-            <div class="hero-btns reveal" style="animation-delay: 0.5s; justify-content: center;">
-                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
-                <a href="#industries" class="btn btn-secondary">View Templates</a>
-            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="timora.html" class="nav-link">Timora <span style="font-size: 0.65rem; background: var(--brand-accent); color: white; padding: 2px 6px; border-radius: 10px; margin-left: 4px;">COMING SOON</span></a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem;">Get Free Audit</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Industry Showcase Grid -->
-    <section class="section-padding-large" id="industries" style="background: #070d1a;">
+    <!-- Services Hero -->
+    <section style="padding: 140px 0 80px; background: var(--bg-soft); text-align: center; border-bottom: 1px solid var(--border-light);">
         <div class="container">
-            <div class="text-center">
-                <span class="section-tag">Templates</span>
-                <h2 class="section-title">Tailored Solutions by Industry</h2>
-                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Choose a style that matches your brand vision. All templates are fully customizable to your specific business needs.</p>
-            </div>
-            
-            <div class="industry-grid">
-                <!-- 1. 3D Printing -->
-                <div class="industry-card reveal">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-3d-printing.png" alt="3D Printing Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>3D Printing & Manufacturing</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Precision-focused UI for custom product manufacturers and 3D labs.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 2. Water Delivery -->
-                <div class="industry-card reveal" style="animation-delay: 0.1s;">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-water-delivery.png" alt="Water Delivery Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Water Delivery Services</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Clean, subscription-focused design for regional delivery operations.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 3. Appliance Repair -->
-                <div class="industry-card reveal" style="animation-delay: 0.2s;">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-appliance-repair.png" alt="Appliance Repair Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Appliance Repair Services</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Authority-building layouts with prominent booking and contact systems.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 4. Dental Clinics -->
-                <div class="industry-card reveal">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-dental.png" alt="Dental Clinic Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Modern Dental Clinics</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Pristine healthcare aesthetic with integrated appointment scheduling.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 5. Beauty Salon -->
-                <div class="industry-card reveal" style="animation-delay: 0.1s;">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-beauty.png" alt="Beauty Salon Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Beauty Salons & Spas</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Elegant lifestyle design for premium wellness and beauty providers.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 6. Restaurant -->
-                <div class="industry-card reveal" style="animation-delay: 0.2s;">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-restaurant.png" alt="Restaurant Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Restaurants & Cafes</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Appetizing visuals with menu showcases and reservation components.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 7. Real Estate -->
-                <div class="industry-card reveal">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-real-estate.png" alt="Real Estate Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Real Estate Agencies</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Sophisticated property-tech UI with advanced listing and search frames.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 8. Fitness -->
-                <div class="industry-card reveal" style="animation-delay: 0.1s;">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-fitness.png" alt="Gym Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Fitness Clubs & Gyms</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">High-energy, dynamic layouts for athletic centers and studios.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 9. Logistics -->
-                <div class="industry-card reveal" style="animation-delay: 0.2s;">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-logistics.png" alt="Logistics Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Logistics & Freight</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Structured industrial design for global and regional delivery companies.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-
-                <!-- 10. Local Shop -->
-                <div class="industry-card reveal">
-                    <div class="card-image-wrap">
-                        <span class="sample-badge">Sample Template</span>
-                        <img src="assets/niche-local-shop.png" alt="Local Shop Website Template">
-                    </div>
-                    <div class="card-info">
-                        <h3>Boutique Retail & Shops</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Charming storefront UI for local businesses and independent retailers.</p>
-                        <a href="contact.html" class="accent-blue">Get This Style →</a>
-                    </div>
-                </div>
-            </div>
+            <span class="section-tag">Deep Expertise</span>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Solutions built for <br> <span class="text-gradient">modern operations</span></h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">We don't just build software — we design the digital systems that allow your business to grow without friction.</p>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="section-padding-large">
-        <div class="container text-center">
-            <span class="section-tag">Process</span>
-            <h2 class="section-title">How We Build Your Website</h2>
-            <div class="features-grid" style="margin-top: 80px;">
-                <div class="feature-item reveal">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">01</div>
-                    <h4>Understand</h4>
-                    <p style="color: var(--text-secondary);">We analyze your niche competitors and unique business goals.</p>
-                </div>
-                <div class="feature-item reveal" style="animation-delay: 0.1s;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">02</div>
-                    <h4>Design</h4>
-                    <p style="color: var(--text-secondary);">We craft a pixel-perfect mockup based on your chosen industry style.</p>
-                </div>
-                <div class="feature-item reveal" style="animation-delay: 0.2s;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">03</div>
-                    <h4>Develop</h4>
-                    <p style="color: var(--text-secondary);">We build your site with clean code and high-performance hosting.</p>
-                </div>
-                <div class="feature-item reveal" style="animation-delay: 0.3s;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">04</div>
-                    <h4>Optimize</h4>
-                    <p style="color: var(--text-secondary);">We launch and optimize for maximum conversions and speed.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="cta-section" style="background: linear-gradient(135deg, #0a1128 0%, #001f3f 100%);">
-        <div class="container text-center">
-            <div class="cta-box reveal">
-                <h2 style="font-size: 3.5rem;">Get a Website That Works <br> for Your Business</h2>
-                <p style="font-size: 1.2rem; margin: 30px auto 50px; max-width: 800px;">Stop losing customers to outdated design. Let's build your modern digital storefront today.</p>
-                <div class="hero-btns" style="justify-content: center;">
-                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
-                    <a href="contact.html" class="btn btn-secondary" style="border-color: white;">Book a Consultation</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+    <!-- Detailed Services Sections -->
+    <section id="website-dev" style="padding: 100px 0;">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <a href="index.html" class="logo footer-logo">
-                        <img src="assets/logo.png" alt="Infinity Clock Studio Logo" style="height: 35px; vertical-align: middle;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="reveal">
+                    <i data-lucide="layout" style="width: 48px; height: 48px; color: var(--brand-primary); margin-bottom: 1.5rem;"></i>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Website Development</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem;">
+                        Your digital storefront is more than just a site — it's your primary conversion engine. We build pixel-perfect, lightning-fast web experiences that turn visitors into loyal customers.
+                    </p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> High-Converting UI/UX Design</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> SEO & Performance Optimization</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Mobile-First Responsive Layouts</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 2rem;">Initiate My Project</a>
+                </div>
+                <div class="reveal" style="background: var(--bg-soft); border: 1px solid var(--border-light); border-radius: 2rem; height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="monitor" style="width: 120px; height: 120px; color: var(--border-light); opacity: 0.5;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="automation" style="padding: 100px 0; background: var(--bg-soft);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                 <div class="reveal" style="background: white; border: 1px solid var(--border-light); border-radius: 2rem; height: 400px; display: flex; align-items: center; justify-content: center; order: 1;">
+                    <i data-lucide="settings" style="width: 120px; height: 120px; color: var(--border-light); opacity: 0.5;"></i>
+                </div>
+                <div class="reveal" style="order: 2;">
+                    <i data-lucide="database" style="width: 48px; height: 48px; color: var(--brand-primary); margin-bottom: 1.5rem;"></i>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Business Automation</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem;">
+                        Eliminate manual data entry and fragmented spreadsheets. We engineer unified internal systems that automate order processing, payment verification, and logistics.
+                    </p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Order Management Workflows</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Payment Integration & Verification</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Logistics & Freight Automation</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 2rem;">Automate My Workflow</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="custom-solutions" style="padding: 100px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="reveal">
+                    <i data-lucide="zap" style="width: 48px; height: 48px; color: var(--brand-primary); margin-bottom: 1.5rem;"></i>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Custom Solutions</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem;">
+                        Off-the-shelf software doesn't always fit. We build bespoke dashboards and tools that match your exact business logic and industry requirements.
+                    </p>
+                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> KPI Dashboards & Reporting</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Proprietary Internal Tools</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; color: var(--brand-dark);"><i data-lucide="check-circle" style="width: 20px; color: var(--brand-primary);"></i> Legacy System Integrations</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 2rem;">Build My Custom Tool</a>
+                </div>
+                <div class="reveal" style="background: var(--bg-soft); border: 1px solid var(--border-light); border-radius: 2rem; height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="bar-chart-3" style="width: 120px; height: 120px; color: var(--border-light); opacity: 0.5;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="footer-main">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem;">
+                <div>
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1.5rem;">
+                         <img src="assets/logo.png" alt="logo" style="height: 24px; filter: brightness(0) invert(1);">
+                         <span style="color: white; font-weight: 800; font-size: 1.25rem;">Infinity Clock</span>
                     </a>
-                    <p>Websites That Work. Systems That Scale.</p>
+                    <p style="color: #a8b0bd; max-width: 300px;">We build modern websites and business systems that scale with you.</p>
                 </div>
-                <div class="footer-links">
-                    <ul class="nav-links" style="display: flex;">
-                         <li><a href="index.html">Home</a></li>
-                        <li><a href="timora.html">Timora SaaS</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Services</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="services.html">Website Development</a></li>
+                        <li><a href="services.html">Business Automation</a></li>
+                        <li><a href="services.html">Custom Systems</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Product</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="timora.html">Overview</a></li>
+                        <li><a href="timora.html">Waitlist</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Company</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html">Vision</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div style="margin-top: 40px; text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: #a8b0bd; font-size: 0.75rem;">
                 <p>&copy; 2026 Infinity Clock Studio. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="js/theme.js"></script>
     <script>
+        lucide.createIcons();
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('reveal');
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
