@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Service Operations | Infinity Clock Studio</title>
+    <link rel="stylesheet" href="../css/professional.css">
+    <link rel="icon" href="../assets/logo.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Elite Navigation -->
+    <nav class="nav-main">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="../index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                <img src="../assets/logo.png" alt="logo" style="height: 36px;">
+                <span style="font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock</span>
+            </a>
+            <div style="display: flex; align-items: center; gap: 2.5rem;">
+                <a href="../index.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Back to Home</a>
+                <a href="../contact.html" class="btn btn-primary">Get Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Specific Hero -->
+    <section style="padding: 120px 0 80px; text-align: center; background: radial-gradient(circle at 100% 0%, #fef2f2 0%, #ffffff 50%);">
+        <div class="container">
+            <span class="badge-elite">Niche Solution: Repair Services</span>
+            <h1 style="font-size: 4rem; margin-bottom: 1.5rem; font-weight: 800;">Manage your <span style="color: var(--brand-primary);">field operations</span> from a single dashboard.</h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.5;">Unified technician scheduling, onsite job tracking, and instant customer billing for appliance and repair service businesses.</p>
+        </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                 <div class="reveal">
+                    <img src="../niche_repair_services_solution_combo_1774391421274.png" alt="Repair Service Solution" style="width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-premium);">
+                </div>
+                <div class="reveal">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2.5rem;">The Field Work Friction</h2>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem;">
+                        <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div class="icon-box" style="flex-shrink: 0; background: #fef2f2; color: #ef4444;"><i data-lucide="clock"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem;">Technician Ghosting</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Can't track where your team is or if a job has started? Real-time status sync between field app and admin dash.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div class="icon-box" style="flex-shrink: 0; background: #fef2f2; color: #ef4444;"><i data-lucide="clipboard-list"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem;">Messy Job Records</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Handwritten invoices getting lost? Centralize every job history, part replaced, and photo from the site.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div class="icon-box" style="flex-shrink: 0; background: #fef2f2; color: #ef4444;"><i data-lucide="dollar-sign"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem;">Billing Delays</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Waiting for days to send an invoice? Generate and email professional invoices the second the job is marked complete.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="text-align: center; padding: 120px 0; background: var(--brand-navy); color: white;">
+        <div class="container">
+            <h2 style="color: white; font-size: 3rem; margin-bottom: 1.5rem;">Scale your field business on time.</h2>
+            <p style="color: #94a3b8; margin-bottom: 3.5rem;">Never miss a technician arrival or a payment again.</p>
+            <a href="../contact.html" class="btn btn-primary" style="padding: 1.25rem 4rem; font-size: 1.25rem;">Scale My Ops &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Elite Footer -->
+    <footer style="padding: 40px 0; background: white; border-top: 1px solid var(--border-light); text-align: center;">
+        <div class="container" style="color: var(--text-muted); font-size: 0.875rem;">
+            <p>&copy; 2026 Infinity Clock Studio Inc. Specialized Digital Solutions.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
