@@ -24,13 +24,9 @@
 .brand-logo-text {
     font-family: 'Outfit', sans-serif;
     font-weight: 900;
-    font-size: 2rem;
-    letter-spacing: -1.5px;
-    background: linear-gradient(110deg, var(--brand-navy) 0%, var(--brand-dark) 40%, var(--brand-primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-transform: tracking;
+    font-size: 1.85rem;
+    letter-spacing: -1px;
+    color: #000000;
     display: inline-block;
 }
 
