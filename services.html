@@ -8,71 +8,79 @@
     <link rel="icon" href="assets/logo.png">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body style="background: var(--bg-soft);">
 
     <!-- Elite Navigation -->
-    <nav class="nav-main">
+    <nav class="nav-main" style="background: white; border-bottom: 1px solid var(--border-light);">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
                 <img src="assets/logo.png" alt="logo" style="height: 36px;">
-                <span style="font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock</span>
             </a>
-            <div style="display: flex; align-items: center; gap: 2.5rem;">
-                <div class="nav-links" style="display: flex; gap: 2rem;">
-                    <a href="services.html" style="text-decoration: none; font-weight: 600; color: var(--brand-dark);">Services</a>
-                    <a href="about.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Company</a>
+            <div style="display: flex; align-items: center; gap: 3.5rem;">
+                <div class="nav-links" style="display: flex; gap: 2.5rem;">
+                    <a href="services.html" style="text-decoration: none; font-weight: 700; color: var(--brand-dark);">Services</a>
+                    <a href="about.html" style="text-decoration: none; font-weight: 700; color: var(--text-muted);">Company</a>
                 </div>
-                <a href="contact.html" class="btn btn-primary">Get Free Audit</a>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="contact.html" class="btn btn-secondary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem; background: white;">Book a Demo</a>
+                    <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem;">Get Free Audit</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Services Hero -->
-    <section style="padding: 120px 0 80px; text-align: center; background: radial-gradient(circle at 50% 0%, #f1f5f9 0%, #ffffff 100%);">
+    <section style="padding: 120px 0 80px; text-align: center; background: radial-gradient(circle at 50% 0%, #ffffff 0%, #f1f5f9 100%);">
         <div class="container">
-            <span class="badge-elite">Operational Leverage</span>
-            <h1 style="font-size: 4rem; margin-bottom: 1.5rem; font-weight: 800;">Engineering the <span style="color: var(--brand-primary);">systems of scale.</span></h1>
-            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.5;">We focus on three high-value outcomes: customer acquisition, operational clarity, and workflow automation.</p>
+            <span class="badge-elite" style="background: white; border: 1px solid var(--border-light);">Operational Leverage</span>
+            <h1 class="reveal" style="font-size: 4.5rem; letter-spacing: -2px; margin-bottom: 1.5rem; line-height: 1.1; font-weight: 800;">Engineering the <br> <span class="text-gradient">systems of scale.</span></h1>
+            <p class="reveal" style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.6;">We construct high-end digital environments focused entirely on three outcomes: skyrocketing conversion rates, enforcing massive operational efficiency, and eliminating labor friction.</p>
         </div>
     </section>
 
     <!-- Services Detailed -->
-    <section>
+    <section style="padding: 40px 0 120px;">
         <div class="container">
-            <div style="display: flex; flex-direction: column; gap: 8rem;">
+            <div class="reveal" style="display: flex; flex-direction: column; gap: 6rem;">
                 
                 <!-- Pillar 1: Website Development -->
-                <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                <div class="card-premium" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; padding: 4rem; border-radius: 2rem;">
                     <div>
-                        <div class="icon-box" style="width: 64px; height: 64px;"><i data-lucide="layout" style="width: 32px; height: 32px;"></i></div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: -1px;">High-Performance Website Development</h2>
+                        <div class="icon-box" style="width: 64px; height: 64px; background: rgba(79, 70, 229, 0.1); color: var(--brand-primary); margin-bottom: 2rem;"><i data-lucide="layout" style="width: 32px; height: 32px;"></i></div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: -1px; color: var(--brand-dark);">High-Performance Web Frontends</h2>
+                        
                         <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2.5rem;">
-                             <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
-                                <h4 style="color: #991b1b; margin-bottom: 0.5rem;">The Problem</h4>
-                                <p style="color: #b91c1c; font-size: 0.9375rem;">Your current website looks outdated, loads slowly, and fails to convert traffic into actual leads. It's a digital brochure, not a sales engine.</p>
+                             <div style="border-left: 4px solid #ef4444; padding-left: 1.5rem;">
+                                <h4 style="color: #ef4444; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">1. The Problem</h4>
+                                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">Your website is currently a passive digital brochure. It loads terribly, confuses visitors precisely when they want to buy, and fundamentally fails to generate active sales leads.</p>
                              </div>
-                             <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
-                                <h4 style="color: #166534; margin-bottom: 0.5rem;">The Outcome</h4>
-                                <p style="color: #15803d; font-size: 0.9375rem;">A conversion-focused, lightning-fast digital storefront that builds immediate trust and funnels high-value prospects into your business.</p>
+                             <div style="border-left: 4px solid #f59e0b; padding-left: 1.5rem;">
+                                <h4 style="color: #f59e0b; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">2. The Solution</h4>
+                                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">We architect entirely bespoke, lightning-fast storefronts deployed directly onto global edge networks. We structure the psychological sales copy so it aggressively forces a conversion action.</p>
+                             </div>
+                             <div style="border-left: 4px solid #10b981; padding-left: 1.5rem; background: rgba(16, 185, 129, 0.05); padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
+                                <h4 style="color: #10b981; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">3. The Result</h4>
+                                <p style="color: var(--brand-dark); font-size: 1.05rem; font-weight: 600; line-height: 1.6;">Immediate surge in pipeline leads resulting directly in higher closing revenue. No longer bleeding traffic.</p>
                              </div>
                         </div>
+                        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">Get Free Website Audit</a>
                     </div>
-                    <div style="background: var(--bg-soft); border-radius: 2rem; padding: 1rem; border: 1px solid var(--border-light); transform: perspective(1000px) rotateY(-5deg); box-shadow: var(--shadow-lg);">
-                         <!-- Visual representation of a Website Frontend -->
-                         <div style="background: white; border-radius: 1rem; overflow: hidden; border: 1px solid var(--border-light);">
-                             <div style="background: var(--border-light); height: 32px; display: flex; align-items: center; padding: 0 1rem; gap: 0.5rem;">
-                                 <div style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444;"></div>
-                                 <div style="width: 10px; height: 10px; border-radius: 50%; background: #eab308;"></div>
-                                 <div style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e;"></div>
+                    <div style="background: var(--bg-soft); border-radius: 2.5rem; padding: 1.5rem; border: 1px solid var(--border-light); transform: perspective(1000px) rotateY(-5deg); box-shadow: var(--shadow-premium);">
+                         <div style="background: white; border-radius: 1.5rem; overflow: hidden; border: 1px solid var(--border-light);">
+                             <div style="background: var(--bg-soft); height: 40px; display: flex; align-items: center; padding: 0 1.5rem; gap: 0.5rem; border-bottom: 1px solid var(--border-light);">
+                                 <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                                 <div style="width: 12px; height: 12px; border-radius: 50%; background: #eab308;"></div>
+                                 <div style="width: 12px; height: 12px; border-radius: 50%; background: #10b981;"></div>
                              </div>
-                             <div style="padding: 2rem; text-align: center;">
-                                <div style="width: 80%; height: 30px; background: var(--bg-soft); margin: 0 auto 2rem; border-radius: 5px;"></div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                    <div style="height: 150px; background: var(--brand-glow); border-radius: 10px;"></div>
-                                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                                        <div style="height: 40px; background: var(--bg-soft); border-radius: 5px;"></div>
-                                        <div style="height: 40px; background: var(--bg-soft); border-radius: 5px;"></div>
-                                        <div style="margin-top: auto; padding: 0.75rem; background: var(--brand-primary); color: white; border-radius: 5px; font-size: 0.8rem; font-weight: bold;">Get Started</div>
+                             <div style="padding: 3rem; text-align: center;">
+                                <div style="width: 70%; height: 35px; background: var(--bg-soft); margin: 0 auto 2.5rem; border-radius: 8px;"></div>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                    <div style="height: 180px; background: rgba(79, 70, 229, 0.1); border-radius: 12px;"></div>
+                                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                        <div style="height: 50px; background: var(--bg-soft); border-radius: 8px;"></div>
+                                        <div style="height: 50px; background: var(--bg-soft); border-radius: 8px;"></div>
+                                        <div style="margin-top: auto; padding: 1rem; background: var(--brand-primary); color: white; border-radius: 8px; font-weight: 800; letter-spacing: 1px;">BOOK NOW</div>
                                     </div>
                                 </div>
                              </div>
@@ -81,59 +89,68 @@
                 </div>
 
                 <!-- Pillar 2: Business Systems -->
-                <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
-                    <div style="order: 1; background: var(--brand-navy); border-radius: 2rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.1); transform: perspective(1000px) rotateY(5deg); box-shadow: var(--shadow-premium);">
-                         <!-- Visual representation of a Dashboard -->
-                         <div style="background: #0f172a; border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); display: flex;">
-                             <div style="width: 30%; background: #1e293b; padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                                 <div style="height: 20px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 1rem;"></div>
-                                 <div style="height: 15px; background: var(--brand-primary); border-radius: 4px;"></div>
-                                 <div style="height: 15px; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
-                                 <div style="height: 15px; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+                <div class="card-premium" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; padding: 4rem; border-radius: 2rem; border: 2px solid var(--brand-primary); box-shadow: 0 20px 60px rgba(79, 70, 229, 0.1);">
+                    <div style="order: 1; background: var(--brand-navy); border-radius: 2.5rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.1); transform: perspective(1000px) rotateY(5deg); box-shadow: var(--shadow-premium);">
+                         <div style="background: #0f172a; border-radius: 1.5rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); display: flex; height: 100%;">
+                             <div style="width: 30%; background: #1e293b; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; border-right: 1px solid rgba(255,255,255,0.05);">
+                                 <div style="height: 24px; background: rgba(255,255,255,0.1); border-radius: 6px; margin-bottom: 1.5rem;"></div>
+                                 <div style="height: 20px; background: var(--brand-primary); border-radius: 6px;"></div>
+                                 <div style="height: 20px; background: rgba(255,255,255,0.05); border-radius: 6px;"></div>
+                                 <div style="height: 20px; background: rgba(255,255,255,0.05); border-radius: 6px;"></div>
                              </div>
-                             <div style="width: 70%; padding: 1rem;">
-                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem;">
-                                     <div style="height: 40px; background: rgba(255,255,255,0.05); border-radius: 6px;"></div>
-                                     <div style="height: 40px; background: rgba(255,255,255,0.05); border-radius: 6px;"></div>
+                             <div style="width: 70%; padding: 2rem;">
+                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+                                     <div style="height: 60px; background: rgba(255,255,255,0.05); border-radius: 8px;"></div>
+                                     <div style="height: 60px; background: rgba(255,255,255,0.05); border-radius: 8px;"></div>
                                  </div>
-                                 <div style="height: 100px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px;"></div>
+                                 <div style="height: 180px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 8px;"></div>
                              </div>
                          </div>
                     </div>
                     <div style="order: 2;">
-                        <span class="badge-elite" style="background: var(--brand-primary); color: white;">CORE OFFERING</span>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: -1px;">Bespoke Business Systems</h2>
+                        <span class="badge-elite" style="background: var(--brand-primary); color: white; margin-bottom: 1.5rem; border: none;">CORE EXPERTISE</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: -1px; color: var(--brand-dark);">Private Operations Dashboards</h2>
                         <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2.5rem;">
-                             <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
-                                <h4 style="color: #991b1b; margin-bottom: 0.5rem;">The Problem</h4>
-                                <p style="color: #b91c1c; font-size: 0.9375rem;">Your operations are scattered across WhatsApp, spreadsheets, and sticky notes. Accountability is zero, tracking orders is a nightmare, and scaling requires immense manual effort.</p>
+                             <div style="border-left: 4px solid #ef4444; padding-left: 1.5rem;">
+                                <h4 style="color: #ef4444; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">1. The Problem</h4>
+                                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">Your staff tracks moving pieces in 14 different spreadsheets and group chats. Deadlines are missed, materials are double-sold, and scaling up breaks the whole fragile system.</p>
                              </div>
-                             <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
-                                <h4 style="color: #166534; margin-bottom: 0.5rem;">The Outcome</h4>
-                                <p style="color: #15803d; font-size: 0.9375rem;">A customized, secure internal dashboard. Track every order stage, consolidate field operations, and grant role-based access to your team. True operational clarity.</p>
+                             <div style="border-left: 4px solid #f59e0b; padding-left: 1.5rem;">
+                                <h4 style="color: #f59e0b; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">2. The Solution</h4>
+                                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">We construct a completely encrypted central command unit explicitly tailored to your internal workflow logic. One login portal that governs exact employee access and tasks.</p>
+                             </div>
+                             <div style="border-left: 4px solid #10b981; padding-left: 1.5rem; background: rgba(16, 185, 129, 0.05); padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
+                                <h4 style="color: #10b981; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">3. The Result</h4>
+                                <p style="color: var(--brand-dark); font-size: 1.05rem; font-weight: 600; line-height: 1.6;">Saved hundreds of manual processing hours weekly, locking operations into frictionless execution.</p>
                              </div>
                         </div>
+                        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem; background: var(--brand-navy);">Start Your Project</a>
                     </div>
                 </div>
 
                 <!-- Pillar 3: Automation -->
-                <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                <div class="card-premium" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; padding: 4rem; border-radius: 2rem;">
                     <div>
-                        <div class="icon-box" style="width: 64px; height: 64px; background: rgba(16, 185, 129, 0.1); color: #10b981;"><i data-lucide="bot" style="width: 32px; height: 32px;"></i></div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: -1px;">Workflow Automation Solutions</h2>
+                        <div class="icon-box" style="width: 64px; height: 64px; background: rgba(16, 185, 129, 0.1); color: #10b981; margin-bottom: 2rem;"><i data-lucide="bot" style="width: 32px; height: 32px;"></i></div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: -1px; color: var(--brand-dark);">System Workflow Automation</h2>
                         <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2.5rem;">
-                             <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
-                                <h4 style="color: #991b1b; margin-bottom: 0.5rem;">The Problem</h4>
-                                <p style="color: #b91c1c; font-size: 0.9375rem;">You and your staff spend thousands of hours a year on repetitive admin tasks: generating invoices, copying data between apps, and sending manual status updates.</p>
+                             <div style="border-left: 4px solid #ef4444; padding-left: 1.5rem;">
+                                <h4 style="color: #ef4444; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">1. The Problem</h4>
+                                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">You are paying human beings to do the work of machines. Clicking copy-paste between billing software, dispatch software, and customer emails is utterly inefficient.</p>
                              </div>
-                             <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
-                                <h4 style="color: #166534; margin-bottom: 0.5rem;">The Outcome</h4>
-                                <p style="color: #15803d; font-size: 0.9375rem;">Systems that talk to each other automatically. We script the logic that routes new jobs to technicians, instantly emails client invoices, and updates inventory without human touch.</p>
+                             <div style="border-left: 4px solid #f59e0b; padding-left: 1.5rem;">
+                                <h4 style="color: #f59e0b; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">2. The Solution</h4>
+                                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">We write rigorous API integration logic so your systems talk to each other absolutely seamlessly. Payments trigger invoices, which ping mechanics, and notify users automatically.</p>
+                             </div>
+                             <div style="border-left: 4px solid #10b981; padding-left: 1.5rem; background: rgba(16, 185, 129, 0.05); padding: 1.5rem; border-radius: 0 1rem 1rem 0;">
+                                <h4 style="color: #10b981; margin-bottom: 0.5rem; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em;">3. The Result</h4>
+                                <p style="color: var(--brand-dark); font-size: 1.05rem; font-weight: 600; line-height: 1.6;">A complete collapse of human error parameters and a massive reclamation of raw profit margins.</p>
                              </div>
                         </div>
+                        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem; background: #10b981; border: none;">Book a Demo</a>
                     </div>
-                    <div style="background: var(--bg-soft); border-radius: 2rem; height: 400px; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center;">
-                         <i data-lucide="refresh-cw" style="width: 150px; height: 150px; color: #10b981; opacity: 0.2;"></i>
+                    <div style="background: var(--bg-soft); border-radius: 2.5rem; height: 500px; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center;">
+                         <i data-lucide="braces" style="width: 250px; height: 250px; color: #10b981; opacity: 0.15;"></i>
                     </div>
                 </div>
 
@@ -144,9 +161,11 @@
     <!-- Final CTA -->
     <section style="text-align: center; background: var(--brand-navy); color: white; padding: 120px 0;">
         <div class="container">
-            <h2 style="font-size: 3rem; margin-bottom: 1.5rem; color: white;">Stop doing the data entry yourself.</h2>
-            <p style="color: #94a3b8; margin-bottom: 3rem; font-size: 1.25rem;">Let us build the systems that scale your operation.</p>
-             <a href="contact.html" class="btn btn-primary" style="padding: 1.25rem 4rem; font-size: 1.25rem;">Initiate System Audit</a>
+            <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: white; letter-spacing: -2px;">Stop managing chaos.</h2>
+            <p style="color: #94a3b8; margin-bottom: 3.5rem; font-size: 1.35rem; max-width: 650px; margin-inline: auto;">Let our engineering team construct the exact operational system required to automate your business.</p>
+             <div style="display: flex; gap: 1.5rem; justify-content: center;">
+                 <a href="contact.html" class="btn btn-primary" style="padding: 1.25rem 4rem; font-size: 1.25rem;">Start Your Project</a>
+             </div>
         </div>
     </section>
 
