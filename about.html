@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company & Founder Story | Infinity Clock Studio</title>
     <link rel="stylesheet" href="css/professional.css?v=4">
-    <link rel="icon" href="assets/logo.png?v=4">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="assets/logo.png?v=6">
+    <script>document.documentElement.classList.add('js-ready');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap">
+    <meta name="description" content="Built by engineers, driven by efficiency. Infinity Clock Studio helps American service businesses permanently scale through custom operational software systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Infinity Clock Studio">
+    <meta property="og:title" content="Company & Founder Story | Infinity Clock Studio">
+    <meta property="og:description" content="Built by engineers, driven by efficiency. Infinity Clock Studio helps American service businesses permanently scale through custom operational software systems.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Company & Founder Story | Infinity Clock Studio">
+    <meta name="twitter:description" content="Built by engineers, driven by efficiency. Infinity Clock Studio helps American service businesses permanently scale through custom operational software systems.">
+    <link rel="canonical" href="https://infinityclockstudio.com/about.html">
 </head>
-<body style="background: var(--bg-soft);">
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Elite Navigation -->
     <nav class="nav-main" style="background: white; border-bottom: 1px solid var(--border-light);">
@@ -23,7 +37,7 @@
                 </div>
             </a>
             <div style="display: flex; align-items: center; gap: 3.5rem;">
-                <div class="nav-links" style="display: flex; gap: 2.5rem;">
+                <div class="nav-links nav-desktop-links" style="display: flex; gap: 2.5rem;">
                     <a href="services.html" style="text-decoration: none; font-weight: 700; color: var(--text-muted);">Services</a>
                     <a href="about.html" style="text-decoration: none; font-weight: 700; color: var(--brand-dark);">Company</a>
                 </div>
@@ -35,6 +49,17 @@
             </div>
         </div>
     </nav>
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="about.html" class="mobile-nav-link">Company</a>
+        <div class="mobile-menu-ctas">
+            <a href="contact.html" class="btn btn-secondary">Book a Demo</a>
+            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        </div>
+        </div>
+
+    <main id="main-content">
 
     <!-- About Hero -->
     <section style="padding: 140px 0 80px; text-align: center; background: radial-gradient(circle at 50% 0%, #ffffff 0%, #f1f5f9 100%);">
@@ -113,12 +138,14 @@
     </section>
 
     <!-- Elite Footer -->
+    </main>
+
     <footer style="padding: 100px 0 40px; background: white; border-top: 1px solid var(--border-light);">
         <div class="container">
             <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 5rem;">
                 <div>
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
-                        <img src="assets/logo.png?v=4" alt="logo" style="height: 32px;">
+                        <img src="assets/logo.png?v=6" alt="Infinity Clock Studio" style="height: 32px;">
                         <span style="font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock Studio</span>
                     </div>
                     <p style="color: var(--text-muted); max-width: 320px; line-height: 1.6; margin-bottom: 2rem;">We are a premium digital engineering firm. We help modern businesses operate significantly smarter through rigorous custom system architecture.</p>
@@ -152,13 +179,14 @@
             <div style="border-top: 1px solid var(--border-light); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.8125rem;">
                 <p>&copy; 2026 Infinity Clock Studio Inc. All rights reserved.</p>
                 <div style="display: flex; gap: 2rem;">
-                    <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a>
-                    <a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a>
+                    <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+                    <a href="terms.html" style="color: inherit; text-decoration: none;">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lucide@1.6.0"></script>
     <script>
         lucide.createIcons();
         const observer = new IntersectionObserver((entries) => {
@@ -168,7 +196,20 @@
                 }
             });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('nav-hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+            });
+        }
+        document.querySelectorAll('.reveal').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) el.classList.add('active');
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>

@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact & Audit | Infinity Clock Studio</title>
     <link rel="stylesheet" href="css/professional.css?v=4">
-    <link rel="icon" href="assets/logo.png?v=4">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="assets/logo.png?v=6">
+    <script>document.documentElement.classList.add('js-ready');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap">
+    <meta name="description" content="Get a free operational audit from Infinity Clock Studio. Our Lead Engineer will review your workflows and respond within 24 hours with a custom technical roadmap.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Infinity Clock Studio">
+    <meta property="og:title" content="Get a Free System Audit | Infinity Clock Studio">
+    <meta property="og:description" content="Get a free operational audit from Infinity Clock Studio. Our Lead Engineer will review your workflows and respond within 24 hours with a custom technical roadmap.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Get a Free System Audit | Infinity Clock Studio">
+    <meta name="twitter:description" content="Get a free operational audit from Infinity Clock Studio. Our Lead Engineer will review your workflows and respond within 24 hours with a custom technical roadmap.">
+    <link rel="canonical" href="https://infinityclockstudio.com/contact.html">
 </head>
-<body style="background: var(--bg-soft);">
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Elite Navigation -->
     <nav class="nav-main" style="background: white; border-bottom: 1px solid var(--border-light);">
@@ -23,17 +37,29 @@
                 </div>
             </a>
             <div style="display: flex; align-items: center; gap: 3.5rem;">
-                <div class="nav-links" style="display: flex; gap: 2.5rem;">
+                <div class="nav-links nav-desktop-links" style="display: flex; gap: 2.5rem;">
                     <a href="services.html" style="text-decoration: none; font-weight: 700; color: var(--text-muted);">Services</a>
-                    <a href="about.html" style="text-decoration: none; font-weight: 700; color: var(--brand-dark);">Company</a>
+                    <a href="about.html" style="text-decoration: none; font-weight: 700; color: var(--text-muted);">Company</a>
                 </div>
-                 <div style="display: flex; gap: 1rem;">
+                 <div class="nav-desktop-ctas" style="display: flex; gap: 1rem;">
                     <a href="contact.html" class="btn btn-secondary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem; background: white;">Book a Demo</a>
                     <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem;">Start Your Project</a>
                 </div>
+                <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="about.html" class="mobile-nav-link">Company</a>
+        <div class="mobile-menu-ctas">
+            <a href="contact.html" class="btn btn-secondary">Book a Demo</a>
+            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        </div>
+        </div>
+
+    <main id="main-content">
 
     <!-- Contact Hero -->
     <section style="padding: 120px 0 60px; text-align: center;">
@@ -50,8 +76,17 @@
             
             <!-- Left: Contact Form -->
             <div class="reveal card-premium" style="padding: 3.5rem; border-radius: 2rem; background: white; border: 1px solid var(--brand-primary); box-shadow: 0 20px 50px rgba(79, 70, 229, 0.1);">
-                <form style="display: flex; flex-direction: column; gap: 2rem;">
-                    
+                <!-- Success State (hidden until form submitted) -->
+                <div id="form-success" style="display: none; text-align: center; padding: 3rem 1rem;">
+                    <div style="width: 64px; height: 64px; background: #f0fdf4; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i data-lucide="check-circle" style="color: #10b981; width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.75rem; color: var(--brand-dark); margin-bottom: 0.75rem;">Request Received.</h3>
+                    <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">Our Lead Engineer will review your workflow and respond within 24 hours with a custom technical audit.</p>
+                </div>
+
+                <form id="contact-form" style="display: flex; flex-direction: column; gap: 2rem;">
+
                     <!-- Trust Banner -->
                     <div style="background: #f0fdf4; border: 1px solid rgba(34, 197, 94, 0.2); padding: 1.25rem; border-radius: 0.75rem; margin-top: -1rem; display: flex; align-items: flex-start; gap: 1rem;">
                         <i data-lucide="shield-check" style="color: #10b981; flex-shrink: 0; margin-top: 0.25rem;"></i>
@@ -62,17 +97,17 @@
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                         <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                            <label style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Full Name</label>
-                            <input type="text" placeholder="John Doe" required style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem;">
+                            <label for="full-name" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Full Name</label>
+                            <input id="full-name" name="full_name" type="text" placeholder="John Doe" required style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem;">
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                            <label style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Work Email</label>
-                            <input type="email" placeholder="john@company.io" required style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem;">
+                            <label for="work-email" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Work Email</label>
+                            <input id="work-email" name="email" type="email" placeholder="john@company.io" required style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem;">
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                        <label style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Operational Solution Required</label>
-                        <select style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem; background: var(--bg-white);">
+                        <label for="service-select" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Operational Solution Required</label>
+                        <select id="service-select" name="service" style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem; background: var(--bg-white);">
                             <option>High-Converting System Architecture</option>
                             <option>Internal Business System / Dashboard</option>
                             <option>Workflow Automation Software</option>
@@ -80,10 +115,10 @@
                         </select>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                        <label style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Project Context</label>
-                        <textarea rows="5" placeholder="Briefly describe the manual friction, data leaks, or scaling challenges you're currently facing..." style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem; resize: none;"></textarea>
+                        <label for="project-context" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Project Context</label>
+                        <textarea id="project-context" name="message" rows="5" placeholder="Briefly describe the manual friction, data leaks, or scaling challenges you're currently facing..." style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem; resize: none;"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="padding: 1.25rem; font-size: 1.125rem; width: 100%; margin-top: 1rem;">Get Free Operational Audit & Demo</button>
+                    <button type="submit" id="submit-btn" class="btn btn-primary" style="padding: 1.25rem; font-size: 1.125rem; width: 100%; margin-top: 1rem;">Get Free Operational Audit & Demo</button>
                     <p style="text-align: center; color: var(--text-muted); font-size: 0.8125rem;">By submitting, you agree to our strict data privacy policy.</p>
                 </form>
             </div>
@@ -126,12 +161,14 @@
     </section>
 
     <!-- Elite Footer -->
+    </main>
+
     <footer style="padding: 100px 0 40px; background: white; border-top: 1px solid var(--border-light);">
         <div class="container">
             <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 5rem;">
                 <div>
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
-                        <img src="assets/logo.png?v=4" alt="logo" style="height: 32px;">
+                        <img src="assets/logo.png?v=6" alt="Infinity Clock Studio" style="height: 32px;">
                         <span style="font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock Studio</span>
                     </div>
                     <p style="color: var(--text-muted); max-width: 320px; line-height: 1.6; margin-bottom: 2rem;">We are a premium digital engineering firm. We help modern businesses operate significantly smarter through rigorous custom system architecture.</p>
@@ -165,13 +202,14 @@
             <div style="border-top: 1px solid var(--border-light); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.8125rem;">
                 <p>&copy; 2026 Infinity Clock Studio Inc. All rights reserved.</p>
                 <div style="display: flex; gap: 2rem;">
-                    <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a>
-                    <a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a>
+                    <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+                    <a href="terms.html" style="color: inherit; text-decoration: none;">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lucide@1.6.0"></script>
     <script>
         lucide.createIcons();
         const observer = new IntersectionObserver((entries) => {
@@ -181,7 +219,57 @@
                 }
             });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('nav-hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+            });
+        }
+        document.querySelectorAll('.reveal').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) el.classList.add('active');
+            observer.observe(el);
+        });
+
+        // Contact form handler
+        // TODO: Replace the mailto fallback below with your preferred form endpoint.
+        // Options: Formspree (https://formspree.io), Netlify Forms, or a custom backend.
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+        const submitBtn = document.getElementById('submit-btn');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('full-name').value.trim();
+            const email = document.getElementById('work-email').value.trim();
+            const service = document.getElementById('service-select').value;
+            const message = document.getElementById('project-context').value.trim();
+
+            // Build mailto link as the submission mechanism until a backend is configured
+            const subject = encodeURIComponent('New Audit Request from ' + name);
+            const body = encodeURIComponent(
+                'Name: ' + name + '\n' +
+                'Email: ' + email + '\n' +
+                'Service: ' + service + '\n\n' +
+                'Project Context:\n' + message
+            );
+
+            submitBtn.textContent = 'Opening email client...';
+            submitBtn.disabled = true;
+
+            window.location.href = 'mailto:hello@infinityclockstudio.com?subject=' + subject + '&body=' + body;
+
+            // Show success state after a brief delay
+            setTimeout(function() {
+                contactForm.style.display = 'none';
+                formSuccess.style.display = 'block';
+                lucide.createIcons();
+            }, 800);
+        });
     </script>
 </body>
 </html>

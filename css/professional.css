@@ -1,5 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+/* Google Fonts are loaded via <link> tags in each page's <head> for non-blocking load */
+
+/*
+ * TECH DEBT: Nav and footer HTML is duplicated across all 8 pages (index, about, services,
+ * contact, privacy, terms, solutions/3d-printing, solutions/repair-services, solutions/custom-products).
+ * Any structural change to nav or footer must be applied manually to each file.
+ * Resolution requires migrating to a build tool (e.g., Vite, Eleventy, or server-side includes).
+ */
+
+/* Skip navigation link for keyboard/screen reader users */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--brand-dark, #0F172A);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    z-index: 9999;
+    border-radius: 0 0 0.5rem 0;
+    transition: top 0.15s ease;
+}
+.skip-link:focus {
+    top: 0;
+}
 
 :root {
     --brand-primary: #0ea5e9;
@@ -38,7 +63,7 @@
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-main);
-    background-color: var(--bg-white);
+    background-color: var(--bg-soft);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -87,15 +112,16 @@ section {
 }
 
 .btn-primary {
-    background: var(--brand-primary);
+    /* #0369a1 on white = 5.3:1 contrast ratio — passes WCAG AA */
+    background: #0369a1;
     color: white;
-    border: 1px solid var(--brand-primary);
+    border: 1px solid #0369a1;
 }
 
 .btn-primary:hover {
-    background: #0284c7;
+    background: #075985;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.4);
+    box-shadow: 0 10px 20px -5px rgba(3, 105, 161, 0.4);
 }
 
 .btn-secondary {
@@ -141,7 +167,8 @@ section {
 }
 
 /* Badge Premium */
-.badge-elite {
+.badge-elite,
+.badge-premium {
     display: inline-block;
     padding: 0.5rem 1rem;
     background: var(--brand-glow);
@@ -161,26 +188,113 @@ section {
     gap: 2.5rem;
 }
 
+/* ---- Mobile hamburger button ---- */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--brand-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ---- Mobile slide-down menu ---- */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.5rem 2rem 2rem;
+    flex-direction: column;
+    gap: 0;
+    z-index: 998;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu .mobile-nav-link {
+    display: block;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    text-decoration: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-light);
+}
+.mobile-menu-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+}
+.mobile-menu-ctas .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* ---- Responsive breakpoints ---- */
+@media (max-width: 900px) {
+    /* Show hamburger, hide desktop nav items */
+    .nav-hamburger { display: flex; }
+    .nav-desktop-links,
+    .nav-desktop-ctas { display: none !important; }
+
+    /* Collapse ALL inline-styled CSS grids to single column */
+    [style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Tighten container padding */
+    .container { padding: 0 1.25rem !important; }
+
+    /* Reduce section padding */
+    section { padding: 60px 0 !important; }
+
+    /* Scale down headings */
+    h1 { font-size: 2.5rem !important; letter-spacing: -1px !important; }
+    h2 { font-size: 2rem !important; }
+    h3 { font-size: 1.5rem !important; }
+}
+
 @media (max-width: 768px) {
     .solution-grid { grid-template-columns: 1fr; }
-    section { padding: 80px 0; }
-    h1 { font-size: 2.5rem !important; }
 }
 
-/* Animations */
+/* Animations — progressive enhancement: only hide when JS has confirmed it's ready */
 .reveal {
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.js-ready .reveal {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.reveal.active {
+.js-ready .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* ----- WOW FACTOR AESTHETICS ----- */
-.gradient-text {
+.gradient-text,
+.text-gradient {
     background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #a855f7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

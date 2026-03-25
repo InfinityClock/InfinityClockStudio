@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinity Clock Studio | Business Automation & Software Systems</title>
     <link rel="stylesheet" href="css/professional.css?v=4">
-    <link rel="icon" href="assets/logo.png?v=4">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="assets/logo.png?v=6">
+    <script>document.documentElement.classList.add('js-ready');</script>
     <style>
         body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
         .hero-title { font-size: 4.5rem; line-height: 1.1; letter-spacing: -2px; margin-bottom: 1.5rem; font-weight: 800; color: var(--brand-dark); }
@@ -18,8 +18,22 @@
         .niche-row { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.9375rem; }
         .niche-label { font-weight: 800; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--brand-primary); }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap">
+    <meta name="description" content="We build precisely engineered software systems that permanently automate your operations and force your service business to scale. Get a free system audit.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Infinity Clock Studio">
+    <meta property="og:title" content="Infinity Clock Studio | Business Automation & Software Systems">
+    <meta property="og:description" content="We build precisely engineered software systems that permanently automate your operations and force your service business to scale. Get a free system audit.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Infinity Clock Studio | Business Automation & Software Systems">
+    <meta name="twitter:description" content="We build precisely engineered software systems that permanently automate your operations and force your service business to scale. Get a free system audit.">
+    <link rel="canonical" href="https://infinityclockstudio.com/">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Elite Navigation -->
     <nav class="nav-main">
@@ -34,17 +48,29 @@
                 </div>
             </a>
             <div style="display: flex; align-items: center; gap: 3.5rem;">
-                <div class="nav-links" style="display: flex; gap: 2.5rem;">
+                <div class="nav-links nav-desktop-links" style="display: flex; gap: 2.5rem;">
                     <a href="services.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Services</a>
                     <a href="about.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Company</a>
                 </div>
-                <div style="display: flex; gap: 1rem;">
+                <div class="nav-desktop-ctas" style="display: flex; gap: 1rem;">
                     <a href="contact.html" class="btn btn-secondary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem; background: var(--bg-soft);">Book a Demo</a>
                     <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem; box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);">Start Your Project</a>
                 </div>
+                <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="about.html" class="mobile-nav-link">Company</a>
+        <div class="mobile-menu-ctas">
+            <a href="contact.html" class="btn btn-secondary">Book a Demo</a>
+            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        </div>
+        </div>
+
+    <main id="main-content">
 
     <!-- 1. HERO SECTION (Outcome-Driven) -->
     <section class="bg-hero-glow" style="padding: 120px 0 100px; border-bottom: 1px solid var(--border-light); text-align: center;">
@@ -66,7 +92,7 @@
 
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
                     <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center;">
-                        <a href="contact.html" class="btn btn-primary btn-massive glow-btn" style="background: #ef4444; box-shadow: 0 0 30px rgba(239, 68, 68, 0.4); border: none;">Stop The Chaos &rarr;</a>
+                        <a href="contact.html" class="btn btn-primary btn-massive glow-btn" style="background: #b91c1c; box-shadow: 0 0 30px rgba(185, 28, 28, 0.4); border: none;">Stop The Chaos &rarr;</a>
                         <a href="contact.html" class="btn btn-secondary" style="padding: 1.5rem 3.5rem; font-size: 1.125rem; font-weight: 700; border-radius: 0.75rem; background: white;">Get A Free System Audit</a>
                     </div>
                     <p style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600; display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="shield-check" style="width: 16px; color: #10b981;"></i> Guaranteed 24-Hour Engineering Response</p>
@@ -107,7 +133,7 @@
                     
                     <div style="text-align: center; margin-bottom: -1.5rem;">
                         <span style="font-weight: 800; color: var(--brand-primary); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; display: block;">Transparent System Architecture</span>
-                        <h4 style="font-size: 1.75rem; color: var(--brand-dark); line-height: 1.2; letter-spacing: -0.5px;">How we engineer your leverage.</h4>
+                        <h2 style="font-size: 1.75rem; color: var(--brand-dark); line-height: 1.2; letter-spacing: -0.5px;">How we engineer your leverage.</h2>
                     </div>
 
                     <div style="display: flex; align-items: stretch; justify-content: space-between; position: relative; gap: 1rem;">
@@ -119,7 +145,7 @@
                             <div style="width: 56px; height: 56px; background: rgba(79, 70, 229, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
                                 <i data-lucide="globe" style="color: var(--brand-primary); width: 28px; height: 28px;"></i>
                             </div>
-                            <h4 style="font-size: 1.125rem; color: var(--brand-dark); margin-bottom: 0.75rem;">Customer Frontend</h4>
+                            <h3 style="font-size: 1.125rem; color: var(--brand-dark); margin-bottom: 0.75rem;">Customer Frontend</h3>
                             <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Customers book appointments and pay instantly on your high-converting public portal.</p>
                         </div>
 
@@ -128,7 +154,7 @@
                             <div style="width: 56px; height: 56px; background: rgba(234, 179, 8, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
                                 <i data-lucide="database" style="color: #eab308; width: 28px; height: 28px;"></i>
                             </div>
-                            <h4 style="font-size: 1.125rem; color: var(--brand-dark); margin-bottom: 0.75rem;">Secure Database</h4>
+                            <h3 style="font-size: 1.125rem; color: var(--brand-dark); margin-bottom: 0.75rem;">Secure Database</h3>
                             <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Customer data is instantly synced, organized, and routed via secure cloud infrastructure.</p>
                         </div>
 
@@ -137,7 +163,7 @@
                             <div style="width: 56px; height: 56px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
                                 <i data-lucide="layout-dashboard" style="color: #10b981; width: 28px; height: 28px;"></i>
                             </div>
-                            <h4 style="font-size: 1.125rem; color: var(--brand-dark); margin-bottom: 0.75rem;">Backend Operations</h4>
+                            <h3 style="font-size: 1.125rem; color: var(--brand-dark); margin-bottom: 0.75rem;">Backend Operations</h3>
                             <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Your staff manages everything efficiently through a simple, private internal operations dashboard.</p>
                         </div>
                     </div>
@@ -166,14 +192,14 @@
                         <div style="display: flex; gap: 1.5rem;">
                             <i data-lucide="alert-triangle" style="color: #ef4444; width: 32px; height: 32px; flex-shrink: 0; margin-top: 0.25rem;"></i>
                             <div>
-                                <h4 style="font-size: 1.5rem; color: var(--brand-dark); margin-bottom: 0.5rem;">Fragmented Communication</h4>
+                                <h3 style="font-size: 1.5rem; color: var(--brand-dark); margin-bottom: 0.5rem;">Fragmented Communication</h3>
                                 <p style="color: var(--text-muted); font-size: 1.125rem; line-height: 1.6;">Relying on scattered WhatsApp threads, untethered email chains, and sticky notes means highly-valuable client orders are constantly slipping through the cracks.</p>
                             </div>
                         </div>
                         <div style="display: flex; gap: 1.5rem;">
                             <i data-lucide="calculator" style="color: #ef4444; width: 32px; height: 32px; flex-shrink: 0; margin-top: 0.25rem;"></i>
                             <div>
-                                <h4 style="font-size: 1.5rem; color: var(--brand-dark); margin-bottom: 0.5rem;">Repetitive Data Entry</h4>
+                                <h3 style="font-size: 1.5rem; color: var(--brand-dark); margin-bottom: 0.5rem;">Repetitive Data Entry</h3>
                                 <p style="color: var(--text-muted); font-size: 1.125rem; line-height: 1.6;">Paying intelligent staff to copy-paste customer data from your frontend platform into spreadsheets and dispatch software is throwing payroll directly into the garbage.</p>
                             </div>
                         </div>
@@ -295,7 +321,7 @@
                         <p style="color: var(--brand-dark); font-size: 1.125rem; line-height: 1.7; font-weight: 500; margin-bottom: 2rem;">"We were drowning in paperwork. Parker's team ripped out our manual dispatch process and built a custom terminal. It saved us 40 hours a week and instantly stopped us from losing invoices. They are genuine operational engineers."</p>
                     </div>
                     <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;">
-                        <img src="https://ui-avatars.com/api/?name=Marcus+T.&background=10b981&color=fff" alt="Marcus T." style="width: 48px; height: 48px; border-radius: 50%;">
+                        <svg width="48" height="48" viewBox="0 0 48 48" aria-label="Marcus T." role="img" style="border-radius: 50%; flex-shrink: 0;"><circle cx="24" cy="24" r="24" fill="#10b981"/><text x="24" y="29" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#fff">MT</text></svg>
                         <div>
                             <div style="font-weight: 800; color: var(--brand-dark);">Marcus Thompson</div>
                             <div style="color: var(--text-muted); font-size: 0.875rem;">CEO, Precision Freight Network</div>
@@ -312,7 +338,7 @@
                         <p style="color: white; font-size: 1.125rem; line-height: 1.7; font-weight: 500; margin-bottom: 2rem;">"We lost $15k in a single month because the front desk couldn't handle the phones. Infinity Clock built us a secure booking engine that bypassed the phones entirely. The ROI paid for itself the exact week it launched."</p>
                     </div>
                     <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
-                        <img src="https://ui-avatars.com/api/?name=Sarah+J.&background=4f46e5&color=fff" alt="Sarah J." style="width: 48px; height: 48px; border-radius: 50%;">
+                        <svg width="48" height="48" viewBox="0 0 48 48" aria-label="Sarah J." role="img" style="border-radius: 50%; flex-shrink: 0;"><circle cx="24" cy="24" r="24" fill="#4f46e5"/><text x="24" y="29" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#fff">SJ</text></svg>
                         <div>
                             <div style="font-weight: 800; color: white;">Dr. Sarah Jenkins</div>
                             <div style="color: #cbd5e1; font-size: 0.875rem;">Clinical Director, Elite Dental Implants</div>
@@ -329,7 +355,7 @@
                         <p style="color: var(--brand-dark); font-size: 1.125rem; line-height: 1.7; font-weight: 500; margin-bottom: 2rem;">"I burned $10k on a useless website before finding Infinity Clock. They didn't build me a brochure; they built an automated client capture pipeline. We closed 12 new high-ticket jobs in the first month without lifting a finger."</p>
                     </div>
                     <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;">
-                        <img src="https://ui-avatars.com/api/?name=David+R.&background=eab308&color=fff" alt="David R." style="width: 48px; height: 48px; border-radius: 50%;">
+                        <svg width="48" height="48" viewBox="0 0 48 48" aria-label="David R." role="img" style="border-radius: 50%; flex-shrink: 0;"><circle cx="24" cy="24" r="24" fill="#eab308"/><text x="24" y="29" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#fff">DR</text></svg>
                         <div>
                             <div style="font-weight: 800; color: var(--brand-dark);">David Reynolds</div>
                             <div style="color: var(--text-muted); font-size: 0.875rem;">Founder, Apex Home Services</div>
@@ -354,12 +380,14 @@
     </section>
 
     <!-- Elite Footer -->
+    </main>
+
     <footer style="padding: 100px 0 40px; background: white; border-top: 1px solid var(--border-light);">
         <div class="container">
             <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 5rem;">
                 <div>
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
-                        <img src="assets/logo.png?v=4" alt="logo" style="height: 32px;">
+                        <img src="assets/logo.png?v=6" alt="Infinity Clock Studio" style="height: 32px;">
                         <span style="font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock Studio</span>
                     </div>
                     <p style="color: var(--text-muted); max-width: 320px; line-height: 1.6; margin-bottom: 2rem;">We are a premium digital engineering firm. We help modern businesses operate significantly smarter through rigorous custom system architecture.</p>
@@ -393,13 +421,14 @@
             <div style="border-top: 1px solid var(--border-light); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.8125rem;">
                 <p>&copy; 2026 Infinity Clock Studio Inc. All rights reserved.</p>
                 <div style="display: flex; gap: 2rem;">
-                    <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a>
-                    <a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a>
+                    <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+                    <a href="terms.html" style="color: inherit; text-decoration: none;">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lucide@1.6.0"></script>
     <script>
         lucide.createIcons();
         const observer = new IntersectionObserver((entries) => {
@@ -409,7 +438,20 @@
                 }
             });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('nav-hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+            });
+        }
+        document.querySelectorAll('.reveal').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) el.classList.add('active');
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>
