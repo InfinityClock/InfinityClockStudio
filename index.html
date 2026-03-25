@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="css/professional.css">
     <link rel="icon" href="assets/logo.png">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Typography and Hierarchy enhancements */
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .hero-title { font-size: 5.5rem; line-height: 1.05; letter-spacing: -2.5px; margin-bottom: 1.5rem; font-weight: 800; color: var(--brand-dark); }
+        .section-title { font-size: 4rem; letter-spacing: -1.5px; font-weight: 800; color: var(--brand-dark); margin-bottom: 1.5rem; }
+        .card-premium { padding: 2.5rem; background: white; border-radius: 1.5rem; border: 1px solid var(--border-light); box-shadow: 0 10px 40px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-premium:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+        .btn-massive { padding: 1.5rem 3.5rem; font-size: 1.125rem; font-weight: 700; border-radius: 0.75rem; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2); }
+        .niche-matrix { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); }
+        .niche-row { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.9375rem; }
+        .niche-label { font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--brand-primary); }
+    </style>
 </head>
 <body>
 
@@ -22,254 +34,274 @@
                     <a href="services.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Services</a>
                     <a href="about.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Company</a>
                 </div>
-                <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+                <a href="contact.html" class="btn btn-primary" style="box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);">Start Your Project</a>
             </div>
         </div>
     </nav>
 
-    <!-- 1. HERO SECTION (Image Free Centered) -->
-    <section style="padding: 160px 0 120px; background: radial-gradient(circle at 50% 0%, #f1f5f9 0%, #ffffff 80%); border-bottom: 1px solid var(--border-light); text-align: center;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+    <!-- 1. HERO SECTION -->
+    <section style="padding: 160px 0 120px; background: radial-gradient(circle at 50% 0%, #f8fafc 0%, #ffffff 80%); border-bottom: 1px solid var(--border-light); text-align: center;">
+        <div class="container" style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
             <div class="reveal">
-                <span class="badge-elite" style="margin-bottom: 1.5rem; background: var(--bg-soft); border: 1px solid var(--border-light);">Premium Business Systems</span>
-                <h1 style="font-size: 5.5rem; line-height: 1.05; margin-bottom: 1.5rem; font-weight: 800; color: var(--brand-dark); letter-spacing: -2px;">Websites that don’t just look good.<br><span style="color: var(--brand-primary);">They run your business.</span></h1>
-                <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 3rem; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;">We design high-performance websites and build powerful internal systems to automate your operations. Move beyond the brochure.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="contact.html" class="btn btn-primary" style="padding: 1.25rem 3rem; font-size: 1.125rem;">Get Free Website Audit</a>
-                    <a href="contact.html" class="btn btn-secondary" style="padding: 1.25rem 3rem; font-size: 1.125rem;">Book a Demo</a>
+                <span class="badge-elite" style="margin-bottom: 2rem; background: var(--bg-soft); border: 1px solid var(--border-light); color: var(--brand-dark); font-weight: 700;">Global Reach. US-Grade Engineering.</span>
+                <h1 class="hero-title">We build websites and systems <span style="color: var(--brand-primary); display: block;">that run your business.</span></h1>
+                <p style="font-size: 1.35rem; color: var(--text-muted); margin-bottom: 3.5rem; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">Move entirely beyond digital brochures. We engineer pristine frontend websites and powerful backend operational dashboards to automate your daily workflows and force revenue scaling.</p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center;">
+                    <a href="contact.html" class="btn btn-primary btn-massive">Get Free Website Audit</a>
+                    <a href="contact.html" class="btn btn-secondary" style="padding: 1.5rem 3.5rem; font-size: 1.125rem; font-weight: 700; border-radius: 0.75rem; background: white;">Book a Demo</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. PROBLEM SECTION -->
-    <section style="background: var(--bg-soft); padding: 100px 0;">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <h2 style="font-size: 3.5rem; color: var(--brand-dark); margin-bottom: 1rem; letter-spacing: -1px;">The bottleneck of manual workflows.</h2>
-                <p style="color: var(--text-muted); font-size: 1.25rem;">You cannot scale operations using sticky notes and chat groups.</p>
+    <!-- 2. TRUST SECTION -->
+    <section style="background: var(--brand-navy); color: white; padding: 100px 0; overflow: hidden; position: relative;">
+        <!-- Abstract gradient glow -->
+        <div style="position: absolute; top: -50%; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 60%); pointer-events: none;"></div>
+        
+        <div class="container relative z-10">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="badge-elite" style="background: rgba(255,255,255,0.05); color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1);">Verified Success</span>
+                <h2 style="font-size: 3rem; margin-top: 1rem; color: white; letter-spacing: -1px;">Built for real businesses. Trusted globally.</h2>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
-                <div class="reveal card-enterprise" style="border-top: 4px solid #ef4444;">
-                    <div class="icon-box" style="background: #fee2e2; color: #ef4444;"><i data-lucide="inbox"></i></div>
-                    <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">Manual Order Entry</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem;">Copy-pasting data from emails to spreadsheets leads to dropped orders, incorrect invoices, and severely unhappy clients.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; align-items: center;">
+                <div class="reveal card-premium" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                    <div style="display: flex; color: #fbbf24; margin-bottom: 1rem; gap: 0.25rem;">
+                        <i data-lucide="star" style="fill: currentColor; width: 20px;"></i>
+                        <i data-lucide="star" style="fill: currentColor; width: 20px;"></i>
+                        <i data-lucide="star" style="fill: currentColor; width: 20px;"></i>
+                        <i data-lucide="star" style="fill: currentColor; width: 20px;"></i>
+                        <i data-lucide="star" style="fill: currentColor; width: 20px;"></i>
+                    </div>
+                    <p style="font-size: 1.25rem; line-height: 1.6; color: white; margin-bottom: 2rem;">"Infinity Clock completely replaced our scattered WhatsApp groups and manual spreadsheets with a unified booking dashboard. Our revenue jumped 40% in two quarters because we stopped dropping active leads."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--brand-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem;">MT</div>
+                        <div>
+                            <div style="font-weight: 700; color: white;">Marcus T.</div>
+                            <div style="color: #94a3b8; font-size: 0.875rem;">Director of Operations, Precision Logistics</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="reveal card-enterprise" style="border-top: 4px solid #ef4444; animation-delay: 0.1s;">
-                    <div class="icon-box" style="background: #fee2e2; color: #ef4444;"><i data-lucide="message-circle"></i></div>
-                    <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">WhatsApp Chaos</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem;">Running a business out of messaging apps means zero accountability, lost history, and staff burnout trying to find critical information.</p>
-                </div>
-                <div class="reveal card-enterprise" style="border-top: 4px solid #ef4444; animation-delay: 0.2s;">
-                    <div class="icon-box" style="background: #fee2e2; color: #ef4444;"><i data-lucide="alert-circle"></i></div>
-                    <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">No Workflow Tracking</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem;">Customers constantly asking "what's the status?" because your team lacks a unified system to track absolute progress across production stages.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 3. SOLUTION SECTION -->
-    <section>
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 6rem;">
-                <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Our specific solution architecture.</h2>
-                <p style="color: var(--text-muted); font-size: 1.25rem; max-width: 700px; margin: 0 auto;">We don't just fix the design. We fix the data layer of your business.</p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem;">
-                <div class="reveal text-center" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    <div class="icon-box" style="width: 80px; height: 80px; margin-bottom: 1.5rem;"><i data-lucide="layout-template" style="width: 40px; height: 40px;"></i></div>
-                    <h3 style="margin-bottom: 1rem;">1. Website (Frontend)</h3>
-                    <p style="color: var(--text-muted); font-size: 1rem;">A premium, conversion-focused digital storefront built to convert visitors into hard leads. Blazing fast and SEO optimized.</p>
-                </div>
-                <div class="reveal text-center" style="display: flex; flex-direction: column; align-items: center; text-align: center; animation-delay: 0.1s;">
-                    <div class="icon-box" style="width: 80px; height: 80px; margin-bottom: 1.5rem;"><i data-lucide="server" style="width: 40px; height: 40px;"></i></div>
-                    <h3 style="margin-bottom: 1rem;">2. System (Operations)</h3>
-                    <p style="color: var(--text-muted); font-size: 1rem;">A bespoke operations dashboard to track orders, manage payments, and command your team securely behind a login wall.</p>
-                </div>
-                <div class="reveal text-center" style="display: flex; flex-direction: column; align-items: center; text-align: center; animation-delay: 0.2s;">
-                    <div class="icon-box" style="width: 80px; height: 80px; margin-bottom: 1.5rem;"><i data-lucide="zap" style="width: 40px; height: 40px;"></i></div>
-                    <h3 style="margin-bottom: 1rem;">3. Automation (Efficiency)</h3>
-                    <p style="color: var(--text-muted); font-size: 1rem;">Programmatic connections. Auto-generate invoices, trigger client SMS updates, and calculate dynamic quotes instantly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. PROOF SECTION -->
-    <section style="background: var(--brand-navy); color: white; padding: 120px 0;">
-         <div class="container">
-            <div style="text-align: center; margin-bottom: 6rem;">
-                <span class="badge-elite" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid rgba(255,255,255,0.1);">Production Proven</span>
-                <h2 style="font-size: 4rem; margin-top: 1rem; letter-spacing: -2px; color: white;">Don't just take our word for it.</h2>
-                <p style="color: #94a3b8; font-size: 1.25rem;">Real UI flows demonstrating true operational capability.</p>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
-                <div class="reveal">
-                    <img src="assets/images/timora_pro_dashboard_mockup_1774391365671.png" alt="Internal Operations Dashboard" style="width: 100%; border-radius: 1.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
-                </div>
-                <div class="reveal" style="background: rgba(255,255,255,0.03); padding: 3rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.05);">
-                    <h3 style="color: white; margin-bottom: 1.5rem; font-size: 2rem;">Internal Orders UI Workflows</h3>
+                <div class="reveal card-premium" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5); animation-delay: 0.1s;">
+                    <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">Immediate ROI Use-Cases</h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
                         <li style="display: flex; gap: 1rem;">
-                            <i data-lucide="check-circle" style="color: var(--brand-primary); flex-shrink: 0;"></i>
-                            <span style="color: #cbd5e1;"><strong>Multi-Tenant Data Structuring:</strong> Admins view all organization metrics securely mapped to unique IDs.</span>
+                            <i data-lucide="zap" style="color: #fbbf24; flex-shrink: 0;"></i>
+                            <span style="color: #cbd5e1;"><strong>Automated Invoicing:</strong> Generate and sync Stripe bills directly from frontend form logic, saving 15 hours weekly.</span>
                         </li>
                         <li style="display: flex; gap: 1rem;">
-                            <i data-lucide="check-circle" style="color: var(--brand-primary); flex-shrink: 0;"></i>
-                            <span style="color: #cbd5e1;"><strong>Kanban Stage Traversal:</strong> Drag-and-drop order states from "Pending" directly into "Fulfilled".</span>
+                            <i data-lucide="users" style="color: var(--brand-primary); flex-shrink: 0;"></i>
+                            <span style="color: #cbd5e1;"><strong>Unified Staff Boards:</strong> Centralized real-time dispatch systems so no employee is ever left guessing assignment status.</span>
                         </li>
                         <li style="display: flex; gap: 1rem;">
-                            <i data-lucide="check-circle" style="color: var(--brand-primary); flex-shrink: 0;"></i>
-                            <span style="color: #cbd5e1;"><strong>Financial Oversight:</strong> Real-time visual metrics tracking absolute revenue flow and outstanding invoices natively.</span>
+                            <i data-lucide="shield-check" style="color: #10b981; flex-shrink: 0;"></i>
+                            <span style="color: #cbd5e1;"><strong>Data Security:</strong> Move internal IP and customer lists off unencrypted messaging apps into a fortified database.</span>
                         </li>
                     </ul>
                 </div>
             </div>
-         </div>
+        </div>
     </section>
 
-    <!-- 5. SERVICES SECTION -->
-    <section style="padding: 120px 0; background: var(--bg-soft);">
+    <!-- 3. PROCESS SECTION -->
+    <section style="padding: 120px 0; background: var(--bg-soft); border-bottom: 1px solid var(--border-light);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="badge-elite">How It Works</span>
+                <h2 class="section-title" style="margin-top: 1rem;">A precise engineering process.</h2>
+                <p style="color: var(--text-muted); font-size: 1.25rem; max-width: 600px; margin: 0 auto;">We don't guess. We map your exact business logic to custom software architecture.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; text-align: center;">
+                <div class="reveal card-premium">
+                    <div style="width: 60px; height: 60px; background: var(--brand-dark); color: white; border-radius: 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; margin: 0 auto 1.5rem;">1</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--brand-dark);">Understand Your Business</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6;">We audit your current manual workflows, locate data leaks, and deeply map how revenue routes through your team.</p>
+                </div>
+                <div class="reveal card-premium" style="animation-delay: 0.1s;">
+                    <div style="width: 60px; height: 60px; background: var(--brand-primary); color: white; border-radius: 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; margin: 0 auto 1.5rem;">2</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--brand-dark);">Design Website & System</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6;">We engineer a conversion-heavy frontend storefront explicitly hard-wired to a private, bespoke operations dashboard.</p>
+                </div>
+                <div class="reveal card-premium" style="animation-delay: 0.2s;">
+                    <div style="width: 60px; height: 60px; background: #10b981; color: white; border-radius: 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; margin: 0 auto 1.5rem;">3</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--brand-dark);">Launch & Optimize</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6;">We securely deploy the finished infrastructure, train your staff on the workflow, and ruthlessly scale your automated capacity.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="contact.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.125rem;">Start Your Project Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICES SECTION -->
+    <section style="padding: 120px 0;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 6rem;">
-                <h2 style="font-size: 3.5rem; letter-spacing: -1px;">Our Core Services.</h2>
+                <span class="badge-elite" style="background: var(--bg-soft); border: 1px solid var(--border-light);">Value Proposition</span>
+                <h2 class="section-title" style="margin-top: 1rem;">Built strictly for business outcomes.</h2>
             </div>
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem;">
                 
-                <div class="reveal card-enterprise" style="background: white;">
+                <div class="reveal card-premium" style="border-top: 4px solid var(--brand-dark);">
                     <div class="icon-box" style="background: var(--bg-soft); color: var(--brand-dark);"><i data-lucide="globe"></i></div>
-                    <h3 style="margin-bottom: 1rem;">Website Development</h3>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 2rem;">
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Conversion-focused UX strategy</li>
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Fast, modern UI architectures</li>
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Built specifically for business growth</li>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Website Development</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">We build incredibly fast, SEO-dominant websites explicitly optimized to force visitor conversion and drive massive lead growth into your pipeline.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--brand-dark); font-weight: 600; font-size: 0.9375rem; margin-bottom: 2rem;">
+                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width: 18px; color: var(--brand-primary);"></i> High Conversions & Fast Load Times</li>
+                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width: 18px; color: var(--brand-primary);"></i> Premium US-Market Aesthetics</li>
                     </ul>
-                    <a href="services.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none;">View Details &rarr;</a>
+                    <a href="services.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">View Strategy <i data-lucide="arrow-right" style="width: 16px;"></i></a>
                 </div>
 
                 <!-- CORE OFFER -->
-                <div class="reveal card-enterprise" style="background: white; border: 2px solid var(--brand-primary); transform: scale(1.05); position: relative; box-shadow: var(--shadow-premium);">
-                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--brand-primary); color: white; padding: 0.35rem 1.5rem; border-radius: 100px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Core Offer</div>
+                <div class="reveal card-premium" style="border: 2px solid var(--brand-primary); transform: scale(1.05); position: relative; box-shadow: 0 20px 50px rgba(79, 70, 229, 0.15);">
+                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--brand-primary); color: white; padding: 0.4rem 2rem; border-radius: 100px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">Core Expertise</div>
                     <div class="icon-box" style="background: var(--brand-primary); color: white;"><i data-lucide="cpu"></i></div>
-                    <h3 style="margin-bottom: 1rem;">Business Systems</h3>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 2rem;">
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Order management dashboards</li>
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Dedicated workflow tracking</li>
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Secure internal ops tooling</li>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Business Systems</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">Bespoke internal dashboards built to track physical orders, enforce absolute staff accountability, and secure vital customer telemetry behind login walls.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--brand-dark); font-weight: 600; font-size: 0.9375rem; margin-bottom: 2rem;">
+                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width: 18px; color: var(--brand-primary);"></i> Real-time Order & Task Tracking</li>
+                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width: 18px; color: var(--brand-primary);"></i> Custom Admin Command Dashboards</li>
                     </ul>
-                    <a href="services.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none;">View Details &rarr;</a>
+                    <a href="services.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">View Architecture <i data-lucide="arrow-right" style="width: 16px;"></i></a>
                 </div>
 
-                <div class="reveal card-enterprise" style="background: white;">
-                    <div class="icon-box" style="background: var(--bg-soft); color: var(--brand-dark);"><i data-lucide="bot"></i></div>
-                    <h3 style="margin-bottom: 1rem;">Automation Solutions</h3>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 2rem;">
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Eliminate redundant manual work</li>
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Trigger-based operational efficiency</li>
-                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check" style="width: 16px; color: var(--brand-primary);"></i> Save extensive time & capital</li>
+                <div class="reveal card-premium" style="border-top: 4px solid #10b981;">
+                    <div class="icon-box" style="background: #d1fae5; color: #10b981;"><i data-lucide="bot"></i></div>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Workflow Automation</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">We mechanically eliminate repetitive human tasks. Sync payments directly to calendars and push invoices to clients without ever clicking a button.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--brand-dark); font-weight: 600; font-size: 0.9375rem; margin-bottom: 2rem;">
+                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width: 18px; color: #10b981;"></i> Eliminate Manual Data Entry</li>
+                        <li style="display: flex; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width: 18px; color: #10b981;"></i> Save Hundreds of Weekly Hours</li>
                     </ul>
-                    <a href="services.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none;">View Details &rarr;</a>
+                    <a href="services.html" style="color: #10b981; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">View Automations <i data-lucide="arrow-right" style="width: 16px;"></i></a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- 6. EXPANDED INDUSTRY GRID SECTION (Swapped based on user feedback) -->
-    <section style="padding: 120px 0 60px;">
+    <!-- 5. EXPANDED INDUSTRY GRID SECTION -->
+    <section style="padding: 120px 0; background: var(--bg-soft); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
         <div class="container">
             <div class="reveal" style="text-align: center; margin-bottom: 6rem;">
-                <span class="badge-elite" style="background: var(--bg-soft); border: 1px solid var(--border-light);">Expanded Industry Support</span>
-                <h2 style="font-size: 4rem; margin-top: 1rem; color: var(--brand-dark); letter-spacing: -2px;">Systems built for specialized sectors.</h2>
-                <p style="color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto;">High-performance digital storefronts integrated with tailored business engines.</p>
+                <span class="badge-elite" style="background: white; border: 1px solid var(--border-light);">Niche Implementations</span>
+                <h2 class="section-title" style="margin-top: 1rem;">Systems built for specialized sectors.</h2>
+                <p style="color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto;">High-performance digital storefronts securely integrated with tailored backend business engines for exact commercial workflows.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-bottom: 8rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-bottom: 4rem;">
+                
                 <!-- 1. Photo Studio -->
-                <div class="reveal card-enterprise" style="padding: 1.5rem; background: white;">
-                    <img src="assets/images/niche_photo_studio.png" alt="Photo Studio Website System" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Photo Studios</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">Manage client bookings, automate portfolio delivery links, and handle deposit collections seamlessly without manual email threads.</p>
-                    <a href="contact.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Get This Website <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                <div class="reveal card-premium">
+                    <img src="assets/images/niche_photo_studio.png" alt="Photo Studio UI Mockup" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                    <h4 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--brand-dark);">Photo Studios</h4>
+                    <div class="niche-matrix">
+                        <div class="niche-row"><span class="niche-label" style="color: #ef4444;">Problem:</span> <span style="color: var(--text-muted);">Losing high-value bookings in chaotic Instagram DMs and chasing manual deposits.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #f59e0b;">Solution:</span> <span style="color: var(--text-muted);">Custom portfolio integrated with an upfront-deposit calendar.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: var(--brand-primary);">Workflow:</span> <span style="color: var(--text-muted);">Client Browses &rarr; Selects Tier &rarr; Pays Retainer &rarr; Auto-Schedules.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #10b981;">Result:</span> <span style="color: var(--brand-dark); font-weight: 600;">Zero no-shows and fully automated client capture.</span></div>
+                    </div>
                 </div>
 
-                <!-- 2. Dental Clinic -->
-                <div class="reveal card-enterprise" style="padding: 1.5rem; background: white;">
-                    <img src="assets/images/niche_dental_clinic_template_1774302327512.png" alt="Dental Clinic Website System" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Dental Clinics</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">Automate patient appointment scheduling, push SMS reminders immediately, and digitize intake forms securely before they arrive.</p>
-                     <a href="contact.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Book a Demo <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                <!-- 2. Medical Center -->
+                <div class="reveal card-premium">
+                    <img src="assets/images/niche_medical_center.png" alt="Medical Center UI Dashboard" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                    <h4 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--brand-dark);">Medical Centers</h4>
+                    <div class="niche-matrix">
+                        <div class="niche-row"><span class="niche-label" style="color: #ef4444;">Problem:</span> <span style="color: var(--text-muted);">Overwhelmed front-desks handling scattered phone calls and lost physical intake forms.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #f59e0b;">Solution:</span> <span style="color: var(--text-muted);">Encrypted digital intake software mapped to real-time doctor availability dashboards.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: var(--brand-primary);">Workflow:</span> <span style="color: var(--text-muted);">Patient Submits Form &rarr; System Validates Slot &rarr; Reception Notified.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #10b981;">Result:</span> <span style="color: var(--brand-dark); font-weight: 600;">Secure, legally-compliant and silent clinic operations.</span></div>
+                    </div>
                 </div>
 
-                <!-- 3. Medical Center -->
-                <div class="reveal card-enterprise" style="padding: 1.5rem; background: white;">
-                    <img src="assets/images/niche_medical_center.png" alt="Medical Center Operations System" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Medical Centers</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">Replace chaotic front-desk operations with a unified patient triage system linking explicit doctor availability and confidential records.</p>
-                     <a href="contact.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Get This Website <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                <!-- 3. Tattoo Studio -->
+                <div class="reveal card-premium">
+                    <img src="assets/images/niche_tattoo_studio.png" alt="Tattoo Studio Operations" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                    <h4 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--brand-dark);">Tattoo Studios</h4>
+                    <div class="niche-matrix">
+                        <div class="niche-row"><span class="niche-label" style="color: #ef4444;">Problem:</span> <span style="color: var(--text-muted);">Managing multiple artists across paper diaries and failing to collect design draw-fees.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #f59e0b;">Solution:</span> <span style="color: var(--text-muted);">Centralized artist schedule matrix with mandatory digital waiver signatures.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: var(--brand-primary);">Workflow:</span> <span style="color: var(--text-muted);">Consult Request &rarr; Fee Captured &rarr; Artist Slot Locked &rarr; Waiver Sent.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #10b981;">Result:</span> <span style="color: var(--brand-dark); font-weight: 600;">100% staff utilization and legally protected chair time.</span></div>
+                    </div>
                 </div>
 
-                <!-- 4. Tattoo Studio -->
-                <div class="reveal card-enterprise" style="padding: 1.5rem; background: white;">
-                    <img src="assets/images/niche_tattoo_studio.png" alt="Tattoo Studio System" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Tattoo Studios</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">Streamline custom piece consultations, accept high-value design deposits securely, and track artist schedules in a central unified agenda.</p>
-                     <a href="contact.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Book a Demo <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                <!-- 4. Salon / Beauty Parlor -->
+                <div class="reveal card-premium">
+                    <img src="assets/images/niche_beauty_salon_template_1774302344067.png" alt="Beauty Salon Schedule UI" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                    <h4 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--brand-dark);">Beauty Salons</h4>
+                    <div class="niche-matrix">
+                        <div class="niche-row"><span class="niche-label" style="color: #ef4444;">Problem:</span> <span style="color: var(--text-muted);">Constant phone interruptions disrupting haircuts and losing track of stylist margins.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #f59e0b;">Solution:</span> <span style="color: var(--text-muted);">Silent self-serve portal connected exactly to shift availability grids.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: var(--brand-primary);">Workflow:</span> <span style="color: var(--text-muted);">Customer Pick Service &rarr; Selects Stylist &rarr; Reminders Pushed.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #10b981;">Result:</span> <span style="color: var(--brand-dark); font-weight: 600;">Maximized styling uptime and predictable daily cashflow.</span></div>
+                    </div>
                 </div>
 
-                <!-- 5. Salon / Beauty Parlor -->
-                <div class="reveal card-enterprise" style="padding: 1.5rem; background: white;">
-                    <img src="assets/images/niche_beauty_salon_template_1774302344067.png" alt="Salon Operations Website" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Beauty Salons</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">Eliminate no-shows with automated upfront booking fees and dynamic stylist availability grids synchronized directly to your storefront.</p>
-                     <a href="contact.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Get This Website <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                <!-- 5. Restaurants / Cafes -->
+                <div class="reveal card-premium">
+                    <img src="assets/images/niche_restaurant_template_1774302371733.png" alt="Restaurant KDS System" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                    <h4 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--brand-dark);">Restaurants & Cafes</h4>
+                    <div class="niche-matrix">
+                        <div class="niche-row"><span class="niche-label" style="color: #ef4444;">Problem:</span> <span style="color: var(--text-muted);">Bleeding 30% margin to third-party delivery apps and re-typing tickets into the kitchen POS.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #f59e0b;">Solution:</span> <span style="color: var(--text-muted);">Direct-to-consumer digital menu natively piped into private Kitchen Displays.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: var(--brand-primary);">Workflow:</span> <span style="color: var(--text-muted);">Web Order Placed &rarr; Payment Verifies &rarr; Screen Pings Chef.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #10b981;">Result:</span> <span style="color: var(--brand-dark); font-weight: 600;">Control 100% of your margins and streamline the prep line.</span></div>
+                    </div>
                 </div>
 
-                <!-- 6. Restaurants / Cafes -->
-                <div class="reveal card-enterprise" style="padding: 1.5rem; background: white;">
-                    <img src="assets/images/niche_restaurant_template_1774302371733.png" alt="Restaurant Workflow System" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Restaurants & Cafes</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">Take control of your margins by routing direct online orders straight to the kitchen display system, bypassing extreme third-party app fees.</p>
-                     <a href="contact.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Book a Demo <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                <!-- 6. Vegetable Vendors / Retail -->
+                <div class="reveal card-premium">
+                    <img src="assets/images/niche_local_shop_template_1774302446576.png" alt="Local Shop Inventory Dashboard" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                    <h4 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--brand-dark);">Local Retail Shops</h4>
+                    <div class="niche-matrix">
+                        <div class="niche-row"><span class="niche-label" style="color: #ef4444;">Problem:</span> <span style="color: var(--text-muted);">Overselling physical stock online because the actual store inventory is completely disconnected.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #f59e0b;">Solution:</span> <span style="color: var(--text-muted);">A responsive digital storefront mechanically locked to a back-office quantity manager.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: var(--brand-primary);">Workflow:</span> <span style="color: var(--text-muted);">Customer Buys Item &rarr; Stock Decrements &rarr; Reorder Alert Triggers.</span></div>
+                        <div class="niche-row"><span class="niche-label" style="color: #10b981;">Result:</span> <span style="color: var(--brand-dark); font-weight: 600;">Zero fulfillment errors and perfectly managed physical supply.</span></div>
+                    </div>
                 </div>
 
-                <!-- 7. Vegetable Vendors / Retail -->
-                <div class="reveal card-enterprise" style="padding: 1.5rem; background: white;">
-                    <img src="assets/images/niche_local_shop_template_1774302446576.png" alt="Local Retail Business Dashboard" style="width: 100%; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Local Retail Shops</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">Connect a fast, localized digital storefront directly to a back-office inventory tracker so you never accidentally oversell your fresh supply.</p>
-                     <a href="contact.html" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Get This Website <i data-lucide="arrow-right" style="width: 16px;"></i></a>
-                </div>
+            </div>
+
+             <div style="text-align: center; margin-top: 2rem;">
+                <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 3rem; font-size: 1.125rem;">Start Your Industry Upgrade</a>
             </div>
         </div>
     </section>
 
-    <!-- 7. VERY DETAILED NICHE SOLUTIONS (Swapped down based on user feedback) -->
-    <section style="padding: 60px 0 120px;">
+    <!-- 6. VERY DETAILED NICHE SOLUTIONS (Deep Dive Blocks) -->
+    <section style="padding: 120px 0;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 8rem;">
-                <h2 style="font-size: 4rem; letter-spacing: -2px; margin-bottom: 1.5rem;">System engineering for exact industries.</h2>
-                <p style="color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto;">We do not build generic templates. We construct exact operational models that map precisely to how your niche natively routes data.</p>
+                <h2 class="section-title">Deep-Dive Architectures.</h2>
+                <p style="color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto;">In-depth looks at how we construct the data layers for heavy physical operations.</p>
             </div>
 
             <!-- Niche 1: 3D Printing -->
             <div class="reveal" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: center; margin-bottom: 10rem;">
                 <div>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--brand-dark);">3D Printing Businesses</h3>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--brand-dark);">Industrial 3D Printing</h3>
                     <div style="margin-bottom: 2rem;">
                         <span style="font-weight: 800; color: #ef4444; font-size: 0.875rem; text-transform: uppercase;">The Real Problem</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Losing track of client STL files in email threads, failing to monitor which 3D printers are currently free, and fighting manual quotes.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">Losing track of heavy client STL geometry files in basic email threads, failing to systematically monitor which specific industrial resin machines are currently free, and fighting manual quotes.</p>
                     </div>
                     <div style="margin-bottom: 2rem;">
                         <span style="font-weight: 800; color: #10b981; font-size: 0.875rem; text-transform: uppercase;">The Workflow Engine</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Web Frontend (Client Uploads) &rarr; Security Check &rarr; Dashboard (Admin Triage) &rarr; Machine Allocation Map.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; font-weight: 600;">Web Portal &rarr; Security Scan &rarr; Admin Triage Dashboard &rarr; Machine Map.</p>
                     </div>
                     <div style="margin-bottom: 2.5rem;">
                         <span style="font-weight: 800; color: var(--brand-primary); font-size: 0.875rem; text-transform: uppercase;">System Explanation</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">A bespoke multi-layered dashboard that explicitly links customer design files with physical machine availability grids securely.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">A bespoke multi-layered command terminal that explicitly authenticates and securely links client IP design files with physical fabrication machine availability grids.</p>
                     </div>
-                    <a href="solutions/3d-printing.html" class="btn btn-secondary">View 3D Print System</a>
+                    <a href="solutions/3d-printing.html" class="btn btn-secondary">Review Hard-Tech System</a>
                 </div>
                 <div>
                     <img src="assets/images/niche_3d_printing_solution_combo_1774391385336.png" alt="3D Printing Dashboard Visual" style="width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-lg);">
@@ -285,37 +317,37 @@
                     <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--brand-dark);">Appliance Repair Fleets</h3>
                     <div style="margin-bottom: 2rem;">
                         <span style="font-weight: 800; color: #ef4444; font-size: 0.875rem; text-transform: uppercase;">The Real Problem</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Technicians arriving blind. No organized history of the appliance defect, and relying on handwritten bills to collect cash onsite.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">Technicians arriving blind. No organized telemetry of the appliance defect, routing inefficiencies, and relying on handwritten bills to collect cash physically at the door.</p>
                     </div>
                     <div style="margin-bottom: 2rem;">
                         <span style="font-weight: 800; color: #10b981; font-size: 0.875rem; text-transform: uppercase;">The Workflow Engine</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Service Request (Web) &rarr; Tech Assignment &rarr; In-Field Job Tracking App UI &rarr; Stripe Payment Sync.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; font-weight: 600;">Geo-Request &rarr; Tech Assignment &rarr; In-Field Tablet App &rarr; Stripe Sync.</p>
                     </div>
                     <div style="margin-bottom: 2.5rem;">
                         <span style="font-weight: 800; color: var(--brand-primary); font-size: 0.875rem; text-transform: uppercase;">System Explanation</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">A central command unit where administration can geolocate work statuses and push historical maintenance records straight to driver terminals.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">A central command unit where administration can absolutely geolocate dispatch statuses and push necessary historical maintenance diagrams straight to driver terminals dynamically.</p>
                     </div>
-                    <a href="solutions/repair-services.html" class="btn btn-secondary">View Field Ops System</a>
+                    <a href="solutions/repair-services.html" class="btn btn-secondary">Review Logistical System</a>
                 </div>
             </div>
 
              <!-- Niche 3: Custom Products -->
             <div class="reveal" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: center;">
                 <div>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--brand-dark);">Custom Product Builders</h3>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--brand-dark);">Custom Product Assembly</h3>
                     <div style="margin-bottom: 2rem;">
                         <span style="font-weight: 800; color: #ef4444; font-size: 0.875rem; text-transform: uppercase;">The Real Problem</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Operating complex variable supply chains. Customers selecting custom fabrics or materials while your inventory isn't communicating with sales data.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">Operating highly complex variable supply chains. Customers endlessly selecting custom fabrics or composite materials while your inventory ledger isn't instantly communicating with storefront data.</p>
                     </div>
                     <div style="margin-bottom: 2rem;">
                         <span style="font-weight: 800; color: #10b981; font-size: 0.875rem; text-transform: uppercase;">The Workflow Engine</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Dynamic Storefront &rarr; Parts Inventory Verification &rarr; Assembly Line Queue &rarr; Automated Shipping Label.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; font-weight: 600;">Store Configurator &rarr; Variable Check &rarr; Assembly Line DB &rarr; Auto-Ship.</p>
                     </div>
                     <div style="margin-bottom: 2.5rem;">
                         <span style="font-weight: 800; color: var(--brand-primary); font-size: 0.875rem; text-transform: uppercase;">System Explanation</span>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">A dual-layer solution connecting what the buyer configures directly into what the stockroom diminishes, protecting capital allocation flawlessly.</p>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5;">A stringent dual-layer engine mechanically locking what the retail buyer configures directly into what the stockroom diminishes, explicitly protecting your material capital allocation from oversell errors.</p>
                     </div>
-                    <a href="solutions/custom-products.html" class="btn btn-secondary">View Logistics System</a>
+                    <a href="solutions/custom-products.html" class="btn btn-secondary">Review Builder System</a>
                 </div>
                 <div>
                     <img src="assets/images/timora_pro_dashboard_mockup_1774391365671.png" alt="Custom Boutique Product UI" style="width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-lg);">
@@ -325,41 +357,52 @@
         </div>
     </section>
 
-    <!-- Closing CTA -->
-    <section style="background: var(--bg-soft); padding: 100px 0; border-top: 1px solid var(--border-light);">
+    <!-- 7. CLOSING CTA -->
+    <section style="background: var(--bg-soft); padding: 120px 0; border-top: 1px solid var(--border-light);">
         <div class="container" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-             <span class="badge-elite" style="background: transparent; border: 1px solid var(--border-light);">Global Reach. US-Grade Engineering.</span>
-            <h2 class="reveal" style="font-size: 4rem; letter-spacing: -2px; margin-bottom: 1.5rem; margin-top: 1.5rem;">Ready to upgrade your infrastructure?</h2>
-            <p class="reveal" style="color: var(--text-muted); font-size: 1.25rem; margin-bottom: 4rem; max-width: 600px;">A generic website will not scale your company. We engineer the exact operational architecture your business needs to eliminate manual friction and completely dominate your market.</p>
+             <span class="badge-elite" style="background: white; border: 1px solid var(--border-light); color: var(--brand-dark);">Scale Aggressively</span>
+            <h2 class="reveal section-title" style="margin-top: 1.5rem;">Ready to upgrade your infrastructure?</h2>
+            <p class="reveal" style="color: var(--text-muted); font-size: 1.35rem; margin-bottom: 4rem; max-width: 750px; line-height: 1.6;">A generic template website will not scale your company. We engineer the exact operational architecture your business absolutely needs to eliminate manual friction and dominate your sector.</p>
             <div style="display: flex; gap: 1rem;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 1.25rem 3.5rem; font-size: 1.125rem;">Initiate System Audit</a>
+                <a href="contact.html" class="btn btn-primary btn-massive">Book a System Demo Pipeline</a>
             </div>
         </div>
     </section>
 
     <!-- Elite Footer -->
-    <footer style="padding: 80px 0 40px; background: white; border-top: 1px solid var(--border-light);">
+    <footer style="padding: 100px 0 40px; background: white; border-top: 1px solid var(--border-light);">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 5rem;">
                 <div>
-                    <div style="font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; margin-bottom: 1.5rem;">Infinity Clock</div>
-                    <p style="color: var(--text-muted); max-width: 320px;">We help businesses not just look better online, but operate smarter through custom system engineering.</p>
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <img src="assets/logo.png" alt="logo" style="height: 32px;">
+                        <span style="font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock Studio</span>
+                    </div>
+                    <p style="color: var(--text-muted); max-width: 320px; line-height: 1.6; margin-bottom: 2rem;">We are a premium digital engineering firm. We help modern businesses operate significantly smarter through rigorous custom system architecture.</p>
+                    <a href="mailto:hello@infinityclock.studio" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 18px;"></i> hello@infinityclock.studio</a>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 1.5rem;">Solutions</h4>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.9375rem;">
-                        <li><a href="solutions/3d-printing.html" style="color: inherit; text-decoration: none;">3D Printing Systems</a></li>
-                        <li><a href="solutions/repair-services.html" style="color: inherit; text-decoration: none;">Appliance Repair Ops</a></li>
-                        <li><a href="solutions/custom-products.html" style="color: inherit; text-decoration: none;">Custom Product Flow</a></li>
-                        <li><a href="contact.html" style="color: inherit; text-decoration: none;">Retail & Service Tech</a></li>
+                    <h4 style="margin-bottom: 1.5rem; color: var(--brand-dark); font-size: 1.125rem;">Services</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-muted); font-size: 0.9375rem;">
+                        <li><a href="services.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Website Development</a></li>
+                        <li><a href="services.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Business Dashboards</a></li>
+                        <li><a href="services.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Workflow Automation</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 1.5rem;">Company</h4>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.9375rem;">
-                        <li><a href="about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
-                        <li><a href="services.html" style="color: inherit; text-decoration: none;">Our Services</a></li>
-                        <li><a href="contact.html" style="color: inherit; text-decoration: none;">Contact & Audit</a></li>
+                    <h4 style="margin-bottom: 1.5rem; color: var(--brand-dark); font-size: 1.125rem;">Deep-Dive Solutions</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-muted); font-size: 0.9375rem;">
+                        <li><a href="solutions/3d-printing.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Industrial 3D Printing</a></li>
+                        <li><a href="solutions/repair-services.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Appliance Repair Ops</a></li>
+                        <li><a href="solutions/custom-products.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Custom Product Flow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1.5rem; color: var(--brand-dark); font-size: 1.125rem;">Company</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-muted); font-size: 0.9375rem;">
+                        <li><a href="about.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">About The Firm</a></li>
+                        <li><a href="services.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Our Architecture</a></li>
+                        <li><a href="contact.html" style="color: inherit; text-decoration: none; transition: color 0.2s;">Contact & Audit</a></li>
                     </ul>
                 </div>
             </div>
