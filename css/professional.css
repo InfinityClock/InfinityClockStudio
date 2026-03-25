@@ -46,11 +46,11 @@
 }
 
 .brand-logo-text {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
     color: var(--brand-dark);
     font-size: 1.75rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 * {

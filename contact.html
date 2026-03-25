@@ -9,7 +9,7 @@
     <script>document.documentElement.classList.add('js-ready');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap">
     <meta name="description" content="Get a free operational audit from Infinity Clock Studio. Our Lead Engineer will review your workflows and respond within 24 hours with a custom technical roadmap.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Infinity Clock Studio">
@@ -20,6 +20,20 @@
     <meta name="twitter:title" content="Get a Free System Audit | Infinity Clock Studio">
     <meta name="twitter:description" content="Get a free operational audit from Infinity Clock Studio. Our Lead Engineer will review your workflows and respond within 24 hours with a custom technical roadmap.">
     <link rel="canonical" href="https://infinityclockstudio.com/contact.html">
+    <style>
+        .required-star { color: #ef4444; margin-left: 2px; font-weight: 900; }
+        .optional-tag { font-weight: 400; font-size: 0.7rem; text-transform: none; letter-spacing: 0; color: var(--text-muted); opacity: 0.75; }
+        .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
+        .form-label { font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em; }
+        .form-input { padding: 1rem; border-radius: 8px; border: 1.5px solid var(--border-light); font-family: inherit; font-size: 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; background: white; color: var(--text-main); }
+        .form-input:focus { border-color: var(--brand-primary); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
+        .form-input.invalid { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.1); }
+        .form-input.invalid:focus { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.15); }
+        .field-error { color: #ef4444; font-size: 0.8125rem; font-weight: 600; display: none; }
+        .field-error.visible { display: block; }
+        select.form-input { cursor: pointer; }
+        textarea.form-input { resize: none; }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -70,14 +84,27 @@
         </div>
     </section>
 
+    <!-- Trust Banner -->
+    <section style="padding: 0 0 2rem;">
+        <div class="container" style="max-width: 1000px;">
+            <div style="background: #f0fdf4; border: 1px solid rgba(34, 197, 94, 0.2); padding: 1.25rem 1.5rem; border-radius: 0.75rem; display: flex; align-items: flex-start; gap: 1rem;">
+                <i data-lucide="shield-check" style="color: #10b981; flex-shrink: 0; margin-top: 0.25rem;"></i>
+                <div>
+                    <h4 style="color: #166534; margin-bottom: 0.25rem; font-size: 1rem;">100% Confidential &amp; Secure Request</h4>
+                    <p style="color: #166534; font-size: 0.9375rem; line-height: 1.5; opacity: 0.9;">Your operational data is never shared. Submitting this form guarantees a direct response from our engineering team within 24 hours, including a <strong>free system audit</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Form & SLA Guarantees -->
-    <section style="padding: 20px 0 120px;">
+    <section style="padding: 0 0 120px;">
         <div class="container" style="max-width: 1000px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem;">
-            
-            <!-- Left: Contact Form -->
-            <div class="reveal card-premium" style="padding: 3.5rem; border-radius: 2rem; background: white; border: 1px solid var(--brand-primary); box-shadow: 0 20px 50px rgba(79, 70, 229, 0.1);">
-                <!-- Success State (hidden until form submitted) -->
-                <div id="form-success" style="display: none; text-align: center; padding: 3rem 1rem;">
+
+            <!-- Left: Success state or Zoho form card -->
+            <div>
+                <!-- Success State (shown when Zoho redirects back with ?success=1) -->
+                <div id="form-success" style="display: none; text-align: center; padding: 4rem 2rem; background: white; border-radius: 2rem; border: 1px solid #bbf7d0; box-shadow: 0 20px 50px rgba(16, 185, 129, 0.08);">
                     <div style="width: 64px; height: 64px; background: #f0fdf4; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
                         <i data-lucide="check-circle" style="color: #10b981; width: 32px; height: 32px;"></i>
                     </div>
@@ -85,42 +112,57 @@
                     <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">Our Lead Engineer will review your workflow and respond within 24 hours with a custom technical audit.</p>
                 </div>
 
-                <form id="contact-form" style="display: flex; flex-direction: column; gap: 2rem;">
+                <!-- Form Card -->
+                <div id="form-card" class="reveal" style="padding: 3.5rem; border-radius: 2rem; background: white; border: 1px solid var(--brand-primary); box-shadow: 0 20px 50px rgba(79, 70, 229, 0.1);">
+                    <form id="contact-form" novalidate style="display: flex; flex-direction: column; gap: 1.75rem;">
 
-                    <!-- Trust Banner -->
-                    <div style="background: #f0fdf4; border: 1px solid rgba(34, 197, 94, 0.2); padding: 1.25rem; border-radius: 0.75rem; margin-top: -1rem; display: flex; align-items: flex-start; gap: 1rem;">
-                        <i data-lucide="shield-check" style="color: #10b981; flex-shrink: 0; margin-top: 0.25rem;"></i>
-                        <div>
-                            <h4 style="color: #166534; margin-bottom: 0.25rem; font-size: 1rem;">100% Confidential & Secure Request</h4>
-                            <p style="color: #166534; font-size: 0.9375rem; line-height: 1.5; opacity: 0.9;">Your operational data is never shared. Submitting this form guarantees a direct response from our engineering team within 24 hours, including a <strong>free system audit</strong>.</p>
+                        <!-- Row 1: Name + Email -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-field">
+                                <label for="full-name" class="form-label">Full Name <span class="required-star">*</span></label>
+                                <input id="full-name" name="full_name" type="text" placeholder="John Doe" autocomplete="name" class="form-input">
+                                <span class="field-error" id="error-name">Please enter your full name.</span>
+                            </div>
+                            <div class="form-field">
+                                <label for="work-email" class="form-label">Work Email <span class="required-star">*</span></label>
+                                <input id="work-email" name="email" type="email" placeholder="john@company.io" autocomplete="email" class="form-input">
+                                <span class="field-error" id="error-email">Please enter a valid email address.</span>
+                            </div>
                         </div>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                            <label for="full-name" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Full Name</label>
-                            <input id="full-name" name="full_name" type="text" placeholder="John Doe" required style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem;">
+
+                        <!-- Row 2: Phone (optional) + Service -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-field">
+                                <label for="phone-number" class="form-label">Phone Number <span class="optional-tag">(Optional)</span></label>
+                                <input id="phone-number" name="phone" type="tel" placeholder="+1 (555) 000-0000" autocomplete="tel" class="form-input">
+                            </div>
+                            <div class="form-field">
+                                <label for="service-select" class="form-label">Solution Required <span class="required-star">*</span></label>
+                                <select id="service-select" name="service" class="form-input">
+                                    <option value="">Select a service…</option>
+                                    <option>High-Converting System Architecture</option>
+                                    <option>Internal Business System / Dashboard</option>
+                                    <option>Workflow Automation Software</option>
+                                    <option>Full Scale System Audit</option>
+                                </select>
+                                <span class="field-error" id="error-service">Please select a service.</span>
+                            </div>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                            <label for="work-email" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Work Email</label>
-                            <input id="work-email" name="email" type="email" placeholder="john@company.io" required style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem;">
+
+                        <!-- Row 3: Project Context -->
+                        <div class="form-field">
+                            <label for="project-context" class="form-label">Project Context <span class="required-star">*</span></label>
+                            <textarea id="project-context" name="message" rows="5" placeholder="Briefly describe the manual friction, data leaks, or scaling challenges you're currently facing…" class="form-input"></textarea>
+                            <span class="field-error" id="error-message">Please briefly describe your project context.</span>
                         </div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                        <label for="service-select" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Operational Solution Required</label>
-                        <select id="service-select" name="service" style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem; background: var(--bg-white);">
-                            <option>High-Converting System Architecture</option>
-                            <option>Internal Business System / Dashboard</option>
-                            <option>Workflow Automation Software</option>
-                            <option>Full Scale System Audit</option>
-                        </select>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                        <label for="project-context" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em;">Project Context</label>
-                        <textarea id="project-context" name="message" rows="5" placeholder="Briefly describe the manual friction, data leaks, or scaling challenges you're currently facing..." style="padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem; resize: none;"></textarea>
-                    </div>
-                    <button type="submit" id="submit-btn" class="btn btn-primary" style="padding: 1.25rem; font-size: 1.125rem; width: 100%; margin-top: 1rem;">Get Free Operational Audit & Demo</button>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.8125rem;">By submitting, you agree to our strict data privacy policy.</p>
-                </form>
+
+                        <!-- Global submission error -->
+                        <div id="submit-error" style="display:none; background:#fef2f2; border:1px solid rgba(239,68,68,0.3); padding:0.875rem 1rem; border-radius:0.5rem; color:#b91c1c; font-size:0.9375rem; line-height:1.5;"></div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-primary" style="padding: 1.25rem; font-size: 1.125rem; width: 100%; margin-top: 0.25rem;">Get Free Operational Audit &amp; Demo</button>
+                        <p style="text-align: center; color: var(--text-muted); font-size: 0.8125rem;">By submitting, you agree to our <a href="privacy.html" style="color: inherit; text-decoration: underline;">data privacy policy</a>.</p>
+                    </form>
+                </div>
             </div>
 
             <!-- Right: SLA Guarantees -->
@@ -128,7 +170,7 @@
                 <div>
                      <span style="font-weight: 800; color: var(--brand-primary); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 1rem;">Our Explicit Guarantees</span>
                      <h3 style="font-size: 2.25rem; color: var(--brand-dark); line-height: 1.1; margin-bottom: 2rem;">Professionalism, coded into our DNA.</h3>
-                     
+
                      <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem;">
                         <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
                             <div style="width: 48px; height: 48px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -234,41 +276,99 @@
             observer.observe(el);
         });
 
-        // Contact form handler
-        // TODO: Replace the mailto fallback below with your preferred form endpoint.
-        // Options: Formspree (https://formspree.io), Netlify Forms, or a custom backend.
-        const contactForm = document.getElementById('contact-form');
-        const formSuccess = document.getElementById('form-success');
-        const submitBtn = document.getElementById('submit-btn');
+        // ── Contact Form — Web3Forms ──────────────────────────────────────────────
+        // Sign up free at https://web3forms.com, enter hello@infinityclockstudio.com
+        // and replace YOUR_WEB3FORMS_ACCESS_KEY below with the key they email you.
+        // ─────────────────────────────────────────────────────────────────────────
+        var W3F_KEY = '919c6b5b-e304-4493-be2c-724b91a51905';
+
+        var contactForm = document.getElementById('contact-form');
+        var formCard    = document.getElementById('form-card');
+        var formSuccess = document.getElementById('form-success');
+        var submitBtn   = document.getElementById('submit-btn');
+        var submitError = document.getElementById('submit-error');
+
+        var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function setFieldError(inputId, errorId, show) {
+            var input = document.getElementById(inputId);
+            var error = document.getElementById(errorId);
+            if (!input) return;
+            if (show) { input.classList.add('invalid'); if (error) error.classList.add('visible'); }
+            else       { input.classList.remove('invalid'); if (error) error.classList.remove('visible'); }
+        }
+
+        [['full-name','error-name'],['work-email','error-email'],['service-select','error-service'],['project-context','error-message']].forEach(function(pair) {
+            var el = document.getElementById(pair[0]);
+            if (el) el.addEventListener('input', function() { setFieldError(pair[0], pair[1], false); });
+        });
+
+        function validateForm() {
+            var name    = document.getElementById('full-name').value.trim();
+            var email   = document.getElementById('work-email').value.trim();
+            var service = document.getElementById('service-select').value;
+            var message = document.getElementById('project-context').value.trim();
+            setFieldError('full-name',       'error-name',    !name);
+            setFieldError('work-email',      'error-email',   !email || !EMAIL_RE.test(email));
+            setFieldError('service-select',  'error-service', !service);
+            setFieldError('project-context', 'error-message', !message);
+            return !!(name && email && EMAIL_RE.test(email) && service && message);
+        }
 
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            submitError.style.display = 'none';
+            if (!validateForm()) {
+                var first = contactForm.querySelector('.form-input.invalid');
+                if (first) first.focus();
+                return;
+            }
 
-            const name = document.getElementById('full-name').value.trim();
-            const email = document.getElementById('work-email').value.trim();
-            const service = document.getElementById('service-select').value;
-            const message = document.getElementById('project-context').value.trim();
+            var name    = document.getElementById('full-name').value.trim();
+            var email   = document.getElementById('work-email').value.trim();
+            var phone   = document.getElementById('phone-number').value.trim();
+            var service = document.getElementById('service-select').value;
+            var message = document.getElementById('project-context').value.trim();
 
-            // Build mailto link as the submission mechanism until a backend is configured
-            const subject = encodeURIComponent('New Audit Request from ' + name);
-            const body = encodeURIComponent(
-                'Name: ' + name + '\n' +
-                'Email: ' + email + '\n' +
-                'Service: ' + service + '\n\n' +
-                'Project Context:\n' + message
-            );
-
-            submitBtn.textContent = 'Opening email client...';
+            submitBtn.textContent = 'Sending…';
             submitBtn.disabled = true;
 
-            window.location.href = 'mailto:hello@infinityclockstudio.com?subject=' + subject + '&body=' + body;
-
-            // Show success state after a brief delay
-            setTimeout(function() {
-                contactForm.style.display = 'none';
+            function showSuccess() {
+                formCard.style.display = 'none';
                 formSuccess.style.display = 'block';
                 lucide.createIcons();
-            }, 800);
+            }
+
+            var payload = {
+                access_key: W3F_KEY,
+                subject: 'New Audit Request from ' + name,
+                name: name,
+                email: email,
+                phone: phone || '—',
+                service: service,
+                message: message
+            };
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(function(res) { return res.json(); }).then(function(data) {
+                if (data.success) {
+                    showSuccess();
+                } else {
+                    submitBtn.textContent = 'Get Free Operational Audit & Demo';
+                    submitBtn.disabled = false;
+                    submitError.textContent = data.message || 'Submission failed. Please email us at hello@infinityclockstudio.com.';
+                    submitError.style.display = 'block';
+                }
+            }).catch(function() {
+                // Network error — open mailto as fallback
+                var subject = encodeURIComponent('New Audit Request from ' + name);
+                var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + (phone ? '\nPhone: ' + phone : '') + '\nService: ' + service + '\n\nProject Context:\n' + message);
+                window.location.href = 'mailto:hello@infinityclockstudio.com?subject=' + subject + '&body=' + body;
+                setTimeout(showSuccess, 800);
+            });
         });
     </script>
 </body>
