@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&display=swap');
 
 :root {
     --brand-primary: #0ea5e9;
@@ -21,11 +22,16 @@
 }
 
 .brand-logo-text {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    color: var(--brand-dark);
-    font-size: 1.75rem;
-    letter-spacing: -1px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: -1.5px;
+    background: linear-gradient(110deg, var(--brand-navy) 0%, var(--brand-dark) 40%, var(--brand-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: tracking;
+    display: inline-block;
 }
 
 * {
