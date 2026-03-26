@@ -271,6 +271,96 @@ section {
     h1 { font-size: 2.5rem !important; letter-spacing: -1px !important; }
     h2 { font-size: 2rem !important; }
     h3 { font-size: 1.5rem !important; }
+
+    /* ---- Mobile overflow fixes ---- */
+
+    /* Prevent text from overflowing viewport */
+    h1, h2, h3, h4, p, li, a, span {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 100%;
+    }
+
+    /* Fix: flex-column containers with align-items:center cause children to use
+       content-width (shrink-to-fit), making text wider than the viewport */
+    .container {
+        align-items: stretch !important;
+    }
+
+    /* Scale down named title classes used across pages */
+    .hero-title {
+        font-size: 2.25rem !important;
+        letter-spacing: -1px !important;
+        line-height: 1.2 !important;
+    }
+    .section-title {
+        font-size: 1.875rem !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    /* Remove white-space: nowrap that causes inline overflow */
+    [style*="white-space: nowrap"] {
+        white-space: normal !important;
+    }
+
+    /* Collapse horizontal multi-column flex layouts in sections to single column */
+    section [style*="justify-content: space-between"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 2rem !important;
+    }
+
+    /* Make all direct children of collapsed flex rows fill full width */
+    section [style*="justify-content: space-between"] > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Collapse CTA button rows (justify-content: center with a gap) */
+    .hero-ctas {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1rem !important;
+    }
+
+    /* Scale down large CTA buttons */
+    .btn-massive {
+        padding: 1rem 2rem !important;
+        font-size: 1rem !important;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Un-stick absolutely positioned overlay cards that cause overflow */
+    section [style*="bottom: -3rem"] {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        margin-top: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    /* Collapse horizontal flex inside the proof/flowchart overlay */
+    section [style*="bottom: -3rem"] [style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Hide decorative connector lines that span across columns */
+    section [style*="position: absolute"][style*="height: 2px"],
+    section [style*="position: absolute"][style*="height: 3px"] {
+        display: none !important;
+    }
+
+    /* Tighten large padding in glass cards / flowchart containers on mobile */
+    [style*="padding: 4rem"] {
+        padding: 1.5rem !important;
+    }
 }
 
 @media (max-width: 768px) {
