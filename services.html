@@ -36,6 +36,11 @@
         .niche-matrix { display: flex; flex-direction: column; gap: 0.875rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border-light); flex: 1; }
         .niche-row { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.9rem; line-height: 1.5; }
         .niche-label { font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        /* Deep-dive solution cards (dark background) */
+        .solution-card { background: rgba(255,255,255,0.05); border-radius: 1.25rem; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; text-decoration: none; }
+        .solution-card:hover { transform: translateY(-7px); box-shadow: 0 24px 56px rgba(0,0,0,0.3); border-color: var(--brand-primary); }
+        .solution-card .solution-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.45s ease; }
+        .solution-card:hover .solution-img { transform: scale(1.04); }
     </style>
 </head>
 <body>
@@ -289,6 +294,65 @@
             </div>
         </div>
     </section>
+    <!-- Deep-Dive Solutions -->
+    <section style="padding: 100px 0; background: var(--brand-navy);">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <span style="font-weight: 800; color: var(--brand-primary); font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 1.5rem;">Industry Deep-Dives</span>
+                <h2 style="font-size: 3.5rem; color: white; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 1.5rem;">Built for your exact niche.</h2>
+                <p style="color: #94a3b8; font-size: 1.25rem; max-width: 720px; margin: 0 auto; line-height: 1.6;">Explore fully detailed system blueprints — each engineered for the specific workflows, problems, and revenue mechanics of three high-demand industries.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+
+                <!-- 3D Printing -->
+                <a href="solutions/3d-printing.html" class="reveal solution-card">
+                    <div style="aspect-ratio: 16/10; overflow: hidden;">
+                        <img src="assets/images/niche_3d_printing_template_1774302278844.png" alt="3D Printing Operations System" class="solution-img">
+                    </div>
+                    <div style="padding: 1.75rem 2rem 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <span style="font-size: 0.75rem; font-weight: 800; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.08em;">Niche Architecture</span>
+                        <h3 style="font-size: 1.375rem; font-weight: 800; color: white; letter-spacing: -0.025em; margin: 0.5rem 0 0;">Industrial 3D Printing</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.875rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); flex: 1;">
+                            <p style="color: #94a3b8; font-size: 0.9375rem; line-height: 1.6; margin: 0;">Automate file intake, machine queue management, and client notifications for high-volume print operations.</p>
+                            <span style="color: var(--brand-primary); font-weight: 700; font-size: 0.9375rem;">View Deep-Dive &rarr;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Repair Services -->
+                <a href="solutions/repair-services.html" class="reveal solution-card" style="animation-delay: 0.1s;">
+                    <div style="aspect-ratio: 16/10; overflow: hidden;">
+                        <img src="assets/images/niche_appliance_repair_template_1774302309308.png" alt="Appliance Repair Operations System" class="solution-img">
+                    </div>
+                    <div style="padding: 1.75rem 2rem 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <span style="font-size: 0.75rem; font-weight: 800; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.08em;">Niche Architecture</span>
+                        <h3 style="font-size: 1.375rem; font-weight: 800; color: white; letter-spacing: -0.025em; margin: 0.5rem 0 0;">Appliance Repair Operations</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.875rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); flex: 1;">
+                            <p style="color: #94a3b8; font-size: 0.9375rem; line-height: 1.6; margin: 0;">Unify technician scheduling, on-site job tracking, and instant billing into a single field operations dashboard.</p>
+                            <span style="color: var(--brand-primary); font-weight: 700; font-size: 0.9375rem;">View Deep-Dive &rarr;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Custom Products -->
+                <a href="solutions/custom-products.html" class="reveal solution-card" style="animation-delay: 0.2s;">
+                    <div style="aspect-ratio: 16/10; overflow: hidden;">
+                        <img src="assets/images/timora_pro_dashboard_mockup_1774391365671.png" alt="Custom Product Order System" class="solution-img">
+                    </div>
+                    <div style="padding: 1.75rem 2rem 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <span style="font-size: 0.75rem; font-weight: 800; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.08em;">Niche Architecture</span>
+                        <h3 style="font-size: 1.375rem; font-weight: 800; color: white; letter-spacing: -0.025em; margin: 0.5rem 0 0;">Custom Product Fulfillment</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.875rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); flex: 1;">
+                            <p style="color: #94a3b8; font-size: 0.9375rem; line-height: 1.6; margin: 0;">End-to-end order lifecycle management with dynamic quoting, inventory tracking, and automated client updates.</p>
+                            <span style="color: var(--brand-primary); font-weight: 700; font-size: 0.9375rem;">View Deep-Dive &rarr;</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     <!-- 5.5. PARTNER TESTIMONIALS -->
     <section style="padding: 120px 0; background: var(--bg-soft); border-bottom: 1px solid var(--border-light);">
         <div class="container">
