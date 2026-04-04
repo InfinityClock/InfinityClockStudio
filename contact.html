@@ -134,7 +134,7 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                             <div class="form-field">
                                 <label for="phone-number" class="form-label">Phone Number <span class="optional-tag">(Optional)</span></label>
-                                <input id="phone-number" name="phone" type="tel" placeholder="+1 (555) 000-0000" autocomplete="tel" class="form-input">
+                                <input id="phone-number" name="phone" type="tel" placeholder="+91 / +971 / +1 (your number)" autocomplete="tel" class="form-input">
                             </div>
                             <div class="form-field">
                                 <label for="service-select" class="form-label">Solution Required <span class="required-star">*</span></label>
@@ -149,7 +149,29 @@
                             </div>
                         </div>
 
-                        <!-- Row 3: Project Context -->
+                        <!-- Row 3: Region + Business Type -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-field">
+                                <label for="region-select" class="form-label">Your Region <span class="required-star">*</span></label>
+                                <select id="region-select" name="region" class="form-input">
+                                    <option value="">Select your region…</option>
+                                    <option>🇮🇳 India</option>
+                                    <option>🇦🇪 Middle East (UAE, KSA, Qatar, Kuwait)</option>
+                                    <option>🌎 Americas (US, Canada, LatAm)</option>
+                                    <option>🇪🇺 Continental Europe</option>
+                                    <option>🌏 APAC (Singapore, Malaysia, SEA)</option>
+                                    <option>🇦🇺 ANZ (Australia &amp; New Zealand)</option>
+                                    <option>Other</option>
+                                </select>
+                                <span class="field-error" id="error-region">Please select your region.</span>
+                            </div>
+                            <div class="form-field">
+                                <label for="company-name" class="form-label">Company / Business Name <span class="optional-tag">(Optional)</span></label>
+                                <input id="company-name" name="company" type="text" autocomplete="organization" class="form-input">
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Project Context -->
                         <div class="form-field">
                             <label for="project-context" class="form-label">Project Context <span class="required-star">*</span></label>
                             <textarea id="project-context" name="message" rows="5" placeholder="Briefly describe the manual friction, data leaks, or scaling challenges you're currently facing…" class="form-input"></textarea>
@@ -213,7 +235,8 @@
                         <img src="assets/logo.png?v=6" alt="Infinity Clock Studio" style="height: 32px;">
                         <span style="font-weight: 800; color: var(--brand-dark); font-size: 1.5rem; letter-spacing: -1px;">Infinity Clock Studio</span>
                     </div>
-                    <p style="color: var(--text-muted); max-width: 320px; line-height: 1.6; margin-bottom: 2rem;">We are a premium digital engineering firm. We help modern businesses operate significantly smarter through rigorous custom system architecture.</p>
+                    <p style="color: var(--text-muted); max-width: 320px; line-height: 1.6; margin-bottom: 1rem;">We are a premium digital engineering firm. We help modern businesses operate significantly smarter through rigorous custom system architecture.</p>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; max-width: 320px; line-height: 1.6; margin-bottom: 2rem;">🇮🇳 India &nbsp;·&nbsp; 🇦🇪 ME &nbsp;·&nbsp; 🌎 Americas &nbsp;·&nbsp; 🇪🇺 Europe &nbsp;·&nbsp; 🌏 APAC &nbsp;·&nbsp; 🇦🇺 ANZ</p>
                     <a href="mailto:hello@infinityclockstudio.com" style="color: var(--brand-primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 18px;"></i> hello@infinityclockstudio.com</a>
                 </div>
                 <div>
@@ -242,7 +265,7 @@
                 </div>
             </div>
             <div style="border-top: 1px solid var(--border-light); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.8125rem;">
-                <p>&copy; 2026 Infinity Clock Studio Inc. All rights reserved.</p>
+                <p>&copy; 2026 Infinity Clock Studio Inc. All rights reserved. &nbsp;·&nbsp; Serving India · ME · Americas · Europe · APAC · ANZ</p>
                 <div style="display: flex; gap: 2rem;">
                     <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
                     <a href="terms.html" style="color: inherit; text-decoration: none;">Terms of Service</a>
@@ -298,21 +321,24 @@
             else       { input.classList.remove('invalid'); if (error) error.classList.remove('visible'); }
         }
 
-        [['full-name','error-name'],['work-email','error-email'],['service-select','error-service'],['project-context','error-message']].forEach(function(pair) {
+        [['full-name','error-name'],['work-email','error-email'],['service-select','error-service'],['region-select','error-region'],['project-context','error-message']].forEach(function(pair) {
             var el = document.getElementById(pair[0]);
             if (el) el.addEventListener('input', function() { setFieldError(pair[0], pair[1], false); });
+            if (el) el.addEventListener('change', function() { setFieldError(pair[0], pair[1], false); });
         });
 
         function validateForm() {
             var name    = document.getElementById('full-name').value.trim();
             var email   = document.getElementById('work-email').value.trim();
             var service = document.getElementById('service-select').value;
+            var region  = document.getElementById('region-select').value;
             var message = document.getElementById('project-context').value.trim();
             setFieldError('full-name',       'error-name',    !name);
             setFieldError('work-email',      'error-email',   !email || !EMAIL_RE.test(email));
             setFieldError('service-select',  'error-service', !service);
+            setFieldError('region-select',   'error-region',  !region);
             setFieldError('project-context', 'error-message', !message);
-            return !!(name && email && EMAIL_RE.test(email) && service && message);
+            return !!(name && email && EMAIL_RE.test(email) && service && region && message);
         }
 
         contactForm.addEventListener('submit', function(e) {
@@ -328,6 +354,8 @@
             var email   = document.getElementById('work-email').value.trim();
             var phone   = document.getElementById('phone-number').value.trim();
             var service = document.getElementById('service-select').value;
+            var region  = document.getElementById('region-select').value;
+            var company = document.getElementById('company-name').value.trim();
             var message = document.getElementById('project-context').value.trim();
 
             submitBtn.textContent = 'Sending…';
@@ -341,10 +369,12 @@
 
             var payload = {
                 access_key: W3F_KEY,
-                subject: 'New Audit Request from ' + name,
+                subject: 'New Audit Request from ' + name + ' (' + region + ')',
                 name: name,
                 email: email,
                 phone: phone || '—',
+                company: company || '—',
+                region: region,
                 service: service,
                 message: message
             };
