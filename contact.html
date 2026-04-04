@@ -25,8 +25,9 @@
         .optional-tag { font-weight: 400; font-size: 0.7rem; text-transform: none; letter-spacing: 0; color: var(--text-muted); opacity: 0.75; }
         .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
         .form-label { font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em; }
-        .form-input { padding: 1rem; border-radius: 8px; border: 1.5px solid var(--border-light); font-family: inherit; font-size: 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; background: white; color: var(--text-main); }
+        .form-input { height: 52px; padding: 0 1rem; border-radius: 8px; border: 1.5px solid var(--border-light); font-family: inherit; font-size: 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; background: white; color: var(--text-main); display: flex; align-items: center; width: 100%; }
         .form-input:focus { border-color: var(--brand-primary); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
+        textarea.form-input { height: auto; padding: 1rem; min-height: 120px; }
         .form-input.invalid { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.1); }
         .form-input.invalid:focus { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.15); }
         .field-error { color: #ef4444; font-size: 0.8125rem; font-weight: 600; display: none; }
@@ -117,7 +118,7 @@
                     <form id="contact-form" novalidate style="display: flex; flex-direction: column; gap: 1.75rem;">
 
                         <!-- Row 1: Name + Email -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
                             <div class="form-field">
                                 <label for="full-name" class="form-label">Full Name <span class="required-star">*</span></label>
                                 <input id="full-name" name="full_name" type="text" placeholder="John Doe" autocomplete="name" class="form-input">
@@ -131,7 +132,7 @@
                         </div>
 
                         <!-- Row 2: Phone (optional) + Service -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
                             <div class="form-field">
                                 <label for="phone-number" class="form-label">Phone Number <span class="optional-tag">(Optional)</span></label>
                                 <input id="phone-number" name="phone" type="tel" placeholder="+91 / +971 / +1 (your number)" autocomplete="tel" class="form-input">
@@ -150,7 +151,7 @@
                         </div>
 
                         <!-- Row 3: Region + Business Type -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
                             <div class="form-field">
                                 <label for="region-select" class="form-label">Your Region <span class="required-star">*</span></label>
                                 <select id="region-select" name="region" class="form-input">
@@ -166,7 +167,7 @@
                                 <span class="field-error" id="error-region">Please select your region.</span>
                             </div>
                             <div class="form-field">
-                                <label for="company-name" class="form-label">Company / Business Name <span class="optional-tag">(Optional)</span></label>
+                                <label for="company-name" class="form-label">Company Name <span class="optional-tag">(Optional)</span></label>
                                 <input id="company-name" name="company" type="text" autocomplete="organization" class="form-input">
                             </div>
                         </div>
