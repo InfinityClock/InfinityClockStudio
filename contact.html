@@ -25,9 +25,9 @@
         .optional-tag { font-weight: 400; font-size: 0.7rem; text-transform: none; letter-spacing: 0; color: var(--text-muted); opacity: 0.75; }
         .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
         .form-label { font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em; }
-        .form-input { height: 52px; padding: 0 1rem; border-radius: 8px; border: 1.5px solid var(--border-light); font-family: inherit; font-size: 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; background: white; color: var(--text-main); display: flex; align-items: center; width: 100%; }
+        .form-input { padding: 1rem; border-radius: 8px; border: 1.5px solid var(--border-light); font-family: inherit; font-size: 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; background: white; color: var(--text-main); width: 100%; }
         .form-input:focus { border-color: var(--brand-primary); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
-        textarea.form-input { height: auto; padding: 1rem; min-height: 120px; }
+        textarea.form-input { resize: none; }
         .form-input.invalid { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.1); }
         .form-input.invalid:focus { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.15); }
         .field-error { color: #ef4444; font-size: 0.8125rem; font-weight: 600; display: none; }
