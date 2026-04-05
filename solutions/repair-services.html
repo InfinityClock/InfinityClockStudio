@@ -42,7 +42,7 @@
                     <a href="../about.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Company</a>
                 </div>
                 <div class="nav-desktop-ctas" style="display: flex; gap: 1rem;">
-                    <a href="../contact.html" class="btn btn-primary">Get Audit</a>
+                    <a href="../contact.html" class="btn btn-primary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem;">Start Your Project</a>
                 </div>
                 <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
             </div>
@@ -77,30 +77,35 @@
                     <img src="../assets/images/niche_repair_services_solution_combo_1774391421274.png" alt="Repair Service Solution" style="width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-premium);">
                 </div>
                 <div class="reveal">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2.5rem; letter-spacing: -1px;">The Field Work Friction</h2>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem;">
-                        <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
-                            <div class="icon-box" style="flex-shrink: 0; background: #fef2f2; color: #ef4444;"><i data-lucide="clock"></i></div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 3rem; letter-spacing: -1px;">The Field Work Lifecycle</h2>
+                    <div style="display: flex; flex-direction: column; gap: 0; position: relative;">
+                        <!-- Vertical Thread -->
+                        <div style="position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: #fee2e2; z-index: 0;"></div>
+                        
+                        <div style="display: flex; gap: 2rem; position: relative; z-index: 1; margin-bottom: 3rem;">
+                            <div style="width: 50px; height: 50px; background: white; border: 2px solid #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i data-lucide="clock" style="color: #ef4444; width: 20px;"></i></div>
                             <div>
-                                <h4 style="margin-bottom: 0.5rem;">Technician Ghosting</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Can't track where your team is or if a job has started? We build real-time status sync between the field operation and the admin deck.</p>
+                                <h4 style="margin-bottom: 0.5rem; font-size: 1.125rem;">Real-Time Dispatch</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.5;">No more ghosting. Track technician location and job status from the second they leave for an appointment.</p>
                             </div>
-                        </li>
-                        <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
-                            <div class="icon-box" style="flex-shrink: 0; background: #fef2f2; color: #ef4444;"><i data-lucide="clipboard-list"></i></div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 2rem; position: relative; z-index: 1; margin-bottom: 3rem;">
+                            <div style="width: 50px; height: 50px; background: white; border: 2px solid #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i data-lucide="clipboard-list" style="color: #ef4444; width: 20px;"></i></div>
                             <div>
-                                <h4 style="margin-bottom: 0.5rem;">Messy Job Records</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Handwritten invoices getting lost? Centralize every job history, part replaced, and photo directly into the customer file securely.</p>
+                                <h4 style="margin-bottom: 0.5rem; font-size: 1.125rem;">Digital Job Vault</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.5;">Centralize onsite photos, parts used, and technician notes into a secure, searchable customer file.</p>
                             </div>
-                        </li>
-                        <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
-                            <div class="icon-box" style="flex-shrink: 0; background: #fef2f2; color: #ef4444;"><i data-lucide="dollar-sign"></i></div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 2rem; position: relative; z-index: 1;">
+                            <div style="width: 50px; height: 50px; background: white; border: 2px solid #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i data-lucide="dollar-sign" style="color: #ef4444; width: 20px;"></i></div>
                             <div>
-                                <h4 style="margin-bottom: 0.5rem;">Billing Delays</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Waiting for days to send an invoice? Generate invoices automatically when the job is marked complete.</p>
+                                <h4 style="margin-bottom: 0.5rem; font-size: 1.125rem;">Instant Billing Closure</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.5;">Capture payment or trigger an automated invoice the moment the technician marks the job complete.</p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,9 +114,12 @@
     <!-- Final CTA -->
     <section style="text-align: center; padding: 120px 0; background: var(--brand-navy); color: white;">
         <div class="container">
-            <h2 style="color: white; font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Scale your field business on time.</h2>
-            <p style="color: #94a3b8; margin-bottom: 3.5rem;">Our systems ensure you never miss a technician arrival or a payment again.</p>
-            <a href="../contact.html" class="btn btn-primary" style="padding: 1.25rem 4rem; font-size: 1.25rem;">Scale My Ops &rarr;</a>
+            <h2 style="color: white; font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Scale your operations.</h2>
+            <p style="color: #94a3b8; font-size: 1.25rem; margin-bottom: 3.5rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">Our systems ensure you never miss a technician arrival or a payment again. Precision is the foundation of growth.</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="../contact.html" class="btn btn-primary" style="padding: 1.25rem 3rem; font-size: 1.1125rem;">Start Your Project</a>
+                <a href="../contact.html" class="btn btn-secondary" style="padding: 1.25rem 3rem; font-size: 1.1125rem;">Get A Free Audit</a>
+            </div>
         </div>
     </section>
 

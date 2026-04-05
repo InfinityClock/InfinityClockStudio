@@ -42,7 +42,7 @@
                     <a href="../about.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">Company</a>
                 </div>
                 <div class="nav-desktop-ctas" style="display: flex; gap: 1rem;">
-                    <a href="../contact.html" class="btn btn-primary">Get Audit</a>
+                    <a href="../contact.html" class="btn btn-primary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem;">Start Your Project</a>
                 </div>
                 <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
             </div>
@@ -69,36 +69,48 @@
         </div>
     </section>
 
-    <!-- Problem & Solution -->
+    <!-- Problem & Solution: Comparison Layout -->
     <section>
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
-                <div class="reveal">
-                    <img src="../assets/images/niche_3d_printing_solution_combo_1774391385336.png" alt="3D Printing Solution" style="width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-premium);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <!-- Traditional Chaos -->
+                <div class="reveal card-premium" style="padding: 3rem; border: 1px solid #fee2e2; background: rgba(254, 226, 226, 0.2);">
+                    <h3 style="color: #ef4444; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <i data-lucide="x-circle"></i> Traditional Friction
+                    </h3>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
+                        <li style="display: flex; gap: 1rem;">
+                            <div style="color: #ef4444; font-weight: 800; font-size: 0.75rem; margin-top: 0.25rem;">01</div>
+                            <p style="color: var(--text-muted); font-size: 0.9375rem;">STL files buried in WhatsApp threads and email attachments.</p>
+                        </li>
+                        <li style="display: flex; gap: 1rem;">
+                            <div style="color: #ef4444; font-weight: 800; font-size: 0.75rem; margin-top: 0.25rem;">02</div>
+                            <p style="color: var(--text-muted); font-size: 0.9375rem;">Manual queue tracking leading to idle machines or missed deadlines.</p>
+                        </li>
+                        <li style="display: flex; gap: 1rem;">
+                            <div style="color: #ef4444; font-weight: 800; font-size: 0.75rem; margin-top: 0.25rem;">03</div>
+                            <p style="color: var(--text-muted); font-size: 0.9375rem;">Chasing payments manually before production can start.</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="reveal">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: -1px;">The Friction of Scale</h2>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem;">
+                
+                <!-- Engineered Flow -->
+                <div class="reveal card-premium" style="padding: 3rem; border: 1px solid #d1fae5; background: rgba(209, 250, 229, 0.2);">
+                    <h3 style="color: #10b981; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <i data-lucide="check-circle-2"></i> Engineered Flow
+                    </h3>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
                         <li style="display: flex; gap: 1rem;">
-                            <div class="icon-box" style="flex-shrink: 0;"><i data-lucide="alert-triangle"></i></div>
-                            <div>
-                                <h4 style="margin-bottom: 0.5rem;">Messy File Tracking</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Are client STL files buried in email threads or chat apps? We build frontends that centralize design assets.</p>
-                            </div>
+                            <div style="color: #10b981; font-weight: 800; font-size: 0.75rem; margin-top: 0.25rem;">01</div>
+                            <p style="color: var(--brand-dark); font-size: 0.9375rem; font-weight: 600;">Centralized asset storage with automatic file integrity checks.</p>
                         </li>
                         <li style="display: flex; gap: 1rem;">
-                            <div class="icon-box" style="flex-shrink: 0;"><i data-lucide="layers"></i></div>
-                            <div>
-                                <h4 style="margin-bottom: 0.5rem;">Queue Bottlenecks</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9375rem;">No visibility on which machine is busy? We engineer dashboards that track production stages (Slicing, Printing, Post-Processing) in real-time.</p>
-                            </div>
+                            <div style="color: #10b981; font-weight: 800; font-size: 0.75rem; margin-top: 0.25rem;">02</div>
+                            <p style="color: var(--brand-dark); font-size: 0.9375rem; font-weight: 600;">Real-time machine triage dashboard with automated job pairing.</p>
                         </li>
                         <li style="display: flex; gap: 1rem;">
-                            <div class="icon-box" style="flex-shrink: 0;"><i data-lucide="credit-card"></i></div>
-                            <div>
-                                <h4 style="margin-bottom: 0.5rem;">Payment Ambiguity</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9375rem;">Waiting for manual verification before starting work? Our team automates payment tracking and instant invoicing.</p>
-                            </div>
+                            <div style="color: #10b981; font-weight: 800; font-size: 0.75rem; margin-top: 0.25rem;">03</div>
+                            <p style="color: var(--brand-dark); font-size: 0.9375rem; font-weight: 600;">Integrated payment gateway syncing directly with print queue.</p>
                         </li>
                     </ul>
                 </div>
@@ -106,43 +118,68 @@
         </div>
     </section>
 
-    <!-- Workflow Visualization -->
-    <section style="background: var(--brand-navy); color: white;">
+    <!-- Production Lifecycle Roadmap -->
+    <section style="background: #f8fafc; overflow: hidden;">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 6rem;">
-                <h2 style="color: white; font-size: 3rem; letter-spacing: -1px;">Our Solution Workflow</h2>
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h2 style="font-size: 3rem; letter-spacing: -1px; color: var(--brand-dark);">The Print Operations Roadmap</h2>
+                <p style="color: var(--text-muted); margin-top: 1rem;">How we architect your industrial production flow.</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
-                <div class="reveal card-enterprise" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-                    <div style="font-size: 0.75rem; color: var(--brand-primary); font-weight: 800; margin-bottom: 1rem;">FRONTEND</div>
-                    <h4 style="color: white; margin-bottom: 1rem;">Smart Storefront</h4>
-                    <p style="color: #94a3b8; font-size: 0.8125rem;">We build a conversion-focused platform where clients securely upload files and select materials.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative;">
+                <!-- Roadmap Line -->
+                <div style="position: absolute; top: 40px; left: 0; right: 0; height: 2px; background: #e2e8f0; z-index: 0;"></div>
+                
+                <div class="reveal" style="position: relative; z-index: 1; padding: 0 1rem;">
+                    <div style="width: 80px; height: 80px; background: white; border: 2px solid var(--brand-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; box-shadow: var(--shadow-premium);">
+                        <i data-lucide="upload-cloud" style="color: var(--brand-primary);"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 0.75rem;">01. Asset Intake</h4>
+                        <p style="color: var(--text-muted); font-size: 0.8125rem;">Secure STL/OBJ upload with automated material & volume calculation.</p>
+                    </div>
                 </div>
-                <div class="reveal card-enterprise" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); animation-delay: 0.1s;">
-                    <div style="font-size: 0.75rem; color: var(--brand-primary); font-weight: 800; margin-bottom: 1rem;">BACKEND</div>
-                    <h4 style="color: white; margin-bottom: 1rem;">Admin Triage</h4>
-                    <p style="color: #94a3b8; font-size: 0.8125rem;">Your custom dashboard captures the order, allowing admins to verify file integrity instantly.</p>
+                
+                <div class="reveal" style="position: relative; z-index: 1; padding: 0 1rem; animation-delay: 0.1s;">
+                    <div style="width: 80px; height: 80px; background: white; border: 2px solid var(--brand-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; box-shadow: var(--shadow-premium);">
+                        <i data-lucide="layers" style="color: var(--brand-primary);"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 0.75rem;">02. Production Triage</h4>
+                        <p style="color: var(--text-muted); font-size: 0.8125rem;">Admin dashboard for slicing verification and machine assignment.</p>
+                    </div>
                 </div>
-                <div class="reveal card-enterprise" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); animation-delay: 0.2s;">
-                    <div style="font-size: 0.75rem; color: var(--brand-primary); font-weight: 800; margin-bottom: 1rem;">AUTOMATION</div>
-                    <h4 style="color: white; margin-bottom: 1rem;">Machine Tracker</h4>
-                    <p style="color: #94a3b8; font-size: 0.8125rem;">The system associates the order to a specific printer and auto-updates the production status.</p>
+                
+                <div class="reveal" style="position: relative; z-index: 1; padding: 0 1rem; animation-delay: 0.2s;">
+                    <div style="width: 80px; height: 80px; background: white; border: 2px solid var(--brand-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; box-shadow: var(--shadow-premium);">
+                        <i data-lucide="printer" style="color: var(--brand-primary);"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 0.75rem;">03. Active Monitoring</h4>
+                        <p style="color: var(--text-muted); font-size: 0.8125rem;">Real-time printer status pings and automatic completion alerts.</p>
+                    </div>
                 </div>
-                <div class="reveal card-enterprise" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); animation-delay: 0.3s;">
-                    <div style="font-size: 0.75rem; color: var(--brand-primary); font-weight: 800; margin-bottom: 1rem;">LOGISTICS</div>
-                    <h4 style="color: white; margin-bottom: 1rem;">Auto-Notifications</h4>
-                    <p style="color: #94a3b8; font-size: 0.8125rem;">Clients receive automated status emails and shipping tracking automatically.</p>
+                
+                <div class="reveal" style="position: relative; z-index: 1; padding: 0 1rem; animation-delay: 0.3s;">
+                    <div style="width: 80px; height: 80px; background: white; border: 2px solid var(--brand-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; box-shadow: var(--shadow-premium);">
+                        <i data-lucide="truck" style="color: var(--brand-primary);"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 0.75rem;">04. Dispatch Sync</h4>
+                        <p style="color: var(--text-muted); font-size: 0.8125rem;">Automated shipping label generation and client tracking notifications.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section style="text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 3rem; margin-bottom: 1rem; letter-spacing: -1px;">Ready to automate your queue?</h2>
-            <p style="color: var(--text-muted); margin-bottom: 3rem;">Let our engineers design the system that scales your business.</p>
-            <a href="../contact.html" class="btn btn-primary" style="padding: 1.25rem 4rem; font-size: 1.25rem;">Get Your Custom System Audit</a>
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -1px; color: var(--brand-dark);">Ready to automate your queue?</h2>
+            <p style="color: var(--text-muted); font-size: 1.25rem; margin-bottom: 3.5rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">Let our engineers design the digital infrastructure that scales your business without increasing your overhead.</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="../contact.html" class="btn btn-primary" style="padding: 1.25rem 3rem; font-size: 1.1125rem;">Start Your Project</a>
+                <a href="../contact.html" class="btn btn-secondary" style="padding: 1.25rem 3rem; font-size: 1.1125rem;">Get A Free Audit</a>
+            </div>
         </div>
     </section>
 
