@@ -33,7 +33,6 @@
         .field-error { color: #ef4444; font-size: 0.8125rem; font-weight: 600; display: none; }
         .field-error.visible { display: block; }
         select.form-input { cursor: pointer; }
-        textarea.form-input { resize: none; }
     </style>
 </head>
 <body>
@@ -60,7 +59,7 @@
                     <a href="contact.html" class="btn btn-secondary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem; background: white;">Book a Demo</a>
                     <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 1.75rem; font-size: 0.9375rem;">Start Your Project</a>
                 </div>
-                <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+                <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
@@ -168,7 +167,7 @@
                             </div>
                             <div class="form-field">
                                 <label for="company-name" class="form-label">Company Name</label>
-                                <input id="company-name" name="company" type="text" autocomplete="organization" class="form-input">
+                                <input id="company-name" name="company" type="text" placeholder="Your company name" autocomplete="organization" class="form-input">
                             </div>
                         </div>
 

@@ -367,6 +367,68 @@ section {
     .solution-grid { grid-template-columns: 1fr; }
 }
 
+/* ---- Small-screen fixes (phones) ---- */
+@media (max-width: 600px) {
+    /* Stack CTA button pairs that use justify-content: center */
+    section [style*="justify-content: center"][style*="gap: 1.5rem"],
+    section [style*="justify-content:center"][style*="gap: 1.5rem"],
+    .container [style*="justify-content: center"][style*="gap: 1.5rem"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1rem !important;
+    }
+
+    /* Stack plain flex CTA rows without justify-content (final CTA sections) */
+    section [style*="display: flex"][style*="gap: 1.5rem"]:not([style*="align-items: center"]):not([style*="flex-direction"]) {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    /* Ensure all buttons in stacked rows are full-width */
+    section [style*="justify-content: center"][style*="gap: 1.5rem"] > .btn,
+    section [style*="justify-content: center"][style*="gap: 1rem"] > .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Footer bottom bar: stack copyright and legal links vertically */
+    footer [style*="justify-content: space-between"][style*="flex"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+    }
+
+    /* Footer legal links: wrap on very small screens */
+    footer [style*="justify-content: space-between"] > div[style*="display: flex"] {
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+    }
+
+    /* Legal pages simple footer */
+    footer [style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    /* Scale down very large heading on contact page */
+    h1[style*="font-size: 4.5rem"] {
+        font-size: 2.5rem !important;
+        letter-spacing: -1px !important;
+    }
+
+    /* Contact form grid: stack on mobile */
+    #contact-form [style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* About hero heading */
+    h1[style*="font-size: 5rem"] {
+        font-size: 2.5rem !important;
+        letter-spacing: -1px !important;
+        line-height: 1.2 !important;
+    }
+}
+
 /* Animations — progressive enhancement: only hide when JS has confirmed it's ready */
 .reveal {
     transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
