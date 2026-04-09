@@ -427,6 +427,62 @@ section {
         letter-spacing: -1px !important;
         line-height: 1.2 !important;
     }
+
+    /* Hero headline (5.5rem inline) */
+    h1[style*="font-size: 5.5rem"] {
+        font-size: 2.5rem !important;
+        letter-spacing: -1px !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Badge / pill: shrink font + padding so it fits on one line on phones */
+    .badge-elite,
+    .badge-premium {
+        font-size: 0.6rem !important;
+        padding: 0.375rem 0.875rem !important;
+        letter-spacing: 0.04em !important;
+    }
+
+    /* Nav logo text: scale down slightly so hamburger has breathing room */
+    .brand-logo-text span[style*="font-size: 1.65rem"] {
+        font-size: 1.35rem !important;
+    }
+
+    /* Nav logo "STUDIO" sub-label */
+    .brand-logo-text span[style*="font-size: 0.65rem"] {
+        font-size: 0.55rem !important;
+        letter-spacing: 0.35em !important;
+    }
+
+    /* Contact page: right-side guarantees column — full-width stacked on mobile */
+    #contact-form + div,
+    section [style*="1.8fr 1fr"] > div:last-child {
+        width: 100% !important;
+    }
+
+    /* Direct Partner Pipeline card: scale email down so it fits on one line */
+    section a[href^="mailto"],
+    footer a[href^="mailto"] {
+        font-size: 0.875rem !important;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    /* Footer: reduce top padding on mobile */
+    footer {
+        padding-top: 60px !important;
+    }
+
+    /* Footer brand logo row */
+    footer [style*="display: flex"][style*="align-items: center"][style*="margin-bottom: 1.5rem"] {
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+
+    /* Footer brand name: smaller on mobile */
+    footer span[style*="font-size: 1.5rem"] {
+        font-size: 1.125rem !important;
+    }
 }
 
 /* Animations — progressive enhancement: only hide when JS has confirmed it's ready */

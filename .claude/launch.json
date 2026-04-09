@@ -4,7 +4,7 @@
     {
       "name": "InfinityClockStudio",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080"],
+      "runtimeArgs": ["-m", "http.server", "8080", "-d", "/Users/pragad-7957/Documents/InfinityClockStudio"],
       "port": 8080
     }
   ]
