@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" fill="none">
+  <!--
+    Infinity Clock Studio — Icon Mark
+    Hourglass + Infinity symbol + 4 gears
+    Blue: #38B6FF  |  Dark: #1A1A2E
+  -->
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--            GEARS  (behind blue frame)       -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- TOP GEAR  –  8 teeth, R_out=20, R_in=15, hole r=8  -->
+  <g transform="translate(100,63)">
+    <path fill="#1A1A2E" fill-rule="evenodd" d="
+      M19.75,-3.13 L19.75,3.13
+      L13.86,5.74
+      L16.18,11.76 L11.76,16.18
+      L5.74,13.86
+      L3.13,19.75 L-3.13,19.75
+      L-5.74,13.86
+      L-11.76,16.18 L-16.18,11.76
+      L-13.86,5.74
+      L-19.75,3.13 L-19.75,-3.13
+      L-13.86,-5.74
+      L-16.18,-11.76 L-11.76,-16.18
+      L-5.74,-13.86
+      L-3.13,-19.75 L3.13,-19.75
+      L5.74,-13.86
+      L11.76,-16.18 L16.18,-11.76
+      L13.86,-5.74 Z
+      M8,0 A8,8 0 1,0 -8,0 A8,8 0 1,0 8,0 Z
+    "/>
+  </g>
+
+  <!-- LEFT GEAR  –  8 teeth, R_out=17, R_in=13, hole r=7  -->
+  <g transform="translate(64,108)">
+    <path fill="#1A1A2E" fill-rule="evenodd" d="
+      M16.79,-2.66 L16.79,2.66
+      L12.01,4.97
+      L13.75,9.99 L9.99,13.75
+      L4.97,12.01
+      L2.66,16.79 L-2.66,16.79
+      L-4.97,12.01
+      L-9.99,13.75 L-13.75,9.99
+      L-12.01,4.97
+      L-16.79,2.66 L-16.79,-2.66
+      L-12.01,-4.97
+      L-13.75,-9.99 L-9.99,-13.75
+      L-4.97,-12.01
+      L-2.66,-16.79 L2.66,-16.79
+      L4.97,-12.01
+      L9.99,-13.75 L13.75,-9.99
+      L12.01,-4.97 Z
+      M7,0 A7,7 0 1,0 -7,0 A7,7 0 1,0 7,0 Z
+    "/>
+  </g>
+
+  <!-- RIGHT GEAR  –  8 teeth, R_out=17, R_in=13, hole r=7  -->
+  <g transform="translate(136,108)">
+    <path fill="#1A1A2E" fill-rule="evenodd" d="
+      M16.79,-2.66 L16.79,2.66
+      L12.01,4.97
+      L13.75,9.99 L9.99,13.75
+      L4.97,12.01
+      L2.66,16.79 L-2.66,16.79
+      L-4.97,12.01
+      L-9.99,13.75 L-13.75,9.99
+      L-12.01,4.97
+      L-16.79,2.66 L-16.79,-2.66
+      L-12.01,-4.97
+      L-13.75,-9.99 L-9.99,-13.75
+      L-4.97,-12.01
+      L-2.66,-16.79 L2.66,-16.79
+      L4.97,-12.01
+      L9.99,-13.75 L13.75,-9.99
+      L12.01,-4.97 Z
+      M7,0 A7,7 0 1,0 -7,0 A7,7 0 1,0 7,0 Z
+    "/>
+  </g>
+
+  <!-- BOTTOM GEAR  –  8 teeth, R_out=20, R_in=15, hole r=8  -->
+  <g transform="translate(100,153)">
+    <path fill="#1A1A2E" fill-rule="evenodd" d="
+      M19.75,-3.13 L19.75,3.13
+      L13.86,5.74
+      L16.18,11.76 L11.76,16.18
+      L5.74,13.86
+      L3.13,19.75 L-3.13,19.75
+      L-5.74,13.86
+      L-11.76,16.18 L-16.18,11.76
+      L-13.86,5.74
+      L-19.75,3.13 L-19.75,-3.13
+      L-13.86,-5.74
+      L-16.18,-11.76 L-11.76,-16.18
+      L-5.74,-13.86
+      L-3.13,-19.75 L3.13,-19.75
+      L5.74,-13.86
+      L11.76,-16.18 L16.18,-11.76
+      L13.86,-5.74 Z
+      M8,0 A8,8 0 1,0 -8,0 A8,8 0 1,0 8,0 Z
+    "/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--            BLUE FRAME  (on top)             -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Top horizontal cap -->
+  <rect x="65" y="16" width="70" height="11" rx="2.5" fill="#38B6FF"/>
+
+  <!-- Top funnel — two converging lines -->
+  <line x1="69"  y1="27" x2="91"  y2="102" stroke="#38B6FF" stroke-width="6" stroke-linecap="round"/>
+  <line x1="131" y1="27" x2="109" y2="102" stroke="#38B6FF" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Bottom funnel — two diverging lines -->
+  <line x1="91"  y1="114" x2="69"  y2="191" stroke="#38B6FF" stroke-width="6" stroke-linecap="round"/>
+  <line x1="109" y1="114" x2="131" y2="191" stroke="#38B6FF" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Bottom horizontal cap -->
+  <rect x="65" y="191" width="70" height="11" rx="2.5" fill="#38B6FF"/>
+
+  <!-- Left infinity loop -->
+  <ellipse cx="64"  cy="108" rx="36" ry="23" stroke="#38B6FF" stroke-width="6" fill="none"/>
+
+  <!-- Right infinity loop -->
+  <ellipse cx="136" cy="108" rx="36" ry="23" stroke="#38B6FF" stroke-width="6" fill="none"/>
+
+  <!-- Centre pivot dot -->
+  <circle cx="100" cy="108" r="5.5" fill="#38B6FF"/>
+</svg>
